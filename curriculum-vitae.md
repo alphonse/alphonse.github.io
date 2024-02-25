@@ -86,7 +86,7 @@ Renbaum-Wolff, L., **D.A. Fischer**, T. Helgestad, A. Lambe, G. Smith, C. Cappa,
 - **WCU CHEM 454/554, PHYS 454:**  *Computer Interfacing*
 - **WCU CHEM 380:**  *Undergraduate Research in Chemistry*
 - **[WCU CHEM 370](https://chem370.github.io):**  *Instrumental Analysis I (Lecutre + Lab)*
-- **[WCU CHEM 370](https://chem330.github.io):**  *Aquatic Chemistry (Lecture + Lab)*
+- **[WCU CHEM 330](https://chem330.github.io):**  *Aquatic Chemistry (Lecture + Lab)*
 - **WCU CHEM 241:**  *Organic Chemistry I Laboratory*  
 - **[WCU CHEM 191](https://alphonse.github.io/archive/chem191):**  *Issues in Environmental Chemistry: Is clean air a right?*
 - **WCU ES 150:**  *Introduction and Approaches to Environmental Science* (3-week unit on Atmospheric Chemistry)

@@ -109,8 +109,8 @@ header a {
 /* On narrow device, reduce margins. */
 @media (max-width: 480px) {
   .franklin-content {
-    padding-left: 6%;
-    padding-right: 6%;
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
 
@@ -123,12 +123,14 @@ header a {
 	font-size: 32px; 
 	color: #433024;
  	font-weight: 200;
+ 	line-height: 100%;
 	} 
 .franklin-content h2 { 
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-size: 26px; 
 	color: #433024;
 	font-weight: 200;
+	line-height: 100%;
 	}
 .franklin-content h3 { font-size: 20px; }
 
