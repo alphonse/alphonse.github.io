@@ -3,9 +3,9 @@ title = "Research Projects"
 hascode = false
 +++
 
-# Current Research in my Lab
+# Current Research in My Lab
 
-I have research projects available in areas of instrument development, environmental analysis, and chemical ecology and phytochemistry.  I welcome both graduate and undergraduate students into my lab to work on any of these projects.  If you are a student interested in any of them send me an [email](dfischer@wcu.edu)!
+I have research projects available in areas of instrument development, environmental analysis, and chemical ecology and phytochemistry.  I welcome both graduate and undergraduate students into my lab to work on these projects.  If you are a student interested in them send me an [email](dfischer@wcu.edu)!
 
 ## Instrumentation and Electronics
 
@@ -31,7 +31,7 @@ The primary focus of my research is the development of new instrumentation.  Som
 
 - DOBSUN: An Arduino-based Dobson meter and sun photometer
 
-# Plants, lichens, and Ecology
+## Plants, lichens, and Ecology (and infrared spectroscopy!)
 
 - **FT-IR and Chemometric Analysis to ID [Lichens](https://docs.google.com/spreadsheets/d/1qoheTM5hP72JtbzDG1ID6iu-P88KxiftFOFtvAIbefA/edit?usp=sharing):** This project involves the development of a rapid, non-destructive method to identify lichen species using infrared spectroscopy and chemometric analysis.  Below is a cluster (HCA) diagram generated from ATR-FTIR spectra of *Usnea* lichens.
 

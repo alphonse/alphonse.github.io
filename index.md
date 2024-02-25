@@ -9,7 +9,7 @@
 <a class="homepage-button" href="/curriculum-vitae/">
   📜 curriculum vitae
  </a>
-<a class="homepage-button" href="/projects/">
+<a class="homepage-button" href="/research/">
  🔧 research projects
 </a>
 <a class="homepage-button" href="https://chem330.github.io/">

@@ -5,11 +5,12 @@ hascode = false
 
 # Curriculum Vitae
 
-*Instrumentation Specialist* \\
+*Assistant Professor* \\
+Department of Chemistry and Physics \\
+Environmental Science Program \\
 Western Carolina University  \\
 [dfischer@wcu.edu](mailto:dfischer@wcu.edu)  \\
 [al@tsugascientific.com](mailto:al@tsugascientific.com) \\
-
 
 # Employment
 
