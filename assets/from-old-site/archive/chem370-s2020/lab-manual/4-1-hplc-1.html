@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="4.1 HPLC | CHEM 370 Lab Manual" />
+<meta property="og:type" content="book" />
+
+<meta property="og:image" content="images/cover-image-mass-spec.png" />
+<meta property="og:description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory" />
+
+
+<meta name="author" content="Al Fischer, PhD" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory">
+
+<title>4.1 HPLC | CHEM 370 Lab Manual</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+
+</head>
+
+<body>
+
+
+
+<div class="row">
+<div class="col-sm-12">
+<!--bookdown:toc:end-->
+<!--bookdown:toc:start-->
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="hplc-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> HPLC</h2>
+<p>This lab will use the Agilent 1220 HPLC (high performance liquid chromatograph) to determine the concentration of acetaminophen in Tylenol tablets.</p>
+<p>Review how to perform serial dilutions for a standard curve.</p>
+<div id="safety-3" class="section level3 unnumbered">
+<h3>Safety</h3>
+<p>This lab will require the use water and <a href="http://www.sciencelab.com/msds.php?msdsId=9927227">methanol</a> for solvents. Methanol can cause blindness and absorbs through the skin. Wear gloves and goggles when working with methanol, and use it in a hood.</p>
+</div>
+<div id="standard-preparation-1" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Standard Preparation</h3>
+<ol style="list-style-type: decimal">
+<li>Make 100 ml of 100-ppm (w/v) acetaminophen stock solution using 98% 4-acetamidophenol in ultra pure water.</li>
+<li>Perform serial dilutions to create a set of 5 standards with concentrations ranging from 0.5 - 25 ppm. You will need 2 ml of each standard for HPLC analysis, but it won’t hurt to have a little extra.</li>
+</ol>
+</div>
+<div id="sample-preparation-3" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Sample Preparation</h3>
+<ol style="list-style-type: decimal">
+<li>Determine the mass of all the contents of your vials.</li>
+<li>Grind your sample into a fine, homogenous powder using a mortar and pestle.</li>
+<li>Cone and quarter your sample (on weighing paper) until you have just over 100 mg.</li>
+<li>Dissolve 100.0 mg of the tablet in 1:3 methanol:water, and bring the final volume to 100.0 ml.</li>
+<li>Perform a 1:100 dilution of you sample in 1:3 methanol:water.</li>
+<li>Filter final dilution through a 0.45 <span class="math inline">\(\mu\)</span>m syringe filter using a 20 ml syringe. Make sure you:
+<ul>
+<li>Don’t pull up on the plunger with the filter attached to the syringe (you may tear the filter).</li>
+<li>Discard the first 10 ml of filtrate.</li>
+<li>Use an aliquot of the last 10 ml of filtrate for analysis.</li>
+</ul></li>
+</ol>
+</div>
+<div id="instrumentation-3" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> Instrumentation</h3>
+<ol style="list-style-type: decimal">
+<li>Place approximately 2 ml of your final dilution in an autosampler vial; you should prepare at least 3 vials to run in triplicate.</li>
+<li>Prepare the appropriate blanks, using 1:3 methanol:water as your blank solution. Please be sure to filter your blanks before analysis.</li>
+<li>Run your samples according to the HPLC SOP, making sure you run:
+<ol style="list-style-type: decimal">
+<li>a rinse blank,</li>
+<li>a subtraction blank,</li>
+<li>your standards (from low to high),</li>
+<li>a rinse blank,</li>
+<li>your samples, and</li>
+<li>a final rinse blank.</li>
+</ol></li>
+</ol>
+</div>
+<div id="waste-disposal-and-cleanup-1" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> Waste Disposal and Cleanup</h3>
+<ul>
+<li>Collect all wastes in the bottle labelled “Hazardous Waste: Lab 2 Acetaminophen” that is stored under the sample prep hood in the Instrument Lab.</li>
+<li>Empty sample vials into the same waste container and dispose of glass in the broken glass bin.</li>
+<li>Ensure your work area and the instrument are cleaner than you found them; notify your instructor if the eluent is low.</li>
+</ul>
+</div>
+<div id="data-processing-3" class="section level3">
+<h3><span class="header-section-number">4.1.5</span> Data Processing</h3>
+<ul>
+<li>Export your data files as a CSV files.</li>
+<li>You may choose to integrate your peaks in the HPLC software or Jupyter.</li>
+<li>You should prepare your calibration curve in Jupyter.</li>
+<li>You should calculate the concentration of your samples in Jupyter.</li>
+<li>You should use a <em>t</em>-test to determine if the mass of acetaminophen is <em>significantly</em> different from the expected mass.</li>
+</ul>
+</div>
+</div>
+<p style="text-align: center;">
+<a href="memorandum-1.html"><button class="btn btn-default">Previous</button></a>
+<a href="4-2-ft-ir-1.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

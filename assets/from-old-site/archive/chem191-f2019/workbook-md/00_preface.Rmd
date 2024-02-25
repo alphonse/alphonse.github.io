@@ -1,0 +1,50 @@
+# Preface {-}
+
+
+
+Over the course of the semester, we will build air quality monitors using the Teensy microcontroller platform.  This platform is an offshoot of the popular Arduino microcontrollers, and they are very similar.  This workbook will introduce you to the basics of Arduino and Teensy, and walk you through assembling and programming your air quality sensor.
+
+## What is Arduino? {-}
+
+**Arduino** is an [open-source](http://www.wikipedia.com/wiki/Open-source) platform for developing interactive electronic devices.  Arduinos of various flavors are used for all variety of things, from controlling motors and lights to reading data from sensors.  Exercise 1 will provide a more thorough overview of Arduino, and you will get experience programming Arduino using the online utility provided by [Tinkercad](https://www.tinkercad.com).
+
+## OK, but what is Teensy? {-}
+
+Teensy is an offshoot of Arduino.  It is capapble of most everything an Arduino can do and often much more.  You might think of it as the supercar version of an Arduino.  Aside from being more capable, it's also smaller -- a fact that gives rise to it's name (Teensy).  In this class, the names Teensy and Arduino will be used interchangeably.  Exercise 1 will provide a more thorough overview of Teensy.
+
+## Using this Book {-}
+
+Some common typographical (formatting) conventions will be used throughout this book.  
+
+### Code {-}
+
+The exercises will make extensive use of computer code, which will always be represented with `monospace` font with a grey background.  It may be `inline` or 
+
+```
+offset.
+```
+
+When you see code, you should take time to thoroughly digest it.  Sometimes the code may work as-is; other times you may have to add to the code to make it work.  And other times the code may be `pseudocode`, which is example code that looks like it would work but will not actually compile.  The code will often be color-coded to highlight various features of the programming language.
+
+### Notes and Warnings {-}
+
+This book will also make use of notes and warnings.  Examples are below.
+
+> *A note is written in a quote box with italic font and represents background information or a bit of knowledge to think about.*
+
+> A NOTE ALL CAPITAL LETTERS REPRESENTS A SAFETY WARNING.  YOU **MUST** PAY ATTENTION TO THESE WARNING OR YOU MAY BREAK EQUIPMENT AND/OR HARM YOURSELF OR YOUR CLASSMATES.
+
+## Is this work dangerous? {-}
+
+Although electricity can be very dangerous and even lethal at the right dosages, the work we'll do in this class shouldn't pose any particular danger.  There are two important factors to consider when deciding how dangerous an electrical device is: (1) the voltage and (2) the current.  Generally speaking, it takes both to be dangerous.  Most of the voltage in these exercises will be either 3.3V or 5V, with currents on the order of 100 mA. These are relatively low voltages and low currents, whcih are safe to work with and do not pose a shock hazard.  That said, connecting things incorrectly can still break components, cause them to get very hot (they might burn you), or even cause them to go up in smoke -- be careful and double check yourself/your lab partner when connecting things!
+
+## Additional Resources {-}
+
+There are myriad books, blog posts, and websites about Arduino, but few specifically deal with the Teensy version.  This workbook and the [Teensy website](http://www.pjrc.com) are your best resources regarding Teensy-specific items.  The code used to program the Teensy (and Arduinos) is a version of `C`; knowing that will be useful when trying to find help online.  The [Arduino language reference](https://www.arduino.cc/reference/en/) provides a list of available functionalities and syntax.
+
+If you want more general information on programming Arduinos, the Arduino IDE, or electronics, you may check some of the following:
+
+- Monk, Simon.  [***Programming Arduino: Getting Started with Sketches***](https://www.amazon.com/Programming-Arduino-Getting-Started-Sketches/dp/0071784225).  
+- Scherz, Paul and Simon Monk. [***Practical Electronics for Inventors***](https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8&psc=1&refRID=9JN842FPFMNAA9RQV8X3).  
+- The Arduino [forum](https://forum.arduino.cc/).  
+- Boxall, John.  [***Arduino Workshop***](https://www.amazon.com/Arduino-Workshop-Hands-Introduction-Projects/dp/1593274483).

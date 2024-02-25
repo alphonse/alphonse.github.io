@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intro to Analytical Chemistry</title>
+    <link rel="stylesheet" type="text/css" href="remark.css">
+    <link rel="stylesheet" type="text/css" href="mermaid.css">
+  </head>
+  <body>
+    <textarea id="source">
+
+class: img-right
+![a-chem-img](https://upload.wikimedia.org/wikipedia/commons/6/66/Portable_Screening_Devices_%281435%29_%288225044148%29.jpg)
+
+<h1 style = "font-size: 80px;">
+Analytical Chemistry
+</h1>
+
+## Chem 370  
+## Instrumental Analysis
+
+**Dr. Al Fischer**  
+Western Carolina University
+---
+layout: true
+.footer[
+- <a href="https://alphonse.github.io/devel/chem370"><i class="fas fa-home"></i></a>
+- <a href="https://alphonse.github.io/devel/chem370/lectures"><i class="fas fa-chalkboard-teacher"></i></a>
+- <a href="https://alphonse.github.io/devel/chem370/lectures#help"><i class="fas fa-question"></i></a>
+]
+
+---
+# Analtyical Chemistry
+
+## Reading
+
+1. [Harvey](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29) Chs 1 + 2
+
+## Table of Contents
+1. [What is Analytical Chemistry?](#analtyical-chemistry)
+1. [Analytical Chemistry vs. Analysis](#vs-analysis)
+1. [Analytical Chemistry Defined](#definition)
+1. [The Analytical Perspective](#analytical-perspective)
+
+---
+
+name: analtyical-chemistry
+
+# What is Analytical Chemistry?  
+
+
+<div class="mermaid">
+graph TD
+   A[Chemistry] --> B[Analytical]
+   A[Chemistry] --> C[Physical]
+   A[Chemistry] --> D[Bio]
+   A[Chemistry] --> E[Organic]
+   A[Chemistry] --> F[Inorganic]
+</div>
+
+---
+
+# What is Analytical Chemistry?  
+
+> "Analytical chemistry is what analytical chemists do."  
+>  
+> *C.N. Reilly*
+
+???
+
+- Analytical chemistry thrawts definition: It is chemistry, physics, engineering, and computer science all rolled together!
+
+--
+
+**An oft-encountered definition:** Field concerned with *qualitatively* and *quantitatively* characterizing matter.
+
+But is this misleading?
+
+???
+
+- Most chemists characterize matter, but most chemists are not "analytical chemists".  
+- Analytical chemistry is often a "catch all" field, though this probably should be so.
+- This ignores the unique perspective an analytical chemist brings to a study.
+
+---
+name: vs-analysis
+class: img-full
+
+# Analytical Chemistry vs. Analysis
+
+![Fresenius’ analytical scheme for the gravimetric analysis of Ni in ores, CC-BY-SA from Analytical Chemistry 2.1](https://chem.libretexts.org/@api/deki/files/159815/Figure1_1.png)
+
+.image-credit[Fresenius’ analytical scheme for the gravimetric analysis of Ni in ores, CC-BY-SA from [Analytical Chemistry 2.1](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29/01%3A_Introduction_to_Analytical_Chemistry/1.01%3A_What_is_Analytical_Chemistry)]
+
+
+???
+
+- We may draw a distinction between **analytical chemistry** and **chemical analysis**.
+- **Analytical chemistry** is concerned with ***developing methods***.
+- **Chemical analysis** is concernted with ***utilizing methods***.
+- This class aims to prepare you to be an analytical chemist, but we will start with/focus on chemical analysis.
+- Instrumental II is focused much more on analytical chemistry aspects of IA.
+
+---
+
+class: img-full
+
+# Analytical Chemistry vs. Analysis
+
+![Gravimetric analysis for Ni in ores by precipitation, CC-BY-SA from Analytical Chemistry 2.1](https://chem.libretexts.org/@api/deki/files/159828/Figure-1_2.jpg)
+
+
+.image-credit[Gravimetric analysis for Ni in ores by precipitation, CC-BY-SA from [Analytical Chemistry 2.1](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29/01%3A_Introduction_to_Analytical_Chemistry/1.01%3A_What_is_Analytical_Chemistry)]
+
+
+???
+
+- We may draw a distinction between **analytical chemistry** and **chemical analysis**.
+- **Analytical chemistry** is concerned with ***developing methods***.
+- **Chemical analysis** is concernted with ***utilizing methods***.
+- This class aims to prepare you to be an analytical chemist, but we will start with/focus on chemical analysis.
+- Instrumental II is focused much more on analytical chemistry aspects of IA.
+
+---
+name: definition
+
+# A Definition
+
+Analtyical chemistry is the field concerned with ***creating and improving analytical processes***.
+
+--
+
+<div class="mermaid">
+graph TD
+   A[Chemistry] --> F{Analytical Chemistry}
+   B[Physics] --> F{Analytical Chemistry}
+   C[Engineering] --> F{Analytical Chemistry}
+   D[Computer Science] --> F{Analytical Chemistry}
+   E[Statistics] --> F{Analytical Chemistry}
+</div>
+
+???
+
+- Analytical chemistry thrawts definition: It is chemistry, physics, engineering, stats and CS all rolled together!
+- We work at the **extremes of analysis**.
+- What are your **design requirements**?
+    - Portable
+    - Small
+    - Better DLs/Sensititivity
+    - etc.
+
+---
+
+# A Definition
+
+Analtyical chemistry is the field concerned with ***creating and improving analytical processes***.
+
+<div class="mermaid">
+graph TD
+   A[Chemistry] --> F{Analytical Chemistry}
+   B[Physics] --> F{Analytical Chemistry}
+   C[Engineering] --> F{Analytical Chemistry}
+   D[Computer Science] --> F{Analytical Chemistry}
+   E[Statistics] --> F{Analytical Chemistry}
+   F{Analytical Chemistry} --> G[Physical]
+   F{Analytical Chemistry} --> H[Bio]
+   F{Analytical Chemistry} --> I[Organic]
+   F{Analytical Chemistry} --> J[Inorganic]
+</div>
+
+???
+
+- Collaboration is the work of an analytical chemist.
+
+
+---
+
+# A Definition
+
+> "To an analytical chemist, the process of making a useful measurement is critical; if the measurement is not of central importance to the work, then it is not analytical chemistry.
+>
+> "[We] will come across numerous examples of analytical methods...most of which are routine examples of chemical analysis. It is important to remember, however, that nonroutine problems prompted analytical chemists to develop these methods."  
+> 
+> [*Harvey 2.1*](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29/01%3A_Introduction_to_Analytical_Chemistry/1.01%3A_What_is_Analytical_Chemistry)
+
+---
+name: analytical-perspective
+
+# The Analytical Perspective 
+
+An analytical method may be broken up into 7 stages [[1](https://link.springer.com/article/10.1007/BF00470406), [2](https://pubs.acs.org/doi/10.1021/ed077p577)]:
+
+1. Conception
+2. Demonstration (Validation)
+3. Establishment of capabilities
+4. Widespread acceptance
+5. Continued development (e.g. commercialization)
+6. Cycling through steps 3-5
+7. Replacement/Death
+
+???
+
+- e.g TEM
+
+---
+class: img-full
+
+# The Analytical Perspective
+
+<img src="https://chem.libretexts.org/@api/deki/files/159831/Figure_1_3.png?revision=1", sytle="width: auto; height: 70%; border-radius: 200px;">
+.image-credit[Flow diagram showing one view of the analytical approach to solving problems, CC-BY-SA [Analytical Chemistry 2.1](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29/01%3A_Introduction_to_Analytical_Chemistry/1.02%3A_The_Analytical_Perspective)]
+
+???
+
+- Analytical chemistry begins with a problem
+
+---
+
+# Common Analytical Problems
+
+- Can be *qualitative* or *quantitative*.
+
+---
+
+# Modern Analytical Chemistry
+
+- Modern methods often rely on *instrumental tecnhiques*
+- [Instruments at WCU](https://www.wcu.edu/learn/departments-schools-colleges/cas/science-and-math/chemphys/instrumentation/index.aspx)
+
+???
+
+e.g. Ni in ore...flame AA
+
+---
+
+# Why Should we Do IA?
+
+<!-- =============================================================================== -->
+
+
+    </textarea>
+    <script src="remark.js" type="text/javascript"></script>
+    <!-- <script src="mermaid.min.js" type="text/javascript"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/efbc54fa3b.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create(
+        {
+          navigation: {scroll: false,},
+          slideNumberFormat: '%current%',
+          highlightLanguage: 'r',
+          highlightStyle: 'atom-one-light',
+        });
+        MathJax.Hub.Config({
+             tex2jax: {
+             skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+             }
+         });
+         MathJax.Hub.Configured();
+         mermaid.initialize({
+            startOnLoad: false,
+            cloneCssStyles: false,
+            theme: null
+          });
+          
+        function initMermaid(s) {
+          var diagrams = document.querySelectorAll('.mermaid');
+          var i;
+          for(i=0;i<diagrams.length;i++){
+            if(diagrams[i].offsetWidth>0){
+              mermaid.init(undefined, diagrams[i]);
+            }
+          }
+        }
+        slideshow.on('afterShowSlide', initMermaid);
+        initMermaid(slideshow.getSlides()[slideshow.getCurrentSlideIndex()])
+    </script>
+    </body>
+</html>

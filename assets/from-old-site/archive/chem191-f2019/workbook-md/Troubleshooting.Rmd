@@ -1,0 +1,10 @@
+# Appendix B: Strategies for Troubleshooting {-}
+
+<!-- # Steps to a Successful Project -->
+
+<!-- 1. Define your objective. -->
+<!-- 2. Write the algorithm. -->
+<!-- 3. Select the hardware. -->
+<!-- 4. Write the code. -->
+<!-- 5. Wire the project. -->
+<!-- 6. Test and debug. -->

@@ -1,0 +1,4 @@
+Sitemap: https://alphonse.github.io/sitemap.xml
+
+User-agent: *
+Disallow:

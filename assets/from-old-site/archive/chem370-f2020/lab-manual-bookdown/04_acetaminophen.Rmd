@@ -1,0 +1,642 @@
+# Rotation B: Acetaminophen
+
+##### **Objective** {-}
+
+Read the Memorandum on the following page to understand the scenario for this lab and determine your objectives.
+
+##### **To Turn In** {-}
+
+- Separate lab notebooks for each technique (e.g. one for HPLC, one for FT-IR, etc.) as ZIP folders containing your notebook and data.  Each student will submit a notebook individually roughly every three weeks.
+- A technical report detailing the entire project, to be turned in in stages (one per group).
+- Consult the [schedule](/archive/chem370-f2020/schedule) to keep track of due dates for notebooks and report stages.  
+- Refer to the materials on the [writing page](/archive/chem370-f2020/writing) for templates, formatting guidelines, content expectations, and grading rubrics.
+- An analysis worksheet for each instrument (linked under the Data Processing sections for each instrument).
+
+##### **Student Learning Outcomes** | *By the end of this lab, students will:*    {-}
+
+- Utilize chemical instrumentation for qualitative analysis of complex samples (e.g. GC-MS, Flame AA to ID sample contents).  
+- Apply instrument calibration techniques to conduct quantitative analysis on complex samples (e.g. FT-IR, HPLC, and Flame AA).   
+- Assess data validity using quality control and blank samples (GCs).  
+- Utilize R and RStudio to perform data analysis in an electronic lab notebook (including chemometric analysis).  
+- Participate effectively in group lab work and writing activities.  
+- Compile results from multiple analyses into a unified report that clearly conveys conclusion(s) to the question(s) posed at project start.  
+
+\newpage
+
+## Memorandum {- #am-memo}
+
+\noindent
+***Western Analytics, Inc.***
+
+\noindent  
+**To:** Pharmaceutical Division  
+\noindent  
+**From:** Al Fischer, PhD        
+\noindent  
+**Subject:** Acetaminophen Analysis  
+
+### Western Analysts: {-}
+
+A confidential manufacturer of pharmaceuticals has recently received complaints of hospitalizations related to their generic-brand, child-strength, chewable acetaminophen ("Tylenol").  The following symptoms have been observed in the patients (1) high acetaminophen concentration in the blood, (2) high zinc concentration in the blood, and (3) high concentrations of an unidentified organic compound in the blood, thought to be either caffeine or a flavoring compound.  The customer is unsure what the contaminant is or which production facility the bad product(s) came from.  They have halted manufacturing of the drug until the problem can be tracked down, and have sent samples to Western Analytics for analysis.  
+
+##### *Your job is to screen the products for:* {-}
+
+  1. Acetaminophen concentration and contamination using HPLC
+  2. General adulteration/contamination using FTIR and the Hit Quality Index method in [Rodriguez et al 2011](https://www.researchgate.net/profile/John_Clarkson6/post/What_are_some_good_reference_bands_for_Raman_spectroscopy/attachment/59d6244c79197b8077982a27/AS%3A312109580128257%401451424130311/download/Standardization+of+Raman+spectra+for+transfer+of+spectral+libraries+across+different+instruments.pdf)
+  3. Harmful flavoring agents using GCMS
+  4. Quantify the sodium concentration using flame AA to screen for sodium naproxen contamination.
+
+Please turn in a technical report detailing the findings of your analyses.  Your report should link together the results from all your analyses, use complementary results to bolster each other, and discuss what effects (if any) the findings from each analysis are likely to have on human health.
+
+##### **Sample Information:** {-}
+
+The customers pulled tablets from all production lines and marked them with their respective lot numbers.   Samples from two separate lots will be randomly assigned to your workgroup for analysis.  You may find things wrong with one, both, or none of your samples.  You will also be given a toxicant-free reference sample.
+
+##### **Record Keeping:**  {-}
+
+Due to the high-impact nature of this work, you must diligently keep track of all sample information -- especially lot numbers -- and data.  You must also follow our standard quality-control and data-validation practices to ensure your results are accurate.  Likewise, all results must meet the precision guidelines described in the procedure for each instrument.
+
+##### *Keep in mind:*   {-}
+
+- There are no additional samples available -- plan ahead to make sure you don't use up all your sample!  
+- The identity of each sample (provided on the bag/vial) must be explicitly tracked in your lab notebook and final report.  
+- You must provide me with your data files and lab notebooks (in addition to your report) for validation.  
+- You must get certified on each instrument prior to using it.  
+
+This is of utmost importance.  Each day the customer is down constitutes tens of thousands of dollars in lost revenue.
+
+Please visit my office or email me with any questions.
+
+\newpage
+
+## HPLC {#am-hplc}
+
+This lab will use the Agilent 1220 HPLC (high performance liquid chromatograph) to determine the concentration of acetaminophen in Tylenol tablets.
+
+HPLC is a separation method.  Like all chromatographic methods, it employs a mobile phase and a stationary phase.  An analyte dissolved in solution is injected onto a column (the stationary phase) and carried through the column by a solvent, called the eluent or mobile phase.  The column is packed with a substrate, which -- for reverse-phase HPLC as we'll perform here -- is a non-polar substance with a C<sub>18</sub> coating.  In the column, the sample partitions between the stationary and the mobile phase, and it's relative affinity for each determines how quickly it moves through the column.  In this way, HPLC allows us to separate analytes based on polarity.  In this lab, you'll use the HPLC to perform quantitative analysis.  This is possible because the area under each chromatographic peak is proportional to the concentration of each analyte.
+
+The general order for HPLC sample preparation is: (1) Prepare standard and quality control samples (QCs), (2) run standards and a QC, (3) prepare the samples, and (4) run the samples.  You should obtain a clean blank, a passing standard curve, and a passing QC before preparing your samples.  If any of these fails there is no point in running your samples!
+
+For HPLC, the definitions of "passing" are:  
+
+  1. **Blank:** Flat, smooth baseline showing only random noise and/or instrument drift no greater than a few percent over 15 minutes.  
+  1. **Standard Curve:** A linear line with $R^2 \ge 0.9900$.  
+  1. **QC:** A measured concentration within 5% ($\pm$ 5%) of the known concentration.  
+
+This is a quantitative analysis.
+
+### Safety {-}
+
+- This lab uses methanol ([SDS](http://www.sciencelab.com/msds.php?msdsId=9927227)).  Methanol can cause blindness and absorbs through the skin.  Wear gloves and goggles when working with methanol, and use it in a hood.  
+- Although samples are over-the-counter products, you should avoid ingesting and/or contacting them with your skin.
+
+### Standard Preparation
+
+1. Make 50 ml of 100-ppm (w/v) acetaminophen stock solution using 98% 4-acetamidophenol in 1:3 methanol:water.
+2. Perform serial dilutions to create a set of 5 standards with concentrations ranging from 0.5 - 25 ppm.  You will need 2 ml of each standard for HPLC analysis, but it won't hurt to have a little extra.
+3. Filter your standards into autosampler vials for analysis using a 0.45$\mu$m syringe filter.
+
+### Running Standards
+
+1. Warm up the HPLC according to the HPLC SOP.  Use the `CHEM370_acetaminophen.M` method.
+1. Place your standards in the HPLC autosampler.
+1. Prepare a sequence based on the autosampler locations of your samples (refer to HPLC SOP for more info).  Prepare your sequence in this order:
+    1. Zero Standard (blank)
+    1. Low Standard
+    1. Medium-low Standard
+    1. Medium Standard
+    1. Medium High Standard
+    1. High Standard
+    1. Blank
+    1. QC Sample
+1. After the instrument has warmed up (stable baseline), run your sequence.
+1. Analyze your standard curve, blanks, and QC.
+
+  ```{marginfigure}
+  **Checkpoint:**  
+
+  - A passing blank will show no signs of contamination.  
+  - A passing standard curve will have $R^2 \ge 0.9900$.  
+  - A passing QC will be within $\pm$ 5% of the known concentration.  
+
+  If any of these is not passing you must repeat the analysis and/or remake your standards until they pass!
+  ```
+
+### Sample Preparation
+
+1. Determine the mass of all the contents of your vials.
+2. Grind your sample into a fine, homogenous powder using a mortar and pestle.
+3. Cone and quarter your sample (on weighing paper) until you have just over 100 mg.
+4. Dissolve 100.0 mg of the tablet in 1:3 methanol:water, and bring the final volume to 100.0 ml.
+5. Perform a  1:100 dilution of you sample in 1:3 methanol:water.
+6. Filter you final dilution through a 0.45 $\mu$m syringe filter using a 20 ml syringe. Make sure you:
+      - Don't pull up on the plunger with the filter attached to the syringe (you may tear the filter).
+      - Discard the first 10 ml of filtrate.
+      - Use an aliquot of the last 10 ml of filtrate for analysis.
+
+### Running Samples
+
+1. Place approximately 2 ml of your final dilution in an autosampler vial; you should prepare at least 3 vials to run in triplicate.
+2. Prepare the appropriate blanks, using 1:3 methanol:water as your blank solution.  Please be sure to filter your blanks before analysis.
+1. Warm up the HPLC according the the HPLC SOP (skip if already warm).
+1. Place your standards in the HPLC autosampler.
+1. Prepare a sequence based on the autosampler locations of your samples (refer to HPLC SOP for more info).  Prepare your sequence in this order:
+    1. Blank, standards, and QC (see *HPLC | Instrumentation: Standards* section)
+    1. Up to 10 samples
+    1. QC Sample (same as previous QC; always finish with QC)
+1. After the instrument has warmed up, run your sequence.
+1. Analyze your standards and samples (you may skip the standards again if you've run them in the past hour -- just start with a QC instead).
+
+### Waste Disposal and Cleanup
+
+1. Place all liquid and/or powder wastes in the HPLC waste container for the lab.
+1. Place all (cleaned) disposable glass vials in the broken class bin.
+
+    > No chemicals should go in broken glass!
+
+### Data Processing {#hplc-data-processing-am}
+
+The following video walks you through the data processing portion of this lab.
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=bb4bb7a4-7260-4f97-9ec6-ac6300e32d3d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
+
+```{marginfigure}
+You should turn a ZIP folder containing:  
+
+- Your complete lab notebook as an .html and .Rmd file functioning with no errors.  
+- Your data files.  
+- Your completed assessment.
+```
+##### **Standard Curve and Concentrations** {-}
+
+1. Use your standards to determine which peak in your sample is acetaminophen.
+  ```{marginfigure}
+  Don't disregard the peaks that aren't acetaminophen.  They contain valuable information that you should discuss.
+  ```
+1. Use the HPLC software (or R if you prefer) to integrate the acetaminophen peak for each sample.
+1. Manually record the integration results in your lab notebook
+1. Calculate a standard curve using a linear model with a floating intercept.   Use units of ppm for your standard curve.
+1. Calculate the concentration (in ppm) of the QCs using your standard curve.
+1. Calculate the concentration (in ppm) of the samples using your standard curve.
+1. Use a *t*-test to determine if the mass of acetaminophen is *significantly* different from the expected mass. (See Appendix 3, "Comparing Means")
+1. Plot *representative chromatograms*:  You do not need to export every single chromatogram (your standards should all be very similar, just different in magnitude).  Instead, export and plot the chromatogram for your medium standard and the chromatogram for each sample.  Include these in your lab notebook and in a single figure in your final report. (See Appendix 2 for R examples).
+
+### Assessment {#am-hplc-assessment}
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+1. What is $R^2$ value for your calibration curve?  Call the variable `r2`.
+
+```{r question-am-hplc-1, purl = TRUE}
+r2 <- 0     # put your answer between the '<-' and '#'
+```
+
+2. What is sensitivity factor?  Call the variable `m`.
+
+```{r question-am-hplc-2, purl = TRUE}
+m <- 0     # put your answer between the '<-' and '#'
+```
+
+3. What is mean measured analyte concentration for the QC in mg/L?  Call the variable `qc_conc`.
+
+```{r question-am-hplc-3, purl = TRUE}
+qc_conc <- 0     # put your answer between the '<-' and '#'
+```
+
+4. What is the expected analyte concentration for the QC in mg/L?  Call the variable `qc_expected`.
+
+```{r question-am-hplc-4, purl = TRUE}
+qc_expected <- 0     # put your answer between the '<-' and '#'
+```
+
+5. TRUE or FALSE: My QC passes at the 95% confidence level.  Save your `TRUE` or `FALSE` answer as `qc_passfail`.
+
+```{r question-am-hplc-5, purl = TRUE}
+passfail <- FALSE     # put your answer between the '<-' and '#'
+```
+
+6. What is mean analyte concentration for sample 1 in mg/L?  Call the variable `s1_conc`.
+
+```{r question-am-hplc-6, purl = TRUE}
+s1_conc <- 0     # put your answer between the '<-' and '#'
+```
+
+7. What is mean analyte concentration for sample 2 in mg/L?  Call the variable `s2_conc`.
+
+```{r question-am-hplc-7, purl = TRUE}
+s2_conc <- 0     # put your answer between the '<-' and '#'
+```
+
+8. What is the 95% CI for sample 1 in mg/L?  Call the variable `s1_ci`.
+
+```{r question-am-hplc-8, purl = TRUE}
+s1_ci <- 0     # put your answer between the '<-' and '#'
+```
+
+9. What is the 95% CI for sample 2 in mg/L?  Call the variable `s2_ci`.
+
+```{r question-am-hplc-9, purl = TRUE}
+s2_ci <- 0     # put your answer between the '<-' and '#'
+```
+
+10. TRUE or FALSE: The concentration of Sample 1 is significantly different from the labeled value.  Save your `TRUE` or `FALSE` answer as `s1_passfail`.
+
+```{r question-am-hplc-10, purl = TRUE}
+s1_passfail <- FALSE     # put your answer between the '<-' and '#'
+```
+
+11. TRUE or FALSE: The concentration of Sample 2 is significantly different from the labeled value.  Save your `TRUE` or `FALSE` answer as `s2_passfail`.
+
+```{r question-am-hplc-11, purl = TRUE}
+s2_passfail <- FALSE     # put your answer between the '<-' and '#'
+```
+
+\newpage
+
+## FT-IR {#am-ftir}
+
+FT-IR spectroscopy is used to deduce the bonds present in liquids, solids, and gases.  It is widely used in industry, research, and teaching for qualitative analysis, but can also provide very accurate quantitative information.  All molecules have a unique infrared spectrum, comparable to a person's fingerprint.  However, it is usually very difficult to interpret infrared spectra of mixtures.  Chemometrics and linear algebra can circumvent this issue by picking out minute differences between spectra using statistical methods.  During this lab, FT-IR will be used to match a sample of acetaminophen to a reference spectrum using a metric called the hit quality index (HQI).  This methods provides a measure of how well two spectra match, and a HQI of 0.99 or better is required to indicate a contaminant-free sample.
+
+This lab will use the Perkin Elmer Spectrum One FT-IR (Fourier-transform infrared spectrometer) to determine whether samples of Tylenol (acetaminophen) are pure.  The Spectrum One is in NS 226.  Before lab, read [*Standardization of Raman Spectra for Transfer of Spectral Libraries Across Different Instruments*.](https://www.researchgate.net/publication/51602215_Standardization_of_Raman_spectra_for_transfer_of_spectral_libraries_across_different_instruments)  Focus on the paragraph regarding hit-quality index calculation.
+
+The general order for FT-IR sampling is: (1) collect a background (no sample present) and (2) collect sample spectra by placing a drop of sample on the instrument.  You will collect 3 spectra for each sample and 3 spectra of the reference sample.
+
+### Safety {-}
+
+- This lab will require the use of small amounts of [acetone](http://www.sciencelab.com/msds.php?msdsId=9927062); avoid contact with skin and eyes.
+- Although samples are over-the-counter products, you should avoid ingesting and/or contacting them with your skin.
+
+### Sample Preparation
+
+1. Determine the mass of all contents of your sample vials.
+2. Grind your samples into a fine, homogenous powder using a mortar and pestle.
+3. Cone a quarter your samples on weighing paper until you have approximately 100 mg of each for FT-IR, and store the extra sample in glass vials.
+
+### Instrumentation
+
+1.  Choose the CHEM370 user when opening the FTIR software; make sure your spectra are in *Absorbance* vs. *Frequency (wavenumber)*.
+1.  Record a background spectrum on the FT-IR according to the FT-IR SOP.
+1.  Place approximately one-third of the sample on the ATR window and acquire a spectrum.
+2.  Wet a Kimwipe with a small amount of acetone and clean the ATR cell and anvil with it.
+3.  Repeat the above steps 2 more times, for a total of three spectra.
+4.  Repeat the above steps for each sample, for a total of three spectra per sample.
+4.  Make sure you leave the instrument and your work area clean, and log out of the computer.
+
+### Waste Disposal and Cleanup
+
+- Clean the IR with acetone and replace the cover.
+
+  > Never spray acetone directly on the IR -- always spray it on a Kimwipe pointed away from the instrument.
+
+- Brush up any acetaminophen powder on and around the IR.
+- Use a minimal amount of warm water to rinse any powdered acetaminophen into the bottle labelled "Hazardous Waste: Lab 2 Acetaminophen" that is stored under the sample prep hood in the Instrument Lab.
+- Make sure your work area and the instrument are cleaner than you found them.
+
+### Data Processing
+
+The following video walks you through the data processing portion of this lab.
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=683a0991-3eb6-4e62-8bda-ac4600e1a364&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
+```{marginfigure}
+You should turn a ZIP folder containing:  
+
+- Your complete lab notebook as an .html and .Rmd file functioning with no errors.  
+- Your data files.  
+- Your completed assessment.
+```
+
+- You will need to export you data as a CSV file.  The Spectrum One does this automatically.  Just copy the exported data from the "Spectrum One Data Folder" (there is a shortcut on the desktop) to your folder on NEON.
+- Baseline correct your spectra by subtracting the minimum value from each data point.  This should make the minimum value on your plot 0. (See Appendix 2 for R examples)
+- Normalize your spectra by converting from absorbance units to relative absorbance.  Your final plot should range from 0 to 1. (See Appendix 2 for R examples)
+- Calculate the Hit Quality Index according to Eq. 2 in [Rodriguez et al (2011)](https://www.researchgate.net/publication/51602215_Standardization_of_Raman_spectra_for_transfer_of_spectral_libraries_across_different_instruments).  Be mindful of the difference between "x" (multiplication) and "·" (dot product). (See Appendix 2 for R examples)
+
+### Assessment {#am-ftir-assessment}
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+1. What is the unique ID (UID) value for Sample 1?  Call the variable `s1_uid`.
+
+```{r question-am-ftir-1, purl = TRUE}
+s1_uid <- 0     # put your answer between the '<-' and '#'
+```
+
+2. What is the unique ID (UID) value for Sample 2?  Call the variable `s2_uid`.
+
+```{r question-am-ftir-2, purl = TRUE}
+s2_uid <- 0     # put your answer between the '<-' and '#'
+```
+
+3. What is the hit quality index (HQI) value for Sample 1?  Call the variable `s1_hqi`.
+
+```{r question-am-ftir-3, purl = TRUE}
+s1_hqi <- 0     # put your answer between the '<-' and '#'
+```
+
+4. What is the hit quality index (HQI) value for Sample 2?  Call the variable `s2_hqi`.
+
+```{r question-am-ftir-4, purl = TRUE}
+s2_hqi <- 0     # put your answer between the '<-' and '#'
+```
+
+5. TRUE or FALSE: Sample 1 shows signs of contamination.  Save your `TRUE` or `FALSE` answer as `s1_passfail`.
+
+```{r question-am-ftir-5, purl = TRUE}
+s1_passfail <- FALSE     # put your answer between the '<-' and '#'
+```
+
+6. TRUE or FALSE: Sample 2 shows signs of contamination.  Save your `TRUE` or `FALSE` answer as `s2_passfail`.
+
+```{r question-am-ftir-6, purl = TRUE}
+s2_passfail <- TRUE     # put your answer between the '<-' and '#'
+```
+
+\newpage
+
+## GC-MS {#am-gcms}
+
+Gas chromatography is a technique used to separate mixtures of gases.  The gases are injected into a column, which (in our case) is a long, hollow tube with a non-polar liquid coating on the inside.  They are pushed through the column with a carrier gas, He in our instrument.  The column is initially held at low temperature (a little above room temperature) and ramped at a defined rate up to 250 degrees C.  The combination of the temperature ramp and the non-polar column allows compounds to be separated based on boiling point and polarity.  GC can be paired with many different techniques, and is often used with electron-ionization mass spectrometry.  This type of mass spectrometer breaks molecules apart into fragments, sorts the fragments by mass, and counts the number of fragments of each mass.  The specific spectrum (or distribution of fragments) is unique for every chemical compound and is based on the stability of each bond in the molecule.  In this way, the identity of a compound can usually be deduced from a mass spectrum alone, although techniques such as nuclear magnetic resonance spectroscopy and Fourier-transform infrared spectroscopy can greatly aid in identification.
+
+You will conduct liquid phase microextraction to analyze the volatile constituents of children's chewable acetaminophen.  You should identify the major flavor constituents and comment on whether or not they may be harmful at the approximate levels present.
+
+The general order for GC-MS sampling is: (1) run solvent blanks on the GC-MS until the instrument is clean,  (2) prepare a single sample using liquid-phase microextraction, (3) run the sample, and (4) repeat 2-4 as necessary.  You should obtain a clean blank before preparing your samples.  For GC-MS, a passing blank will have a baseline less than 50,000 counts that is stable and peak-free.  You may see an increase in the baseline at temperature above 250$^{\circ}$C; this is normal and still considered passing.  If the blank is dirty you will not be able to tell what is from your sample and what is contamination!  
+
+This is a qualitative analysis.
+
+### Safety {-}
+
+- This lab uses small amounts of methanol ([SDS](http://www.sciencelab.com/msds.php?msdsId=9927227)).  Methanol can cause blindness and absorbs through the skin.  Wear gloves and goggles when working with methanol, and use it in a hood.  
+- Microliter syringes may be very sharp!  
+- Although samples are over-the-counter products, you should avoid ingesting and/or contacting them with your skin.
+
+### Instrumentation
+
+1. Run a solvent blank on the GC-MS using the `CHEM370_Acetaminophen.M` method.  Use a microliter syringe to inject your sample and consult the GC-MS SOP.
+    ```{marginfigure}
+    ***Checkpoint:***
+
+    A solvent blank in this case is 2 $\mu$L methanol and nothing else.
+
+    Your blank should have a baseline less than 50,000 counts that is stable and free of peaks.  If you see peaks, run another blank until you don't!
+    ```
+1. If your blank is clean, prepare a sample as per below and run on the GC-MS using the `CHEM370_Acetaminophen.M` method.  Consult the GC-MS SOP for more information.
+
+### Sample Preparation
+
+
+1. Grind a Tylenol tablet in a clean mortar and pestle.
+1. Cone and quarter your sample until you have about 0.5 g.  Place that in an 2-mL GC autosampler vial.
+1. Clean a microliter syringe with the syringe cleaning apparatus.
+1. Load the syringe with 2 $\mu$L of methanol.
+1. Place the syringe in an arm clamp/ring stand and push the GC autosampler vial onto the tip of the syringe.  
+
+    > Do NOT let the tip touch the powder in vial!
+
+1. Push the plunger of the syringe down all the way so that you have a small drop of methanol on the end of the syringe.
+
+    > The syringe plunger does not go all the way down to the glass body!  Do not force it or you will ruin the syringe!
+
+1. Expose the drop of solvent for 30 seconds and then pull the plunger back up to pull the methanol back into the syringe.
+1. Inject the sample into the GC immediately.
+
+### Data Processing
+
+The following videos walk you through the data processing portion of this lab.
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7d2b5841-5888-453d-9173-ac6300e32d05&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d8e961a2-7075-437e-815e-ac6300e32d6d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
+```{marginfigure}
+You should turn a ZIP folder containing:  
+
+- Your complete lab notebook as an .html and .Rmd file functioning with no errors.  
+- Your data files.  
+- Your completed assessment.
+```
+
+*An example notebook is available [here](https://alphonse.github.io/archive/chem370-f2020/notebooks/good-example/)*.
+
+1. Use the GC-MS library (in ChemStation or OpenChrom) to get an initial idea of what compounds are present.
+1. Move the data folder for each sample (ending in .D) to NEON. 
+1. Transfer the data to your lab notebook folder and complete your analysis of the *2 most abundant compounds* in each sample.
+1. Plot your chromatogram as *Relative Abundance (%)* vs. *Time (minutes)*.
+1. Plot your mass spectra as *Relative Abundance (%)* vs. *m/z*.
+1. Clearly identify the base peak, the molecular ion, and any important isotope peaks.  Also state how many rings and double bonds your molecule has, and whether it has an odd or even number of nitrogen atoms.  Provide a formula, common name, and molecular weight for each compound.  You must show your calculations for all of these items.  See the [mass spec guide](/archive/chem370-f2020/guides/mass-spec) for help with interpretation.  Does your interpretation match the library?
+
+## Assessment {#am-gc-assessment}
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+1. What is the mass-to-charge ratio of the base peak in your spectrum?  Call the variable `base`.
+
+```{r question-am-gcms-1, purl = TRUE}
+base <- 0     # put your answer between the '<-' and '#'
+```
+
+2. What is the mass-to-charge ratio of the molecular ion?  Call the variable `molion`.
+
+```{r question-am-gcms-2, purl = TRUE}
+molion <- 0     # put your answer between the '<-' and '#'
+```
+
+3. How many C atoms are present in your sample?  Call the variable `catoms`.
+
+```{r question-am-gcms-3, purl = TRUE}
+catoms <- 0     # put your answer between the '<-' and '#'
+```
+
+4. How many rings and/or double bonds are present in your sample? Call the variable `rdb`.
+
+```{r question-am-gcms-4, purl = TRUE}
+rdb <- 0     # put your answer between the '<-' and '#'
+```
+
+5. TRUE or FALSE: My molecule contains an EVEN number of N atoms.  Answer `TRUE` or `FALSE` in the variable `oddeven`.
+
+```{r question-am-gcms-5, purl = TRUE}
+oddeven <- FALSE     # put your answer between the '<-' and '#'
+```
+
+6. What is the monoisotopic molecular weight of your molecule? Call the variable `molwt`.
+
+```{r question-am-gcms-6, purl = TRUE}
+molwt <- 0     # put your answer between the '<-' and '#'
+```
+
+7. Propose a formula for your molecule.  Use the variables `c` for number carbon atoms, `h` for number of hydrogen, `o` for oxygen, and `n` for nitrogen.  Your sample will not contain atoms other than these for this lab activity.
+
+```{r question-am-gcms-7, purl = TRUE}
+c <- 0     # put your answer between the '<-' and '#'
+h <- 0     # put your answer between the '<-' and '#'
+o <- 0     # put your answer between the '<-' and '#'
+n <- 0     # put your answer between the '<-' and '#'
+```
+
+\newpage
+
+## Flame AA {#am-faas}
+
+Flame atomic absorption spectroscopy is a common method of determining the concentration of specific metals (cations) in a sample.  A solution is nebulized (aerosolized) into an acetylene flame where it is atomized (broken apart into its constituent atoms).  The atoms in the flame absorb characteristic wavelengths of light, unique to each element.  A light source specific to the analyte of interest (specifically, a hollow cathode lamp) shines through the flame, where the light gets absorbed by the sample.  The amount of absorption absorbed is linearly proportional to the concentration of the analyte in solution.  Although the instrument is relatively robust and inexpensive, it is limited to probing for a single analyte at a time.
+
+The general procedure for this lab is to: (1) grind and dissolve a sample of acetaminophen, (2) prepare standards, blanks, and QCs, (3) run the standards, blank, and QC, and (4) run the samples.
+
+For flame AA, the definitions of "passing" are:  
+
+  1. **Blank:** Flat, smooth baseline showing only random noise and/or instrument drift no greater than a few percent over 15 minutes.  
+  1. **Standard Curve:** A linear line with $R^2 \ge 0.9990$.  
+  1. **QC:** A measured concentration within 5% ($\pm$ 5%) of the known concentration.  
+
+This is a quantitative analysis.
+
+### Safety {-}
+
+- Never leave the flame AA unattended when the flame is on.  
+- Although samples are over-the-counter products, you should avoid ingesting and/or contacting them with your skin.
+
+
+### Standard Preparation
+
+1. Prepare blanks from ultrapure water.
+1. Prepare sodium standards at 1-50 ppm using the stock solution provided.  Dilute with ultrapure water using volumetric glassware.
+1. Place your standards in 50 mL plastic centrifuge tubes for analysis.
+
+### Sample Preparation
+
+1. Tare a clean 50-mL centrifuge tube.
+1. Place an acetaminophen tablet in the tube.
+1. Obtain the mass of the tablet in the tube.
+1. Fill to 50 g with ultrapure water.
+1. Place the entire tube in an ultrasonic bath for 5 minutes.
+1. Filter the sample into a clean centrifuge tube using a 0.45 $\mu$m syringe filter.
+
+### Running Samples
+
+1. Use the Flame AA SOP to prepare a flame AA *method* file containing your blanks and standards.  Use the `C370_template` method as a template.
+1. Prepare a *Sample Information File* containing your QC.
+1. Run the blanks, standards, and QC.
+    ```{marginfigure}
+    **Checkpoint:**
+
+    - A passing blank will show no signs of contamination.  
+    - A passing standard curve will have $R^2 \ge 0.9990$.  
+    - A passing QC will be within $\pm$ 5% of the known concentration.  
+
+    If any of these is not passing you must repeat the analysis and/or remake your standards until they pass!
+    ```
+1. If everything passes, add your samples to your Sample Information File.
+1. Run your newly-added samples.
+
+*If you have extra sample, try screening it for other metals! (Ask how.)*
+
+### Waste Disposal and Cleanup
+
+1. Collect all wastes in the Flame AA waste container.
+1. Place used (empty) centrifuge tubes in the trash.
+1. Wipe up any spilled powder with a paper towel.
+1. Remove the vaping machine tubing and rinse it out with ultrapure water.
+
+### Data Processing
+
+
+The following video walks you through the data processing portion of this lab.
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=733fb481-8a20-4369-bf3c-ac67011c358e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
+```{marginfigure}
+You should turn a ZIP folder containing:  
+
+- Your complete lab notebook as an .html and .Rmd file, functioning with no errors.  
+- Your data files.  
+- Your completed assessment.
+```
+
+1. Export your data as a CSV using the CHEM 370 template in the Data Manager software.
+1. Use the absorbances of the standards to calculate your standard curve in R.
+1. Use the absorbances of the samples and QCs to calculate the sample and QC concentrations.
+1. Report your concentrations as the mean concentration $\pm$ 1 SD.
+1. Perform a *t*-test to determine if the sodium concentration is *significantly* different from 0. (See Appendix 3, "Comparing Means")
+
+### Reference
+
+[1] Williams, M.; Li, J.; Talbot, P. Effects of Model, Method of Collection, and Topography on Chemical Elements and Metals in the Aerosol of Tank-Style Electronic Cigarettes. *Sci. Rep.* 2019, 9 (1), 1–14. (doi: 10.1038/s41598-019-50441-4)[https://doi.org/10.1038/s41598-019-50441-4].
+
+### Assessment {#am-faas-assessment}
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+1. What is $R^2$ value for your calibration curve?  Call the variable `r2`.
+
+```{r question-am-faas-1, purl = TRUE}
+r2 <- 0     # put your answer between the '<-' and '#'
+```
+
+2. What is sensitivity factor?  Call the variable `m`.
+
+```{r question-am-faas-2, purl = TRUE}
+m <- 0     # put your answer between the '<-' and '#'
+```
+
+3. What is mean measured analyte concentration for the QC in mg/L?  Call the variable `qc_conc`.
+
+```{r question-am-faas-3, purl = TRUE}
+qc_conc <- 0     # put your answer between the '<-' and '#'
+```
+
+4. What is the expected analyte concentration for the QC in mg/L?  Call the variable `qc_expected`.
+
+```{r question-am-faas-4, purl = TRUE}
+qc_expected <- 0     # put your answer between the '<-' and '#'
+```
+
+5. TRUE or FALSE: My QC passes at the 95% confidence level.  Save your `TRUE` or `FALSE` answer as `qc_passfail`.
+
+```{r question-am-faas-5, purl = TRUE}
+passfail <- FALSE     # put your answer between the '<-' and '#'
+```
+
+6. What is mean analyte concentration for sample 1 in mg/L?  Call the variable `s1_conc`.
+
+```{r question-am-faas-6, purl = TRUE}
+s1_conc <- 0     # put your answer between the '<-' and '#'
+```
+
+7. What is mean analyte concentration for sample 2 in mg/L?  Call the variable `s2_conc`.
+
+```{r question-am-faas-7, purl = TRUE}
+s2_conc <- 0     # put your answer between the '<-' and '#'
+```
+
+8. What is the 95% CI for sample 1 in mg/L?  Call the variable `s1_ci`.
+
+```{r question-am-faas-8, purl = TRUE}
+s1_ci <- 0     # put your answer between the '<-' and '#'
+```
+
+9. (Acetaminophen Only) What is the 95% CI for sample 2 in mg/L?  Call the variable `s2_ci`.
+
+```{r question-am-faas-9, purl = TRUE}
+s2_ci <- 0     # put your answer between the '<-' and '#'
+```
+
+10. TRUE or FALSE: The concentration of Sample 1 is significantly different from the labeled value.  Save your `TRUE` or `FALSE` answer as `s1_passfail`.
+
+```{r question-am-faas-10, purl = TRUE}
+s1_passfail <- FALSE     # put your answer between the '<-' and '#'
+```
+
+11. (Acetaminophen Only)  TRUE or FALSE: The concentration of Sample 2 is significantly different from the labeled value.  Save your `TRUE` or `FALSE` answer as `s2_passfail`.
+
+```{r question-am-faas-11, purl = TRUE}
+s2_passfail <- FALSE     # put your answer between the '<-' and '#'
+```

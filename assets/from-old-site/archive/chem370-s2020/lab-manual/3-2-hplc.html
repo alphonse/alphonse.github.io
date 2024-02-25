@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="3.2 HPLC | CHEM 370 Lab Manual" />
+<meta property="og:type" content="book" />
+
+<meta property="og:image" content="images/cover-image-mass-spec.png" />
+<meta property="og:description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory" />
+
+
+<meta name="author" content="Al Fischer, PhD" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory">
+
+<title>3.2 HPLC | CHEM 370 Lab Manual</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+
+</head>
+
+<body>
+
+
+
+<div class="row">
+<div class="col-sm-12">
+<!--bookdown:toc:end-->
+<!--bookdown:toc:start-->
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="hplc" class="section level2">
+<h2><span class="header-section-number">3.2</span> HPLC</h2>
+<p>The general order for HPLC sample preparation is: (1) Prepare standard and quality control sample (QC), (2) run standards and QC, (3) prepare the samples, (4) run the samples. You should obtain a clean blank, passing standard curve, and passing QC before preparing your samples. If any of these fails there is no point in running your samples!</p>
+<p>For HPLC, the definitions of passing are:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Blank:</strong> Flat, smooth baseline showing only random noise and/or instrument drift no greater than a few percent over 30 minutes.<br />
+</li>
+<li><strong>Standard Curve:</strong> A linear line with <span class="math inline">\(R^2 \ge 0.9990\)</span>.<br />
+</li>
+<li><strong>QC:</strong> A measured concentration within 5% (<span class="math inline">\(\pm\)</span> 5%) of the known concentration.</li>
+</ol>
+<div id="standard-preparation" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Standard Preparation</h3>
+</div>
+<div id="instrumentation-standards" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Instrumentation: Standards</h3>
+<ol style="list-style-type: decimal">
+<li>Warm up the HPLC according the the HPLC SOP.</li>
+<li>Place your standards in the HPLC autosampler.</li>
+<li>Prepare a sequence based on the autosampler locations of your samples (refer to HPLC SOP for more info). Prepare your sequence in this order:
+<ol style="list-style-type: decimal">
+<li>Zero Standard (blank)</li>
+<li>Low Standard</li>
+<li>Medium-low Standard</li>
+<li>Medium Standard</li>
+<li>Medium High Standard</li>
+<li>High Standard</li>
+<li>QC Sample</li>
+</ol></li>
+<li>After the instrument has warmed up (stable baseline), run your sequence.</li>
+<li>Analyze your standard curve.</li>
+</ol>
+<p><label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle"><span class="marginnote"><span style="display: block;">A passing blank will show no signs of contamination.<br />
+A passing standard curve will have <span class="math inline"><span class="math inline">\(R^2 \ge 0.9990\)</span></span>.<br />
+A passing QC will be within <span class="math inline"><span class="math inline">\(\pm\)</span></span> 5% of the known concentration.</span></span></p>
+<blockquote>
+<p><strong>Checkpoint:</strong></p>
+<ul>
+<li>A passing blank will show no signs of contamination.<br />
+</li>
+<li>A passing standard curve will have <span class="math inline">\(R^2 \ge 0.9990\)</span>.<br />
+</li>
+<li>A passing QC will be within <span class="math inline">\(\pm\)</span> 5% of the known concentration.</li>
+</ul>
+<p>If any of these is not passing you must repeat the analysis and/or remake your standards until they pass!</p>
+</blockquote>
+</div>
+<div id="sample-preparation-1" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Sample Preparation</h3>
+<p>Repeat the following for each sample:</p>
+<ol style="list-style-type: decimal">
+<li>Tare an HPLC sample vial.</li>
+<li>Place 4 drops of e-cigarette liquid in the vial.</li>
+<li>Fill to top with approximately 2 mL ultrapure water.</li>
+<li>Obtain the mass of the water you added.</li>
+</ol>
+</div>
+<div id="instrumentation-samples" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Instrumentation: Samples</h3>
+<ol style="list-style-type: decimal">
+<li><p>Warm up the HPLC according the the HPLC SOP (skip if already warm).</p></li>
+<li><p>Place your standards in the HPLC autosampler.</p></li>
+<li><p>Prepare a sequence based on the autosampler locations of your samples (refer to HPLC SOP for more info). Prepare your sequence in this order:</p>
+<ol style="list-style-type: decimal">
+<li>Standards &amp; QC (see <em>HPLC | Instrumentation: Standards</em> section)</li>
+<li>Up to 10 samples</li>
+<li>QC Sample (same as previous QC; always finish with QC)</li>
+</ol></li>
+<li><p>After the instrument has warmed up, run your sequence.</p></li>
+<li><p>Analyze your standards and samples.</p>
+<blockquote>
+<p><em>You should re-run your standards when you run your samples. If you’ve already run them within the past 2 hours you do not need to re-run them.</em></p>
+</blockquote></li>
+</ol>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="3-1-gc-ms.html"><button class="btn btn-default">Previous</button></a>
+<a href="3-3-flame-aa.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

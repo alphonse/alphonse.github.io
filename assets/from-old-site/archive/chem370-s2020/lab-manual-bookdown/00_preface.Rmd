@@ -1,0 +1,70 @@
+# Preface {-}
+
+This workbook provides an introduction to instrumental analysis in the chemistry lab.  Students will be introduced to components of the “analyst’s toolbox” through both introductory labs and real-world scenarios.  Students will conduct spectroscopy, mass spectrometry, and chromatography in labs that include sample preparation, instrument calibration, and qualitative and quantitative analysis.  The techniques used are UV-visible spectroscopy (UV-vis, Lab 1), gas-chromatography (Lab 2), gas-chromatography/mass spectrometry (GC-MS, Labs 3/4), high-performance liquid chromatography (HP-LC, Labs 3/4), flame atomic absorption spectroscopy (Flame AA, Labs 3/4), and Fourier-transform infrared spectroscopy (FT-IR, Labs 3/4).
+
+### Course Overview {-}
+
+##### **Lab Activities** {-}
+
+Students will work in pairs at the beginning of the semester to complete introductory labs involving spectroscopy and gas chromatography.  After that, they will be assigned groups of 2-3 with which they will complete one rotation lab that lasts the remainder of the semester.  Students may choose to analyze [e-cigarette liquid](/archive/chem370-s2020/lab-manual/rotation-a-e-cigarette-liquid.html) or [acetaminophen tablets](/archive/chem370-s2020/lab-manual/rotation-b-acetaminophen.html) for their rotation lab.  The rotation lab are scenario-based, so students should refer to the memorandum at the beginning of each rotation for details.  The lab activities for the rotation lab are:
+
+| Vape Juice                             | Acetaminophen                               | 
+| -------------------------------------- | ------------------------------------------- |
+| GC-MS (ID flavor)                      | HPLC (Quantify acetaminophen, check purity) |
+| AA (Quantify Metal)                    | FTIR (Check for Adulterants)                |
+| FTIR (Check for Adulterants)           | GC-MS (ID flavor)                           |
+| HPLC (Quantify Nicotine, check purity) | AA (Quantify Metal)                         |
+
+##### **Lab Notebooks** {-}
+
+Students will use [Jupyter Lab](https://jupyter.org/) as an electronic lab notebook together with [Octave (or MATLAB)](https://www.gnu.org/software/octave/) for data processing.  Octave is an open-source programming language that is largely modeled after MATLAB, one of the most commonly used programming languages in the fields of chemistry, physics, and engineering.  In general, MATLAB code will usually run in Octave.  So if you get stuck in Octave, you can usually find MATLAB examples that will help solve your problem.  More information on these software packages can be found in the [appendices](/archive/chem370-s2020/lab-manual/appendix-1-getting-started-in-octave-and-jupyter-lab.html).
+
+### Features of the Book {-}
+
+##### **Typographical Conventions** {-}
+
+This lab manual will use some common typographical (formatting) conventions to distinguish between its different features.   For example, the data processing activities will make extensive use of [Octave (MATLAB)](https://www.gnu.org/software/octave/) code, which will always be represented with `monospace font with a grey background` (in the online version).  It may be `inline` or
+
+```
+offset.
+```
+
+You should take time to thoroughly digest code chunks.  Sometimes the code may work as-is; other times you may have to add to the code or change placeholders to make it work.  And other times the code may be *pseudocode*, which is example code that looks like it would work but will throw an error.  The code will often be color-coded to highlight various features of the programming language (a feature called syntax highlighting).
+
+The lab procedures will often contain warnings that your should watch out for.  
+
+   > A warning will look like this!
+
+It also contains checkpoints and tips to help keep you on track.  
+```{marginfigure}
+A tip or checkpoint will look like this.
+```
+
+
+<!-- Both in code and in the lab manual text, capital letters will be used to represent matrices and lowercase letters will be used to represent vectors and scalars.  Matrices and vectors will always be bold within the text.  For example:
+
+- `A` or **A** represents a matrix
+- `a` or **a** represents a vector
+- `a` or $a$ represents a scalar. -->
+
+##### **e-Book vs. PDF** {-}
+
+This lab manual is available in both HTML (webpage) format and as a PDF.  These two formats generally have identical content, although some features of the book (such as videos) may only work in the online version and do not appear in the PDF.
+
+### Additional Resources {-}
+
+##### **Octave/MATLAB** {-}
+
+- [MATLAB Cheat Sheet](http://assets.steventhornton.ca/A_Matlab_Cheat_Sheet/MatlabCheatsheet.pdf) (PDF)
+- [MATLAB Support - Examples](https://www.mathworks.com/help/examples.html)  
+- [Octave Wikibook](https://en.wikibooks.org/wiki/Octave_Programming_Tutorial)
+- [Jupyter Docs](https://jupyterlab.readthedocs.io/en/stable/)
+
+##### **Analytical Chemistry** {-}
+
+- **Recommended Supplementary Book:** Harvey, D.T. (2008) *[Analytical Chemistry 2.0](http://dpuadweb.depauw.edu/harvey_web/eTextProject/version_2.0.html)* (free online)
+
+##### **Markdown** {-}
+
+- [Markdown Tutorial](https://www.markdowntutorial.com/)
+- [Markdown Resources](https://www.markdowntutorial.com/conclusion/)

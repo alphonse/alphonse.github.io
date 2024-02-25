@@ -1,0 +1,300 @@
+# Gas Chromatography with Thermal Conductivity Detection (GC-TCD)
+
+##### **Objective** | Determine which instrument is best for determining the percent composition of an unknown mixture. {-}
+
+
+##### **To Turn In** |  *You should turn a ZIP folder containing:* {-}
+
+  1. Your complete lab notebook as an .Rmd and .html file, functioning with no errors.  
+  2. Your data files.  
+  3. The completed Assessment questions (included in the template).
+
+##### **Student Learning Outcomes** | *By the end of this lab, students will:*    {-}
+
+- Recognize that [gas] chromatography separates a mixture of compounds.  
+- Explain how chromatographic peak area relates to composition of a mixture.  
+- Estimate the signal to noise ratio (S/N) for two gas chromatographs.
+- Relate concepts about polarity from general and organic chemistry to instrumental analysis.  
+- Utilize RMarkdown and knitr as an electronic lab notebook.
+- Utilize R functions to analyze chromatographic data.  
+
+## Introduction {-}
+
+You will be given mixture of unknown composition for this lab.  It will contain several organic compounds with *similar boiling points* diluted in acetone.  You need to (1) determine how many components there are in the mixture, (2) determine the percent composition for each compound, and (3) determine the relative polarities of the compounds.
+
+There are two gas chromatographs available for this task, and your goal is to determine which works best.  You will run the sample on both instruments and compare their performance.  Specifically, one lab partner will use a Gow-Mac 150-series isothermal gas chromatography and the other will use a Gow-Mac 400-series.  Both use thermal conductivity detectors (GC-TCD) and work on the same principles.  They separate compounds by both boiling point and polarity, and produce a peak for each component wherein the peak area is proportional to the amount of that component present.
+
+Before coming to lab you should be familiar with the concepts presented in the following videos:
+
+- [Chromatography](https://www.youtube.com/watch?v=SnbXQTTHGs4)
+- [Gas chromatography](https://www.youtube.com/watch?v=4Xaa9WdXVTM)  
+- [Gow-Mac GC-TCDs](https://youtu.be/0fxH9WRKigw) (*optional - we will go over this material in lab*)
+
+## Lab Procedure
+
+### Prepare Samples
+
+1. Obtain a vial containing your unknown mixture from your instructor.  Make sure to record the ID/name in your notebook!  
+
+    > If you don't record the ID you cannot get credit for getting the right answer!
+
+Your run list for this experiment is, on each instrument:
+
+1. Blank
+1. Sample
+
+### Setup the Instrument
+
+~~*You will need [Vernier Logger Lite](https://www.vernier.com/products/software/logger-lite/#section5) (free) installed on your computer for these steps.*~~
+
+*Due to increased time constraints with COVID19, these steps will be completed for you. A computer and the software will be provided.*  
+
+1. Connect the Instrumentation Amplifier/GoLink! to your computer via USB and open Logger Lite.  
+1. Go to **Experiment > Set up sensors > GoLink:1**.  
+1. Select **Choose Sensor** and select **Instrumentation Amplifier from the dropdown menu**.  
+1. Open the **dropdown menu** again and choose the **0-20 mV** range for the amplifier.
+1. Use the **Zero** knob (on the GC) to adjust the signal until the readout is between 1 and 2 mV.
+
+    > Do not touch any other knobs -- they are very sensitive and moving them even a small amount may lead to several additional hours of stabilization time.
+
+1. Let the instrument run for a minute or two until you're cetain the baseline is stable.
+
+    ```{marginfigure}
+    The instrument is "stable" when the baseline fluctuates by no more than a few percent of full-scale (20 mV in this case).
+    ```
+
+### Load the Syringe
+
+1. Obtain a microliter syringe and clean it with acetone in the syringe cleaning apparatus:   
+    1. Place the syringe in the funnel on top of the apparatus.  
+    2. Turn on the vacuum pump with the **black on/off switch**.  
+    3. Squirt solvent through the syringe.  
+    4. Clean the plunger and the needle with a Kimwipe moistened with your solvent.  
+1. For a solvent blank:  Pull about 4 $\mu$L acetone into the syringe.  Record how much you end up loading into the syringe.
+1. For samples:
+    1. Pull 4 $\mu$L of your sample into the syringe.  Make sure inject *exactly* the same amount into each instrument.
+    1. Pull air into the syringe until you can clearly see how much sample you loaded.  Record this value in your lab notebook.
+
+### Inject the Sample
+
+1. Make sure the software is running and the instrument is ready to run. (It should be if you completed the steps above and the baseline is stable.)
+1. Push the syringe through the septum of the **side B** injection port and then depress the plunger.  Do this step as smoothly and quickly as possible, and be consistent.  
+
+    > The syringe plunger does not go all the way down to the glass body!  Do not force it or you will ruin the syringe!
+
+3. Press the start button in the software.  Again, the key is to be consistent with when you press the start button relative to sample injection!
+1. Allow the instrument to run for at least 5 minutes for all peaks to elute.
+1. Immediately clean the syringe in the syringe cleaning apparatus, and then repeat the loading and injection steps as needed for all blanks/samples.  Make sure you clean the syringe after the last sample.
+
+### Save the Data
+
+1. When your run is finished, click the **Store** button and then give the run a name in the data viewer on the left side of the screen.
+1. When all of your runs have finished go to **File > Export As > CSV** to save your data as a CSV file for processing.
+
+## Data Processing 
+
+The following video walks you through the data processing portion of this lab.
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=69790db3-01a1-4dc7-9f63-ac2900f490b5&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
+
+### Step-by-Step Instructions
+
+1. Create a new R project for this lab and use it for all your data processing. Make sure your data files are also in this folder. Use the path: `lab-notebooks/Lab 2: GC-TCD`.  (You should have done this in Exercise 1.4.)
+1. Load the CSV files into R/RStudio.  You may also want to plot the data to inspect it.
+
+    ```{R, eval = FALSE}
+    chromatogram <- read.csv('filename.csv');  # replace 'filename' with your filename
+    ```
+
+1. Remove the baseline offset (DC offset) from the data.
+
+    ```{R, eval = FALSE}
+    ## Define the "baseline" as 4 minutes to end of chromatogram where there are no peaks
+    baseline = mean(chromatogram[481:end, 2]);
+
+    ## subtract the mean baseline value and store in second column of data set
+    chromatogram[:, 2] <- chromatogram[:, 2] - baseline;  
+    ```
+
+1. Plot the chromatogram with Time on the $x$ axis and signal level on the $y$ axis.
+  
+    ```{R, eval = FALSE}
+    plot(time, signal, xlab = 'Time (min)', ylab = 'Signal (arbitrary)');
+    ```
+
+1. Use the function `peakArea()` to calculate the area of each peak in your chromatograms.
+
+    ```{octave, eval = FALSE}
+    ### You must first run the code shown in the peak area function for this to work!
+    ### Copy and paste it into your notebook and run the cell.
+
+    peak1_area = peakArea([chromatogram(:, 1), chromatogram(:, 2)], x1, x2, true);
+    ### substitute the lower limit of integration for x1 and the upper limit for x2 (in minutes)
+    ### if the last argument is true, a plot will be created
+
+    ### Repeat the function as many times as necessary to integrate each peak.  You will need to change the time for each peak.
+
+    ### ... and so on
+    ```
+
+1. Find the percent composition for each *unknown* peak.  The percent composition for peak $n$ is:
+
+    \[
+    C_n(\%)=\frac{A_n}{A_1 + A_2 + ... A_n} \times 100\%
+    \]
+
+    where $A_n$ represents the peak area of peak $n$.  Devise a way program this in Octave.
+
+1. Estimate the signal to noise (S/N) ratio for each peak.  S/N is defined as:
+
+    $$
+    \frac{S}{N} = \frac{2H}{h} = \frac{\text{Peak Height}}{\text{min-to-max baseline noise}}
+    $$
+
+    where $H$ is the peak height at maximum and $h$ is the min-to-max noise in the baseline.  Use the maximum peak height as signal.  The example below shows how to subset the data and find the min and max values.  You will need to calculate $S/N$ from those values according to the formula above.
+
+    ```{R, eval = FALSE}
+    ## find range of baseline, near end where there are no peaks
+    h <- 2 * (max(chromatogram[481:end, 2]) - min(chromatogram[81:end, 2]))
+
+    H1 <- max(chromatogram[chromatogram[:, 1] < x, 2]) # x represents dividing line between the two peaks in minutes.
+    H2 <- max(chromatogram[chromatogram[:, 1] > x, 2]) # x represents dividing line between the two peaks in minutes.
+    ```
+
+    <!-- See Section 5.3/Example 5.4 in your textbook for more information. -->
+
+6. Include a discussion of (1) how many constituents are in your sample, (2) the percent composition for each, and (3) the relative polarity of each component.
+7. Before turning in your notebook, run `rm(list = ls())` to clear your workspace and then run your entire notebook again.  Fix any errors before turning in your notebook.
+8. After completing the assessment questions at the end of the template, knit your notebook to an HTML.
+9. Compress your notebook (Rmd and HTML files) and data file(s) into ZIP folder and upload it to [Dropbox](https://alphonse.github.io/chem370/assignments/submissions.html).
+
+## Assessment {#gctcd-assessment}
+
+These questions also appear in the notebook template.
+
+Answer the following questions by saving the result as the specified R variable in an R code block at the end of your lab notebook.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+1. What is your sample ID?  Call it `ID`.
+
+```{r question-gc-1, purl = TRUE}
+ID <- "Sample Z"  # Delete sample Z and insert your sample name.  Leave the quotes.
+```
+
+2. What is the *retention time* of the solvent for the blank on the GC-400, in minutes? Save your answer as `solventPeak.blank`
+
+```{r question-gc-2, purl = TRUE}
+solventPeak.blank <- 0    # put your answer between the '<-' and '#'
+```
+
+3. What is the retention time of the *solvent peak* in the sample for the GC-400?  Specify by it's retention time and save your answer as `solventPeak.sample`
+
+```{r question-gc-3, purl = TRUE}
+solventPeak.sample <- 0    # put your answer between the '<-' and '#'
+```
+
+4. Does the retention time exactly agree for the blank and the sample?  Write "yes" or "no" and save the answer as `solventPeak.agree`.
+
+```{r question-gc-4, purl = TRUE}
+solventPeak.agree <- "no"    # put your answer inside the quotes, and make sure to leave the quotes
+```
+
+5. Assuming the peaks do not *exactly* agree, what is the dominant type of error causing the disagreement?  Save the answer as `solventPeak.error`.
+
+```{r question-gc-5, purl = TRUE}
+solventPeak.error <- "type"    # put your answer inside the quotes, and make sure to leave the quotes
+```
+
+6. How many compounds are in your sample, not including the solvent?  Save your answer as the variable `noCompounds`.
+
+```{r question-gc-6, purl = TRUE}
+noCompounds <- 0    # put your answer between the '<-' and '#'
+```
+
+7. What is the percent composition for least polar compound, as a percentage (%), for the GC-400?  Provide your answer as the variable `leastPolarPercent`.
+
+```{r question-gc-7, purl = TRUE}
+leastPolarPercent <- 0    # put your answer between the '<-' and '#'
+```
+
+8. What is the percent composition for most polar compound, as a percentage (%), for the GC-400?  Provide your answer as the variable `mostPolarPercent`.
+
+```{r question-gc-8, purl = TRUE}
+mostPolarPercent <- 0    # put your answer between the '<-' and '#'
+```
+
+9. What is the range of the baseline values, in millivolts (mV), for the GC-400?  Provide your answer as the variable `baselineRange.400`.
+
+```{r question-gc-9, purl = TRUE}
+baselineRange.400 <- 0    # put your answer between the '<-' and '#'
+```
+
+10. What is the signal level for the tallest peak, in millivolts (mV), for the GC-400?  Provide your answer as the variable `signal.400`.
+
+```{r question-gc-10, purl = TRUE}
+signal.400 <- 0    # put your answer between the '<-' and '#'
+```
+
+11. What is the signal to noise ratio for the tallest peak in the GC-400?  Provide your answer as the variable `sn.400`.
+
+```{r question-gc-11, purl = TRUE}
+sn.400 <- 0    # put your answer between the '<-' and '#'
+```
+
+12. What is the range of the baseline, in millivolts (mV), for the GC-150?  Provide your answer as the variable `baselineSD.150`.
+
+```{r question-gc-12, purl = TRUE}
+baselineSD.150 <- 0    # put your answer between the '<-' and '#'
+```
+
+13. What is the signal level for the tallest peak, in millivolts (mV), for the GC-150?  Provide your answer as the variable `signal.150`.
+
+```{r question-gc-13, purl = TRUE}
+signal.150 <- 0    # put your answer between the '<-' and '#'
+```
+
+14. What is the signal to noise ratio for the tallest peak in the GC-150?  Provide your answer as the variable `sn.150`.
+
+```{r question-gc-14, purl = TRUE}
+sn.150 <- 0    # put your answer between the '<-' and '#'
+```
+
+15. Are the retention times the same or different on each instrument?  Are the peaks separated better on one instrument than another?  Propose some ideas as to why.  Provide your answer as the variable `differences`.
+
+```{r question-gc-15, purl = TRUE}
+differences <- "The retention times are exactly the same."    # put your answer between the '<-' and '#'
+```
+
+## Notebook Rubric {#gctcd-rubric}
+
+I will use this rubric to judge the *content* (not accuracy) of your notebook.  For all items: '2' = exceptional, '1' = satisfactory, and '0' = inadequate/not present.
+
+| Item                                                                                                           | 2   | 1   | 0   |
+| -------------------------------------------------------------------------------------------------------------- | --- | --- | --- |
+| Descriptive title present?                                                                                     |     |     |     |
+| Introduction present describing experimental goals?                                                            |     |     |     |
+| Materials and Methods: detailed enough to convey *exactly* what was done?                                      |     |     |     |
+| Materials and Methods: Instrument table(s) complete?                                                           |     |     |     |
+| Results and Data: Calibration curve (if needed) plotted with high quality, including R2, slope, and intercept  |     |     |     |
+| Results and Data: all spectra, chromatograms, etc., plotted with high quality                                  |     |     |     |
+| Results and Data: Notebook runs without errors                                                                 |     |     |     |
+| Conclusion present and clearly states outcome of experiment while discussing errors/future direction as needed |     |     |     |
+| References clearly cited and used in the notebooks                                                             |     |     |     |
+
+
+Include a discussion of (1) how many constituents are in your sample, (2) the percent composition for each, (3) the relative polarity of each component, and (4) any differences you observe between samples.
+
+## Materials (for Instructors) {- #gctcd-materials}
+
+### Materials  {-}
+
+- Syringe cleaning apparatus
+- Microliter syringe
+- GC-TCD Instrument
+
+### Chemicals {-}
+
+- Acetone in wash bottle
+- Unknown mixtures

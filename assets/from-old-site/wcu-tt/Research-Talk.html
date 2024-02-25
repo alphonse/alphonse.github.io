@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Al Fischer, PhD</title>
+    <link rel="stylesheet" type="text/css" href="remark-wcu-tt.css">
+    <link rel="stylesheet" type="text/css" href="mermaid.css">
+    <div w3-include-html="slide-types.htm"></div>
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+
+---
+
+<!-- <h2 style = "text-align: left; font-weight: bold; margin-left: 40px; font-size: 54px; margin-top: 10px;">Environmental applications of ultratrace spectroscopy</h2> -->
+<!-- <h2 style = "text-align: left; font-weight: bold; margin-left: 40px; font-size: 54px; margin-top: 10px;">Ultratrace Spectroscopy for Environmental Analysis</h2> -->
+<h2 style = "text-align: left; font-weight: bold; margin-left: 40px; font-size: 54px; margin-top: 10px;">Portable Instrumentation for UV-visible Spectroscopy of Atmospheric Aerosols</h2>
+<h3 style = "text-align: left; font-weight: thin; margin-left: 40px; font-size: 48px;">Al Fischer, PhD</h3>
+
+<center>
+<img src="./img/wcu-tt_pas-ortho.png", style="height: 325px;">
+</center>
+
+<!-- <center>
+<img src="./img/wcu-tt_mp-dark.jpg">
+</center> -->
+
+---
+exclude: true
+
+## 1 | Background: Aerosols & Climate
+
+## 2 | Past Work
+
+  - New Instrumentation: Photoacoustic Spectroscopy
+  - Applications
+
+## 2 | Recent Work
+
+  - Low-cost aerosol sensors for experiential undergraduate learning
+
+## 3 | N
+
+  - NIR-BBCES
+
+---
+
+## 1 | Atmospheric Aerosols
+  
+  - Global Aerosols
+  - Aerosols & Climate
+
+## 2 | Photoacoustic Spectroscopy
+
+  - Instrument Development
+  - Applications
+
+## 3 | Low-cost Aerosol Sensors
+
+  - Consumer-grade Nephelometers
+  - A low-cost PAS
+
+## 4 | Cavity Enhanced Spectroscopy
+
+  - Aerosol Extinction
+  - NIR-BBCES
+
+---
+
+class: center
+
+*Portrait of Global Aerosols*
+
+---
+class: center
+
+# intro | <b>Aerosols & Climate</b>
+
+Aerosols both cool and warm Earth.
+
+<img src="./img/wcu-tt_radiative_balance.png">
+
+---
+class: center
+
+# intro | <b>Aerosols & Climate</b>
+
+Aerosols are a large uncertainty in climate models.
+
+<img src="./img/wcu-tt_ipcc.png", style="height: 350px;">
+
+.image-credit[IPCC AR5: *The Physical Science Basis* (2013)]
+
+---
+class: center
+
+# intro | <b>Aerosols & Climate</b>
+
+Aerosols are a large uncertainty in climate models.
+
+<img src="./img/wcu-tt_ipcc-highlight.png", style="height: 350px;">
+
+.image-credit[IPCC AR5: *The Physical Science Basis* (2013)]
+
+---
+
+class: center
+
+# intro | <b>Light Absorbing Carbon</b>
+
+There are two categories of carbonaceous aerosols:  
+brown carbon and <b>black carbon</b>.
+
+<img src="./img/wcu-tt_black-carbon.png", style="height: 350px;">
+
+.image-credit[Lambe et al. (2014) *ES&T*]
+
+---
+
+class: center
+
+# intro | <b>Light Absorbing Carbon</b>
+
+There are two categories of carbonaceous aerosols:  
+<b>brown carbon</b> and black carbon.
+
+<img src="./img/wcu-tt_brown-carbon.png", style="height: 350px;">
+
+.image-credit[VanNoort et al. (2004) *ES&T*]
+
+???
+Humic Acid
+
+
+---
+class: center
+
+# intro | <b>Absorption Ångström Exponent</b>
+
+Aerosol absorption is usually assumed to follow a power law:  
+$\alpha (\lambda) = \beta \lambda^{-AAE}$
+
+<img src="./img/wcu-tt_brc-bc.png", style="height: 350px;">
+
+.image-credit[AAEs from Bond et al (2013) **JGR** & Lambe at al (2014) **ES&T**]
+
+---
+exclude: true
+
+# instrumentation | <b>Technique Choice</b>
+
+## Design Requirements
+- UV-vis coverage
+- Measure absorption down to < 1 Mm$^{-1}$ (sensitive)
+- Very accurate
+- Very precise
+- Portable
+- High temporal resolution
+
+---
+exclude: true
+
+
+# instrumentation | <b>Technique Choice</b>
+
+## Design Requirements
+- UV-vis coverage
+- ~~Measure absorption down to < 1 Mm$^{-1}$ (sensitive)~~
+- ~~Very accurate~~
+- Very precise
+- Portable
+- ~~High temporal resolution~~
+
+## Options
+
+- Filter-based extraction + UV-vis
+
+---
+exclude: true
+
+
+# instrumentation | <b>Technique Choice</b>
+
+## Design Requirements
+- UV-vis coverage
+- Measure absorption down to < 1 Mm$^{-1}$ (sensitive)
+- ~~Very accurate~~
+- ~~Very precise~~
+- Portable
+- High temporal resolution
+
+## Options
+
+- ~~Filter-based extraction + UV-vis~~
+- Filter-based transmission (aethalometer)
+
+---
+exclude: true
+
+
+# instrumentation | <b>Technique Choice</b>
+
+## Design Requirements
+- UV-vis coverage
+- Measure absorption down to < 1 Mm$^{-1}$ (sensitive)
+- Very accurate
+- ~~Very precise~~
+- Portable
+- High temporal resolution
+
+## Options
+
+- ~~Filter-based extraction + UV-vis~~
+- ~~Filter-based transmission (aethalometer)~~
+- Extinction (e.g. CRD) - Scattering (nephelometer)
+    (Extinction = Scattering + Absorption)
+
+---
+exclude: true
+
+
+# instrumentation | <b>Technique Choice</b>
+
+## Design Requirements
+- ~~UV-vis coverage~~
+- ~~Measure absorption down to < 1 Mm$^{-1}$ (sensitive)~~
+- Very accurate
+- Very precise
+- Portable
+- High temporal resolution
+
+## Options
+
+- ~~Filter-based extraction + UV-vis~~
+- ~~Filter-based transmission (aethalometer)~~
+- ~~Extinction (e.g. CRD) - Scattering (nephelometer)~~
+- Photothermal (e.g. photoacoustic)
+
+---
+
+class: center
+
+# instrumentation | <b>Photoacoustic</b>
+
+Modulated light is converted to a sound wave with  
+amplitude $\propto$ absorption.
+
+<img src="./img/wcu-tt_pas-overview.png", style="height: 350px;">
+
+.image-credit[Lower image: Hk kng, [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)]
+
+---
+
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+The 'MultiPAS' platform for photoacoustic spectroscopy:  
+MP-IV (vis/NIR).
+
+<img src="./img/wcu-tt_mp-iv.png", style="height: 400px;">
+
+.image-credit[Fischer and Smith (2018) *AS&T*]
+
+---
+exclude: true
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+Wavelengths are deconvolved using fast Fourier transform.
+
+<img src="./img/wcu-tt_pas-res-f.png">
+
+.image-credit[Fischer and Smith (2018) *AS&T*]
+
+
+???
+Q = 30
+
+
+---
+exclude: true
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+Wavelengths are deconvolved using fast Fourier transform.
+
+<img src="./img/wcu-tt_pas-res-f.png">
+
+.image-credit[Fischer and Smith (2018) *AS&T*]
+
+
+???
+Q = 30
+
+---
+exclude: true
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+Detection limits are ~0.6 Mm$^{-1}$ (2-minute, 2-$\sigma$).  
+Commercial instrument is 1 Mm$^{-1}$ for 10-minute average.
+
+<!-- <img src="./img/wcu-tt_mp-case-montage.png", style="height: 425px;"> -->
+<!-- <img src="./img/wcu-tt_mp-case-open-no-lid.png", style="height: 425px;"> -->
+<img src="./img/wcu-tt_background-signal.png", style="height: 420px;">
+
+.image-credit[Fischer and Smith (2018) *AS&T*]
+
+
+
+---
+
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+The 'MultiPAS' platform for photoacoustic spectroscopy:  
+MP-III (vis/NIR).
+
+<img src="./img/wcu-tt_mp-iii-2.png", style="height: 425px;">
+
+
+---
+
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+The 'MultiPAS' platform for photoacoustic spectroscopy:  
+MP-UV (UV/blue).
+
+<img src="./img/wcu-tt_mp-uv.png", style="height: 425px;">
+
+---
+class: center
+
+# instrumentation | <b>PAS Calibration</b>
+
+Experimental setup for calibrating with gases (A) and aerosols (B).
+
+<img src="./img/wcu-tt_o3-exp-setup.png", style = "height: 350px;">
+
+.image-credit[Fischer and Smith (2018) *Atmos. Meas. Tech.*]
+
+
+---
+
+class: center
+
+# instrumentation | <b>PAS Calibration</b>
+
+The MultiPAS is calibrated with NO$_2$ using the built-in CRD.
+
+<img src="./img/wcu-tt_no2-nigrosin-mie.png">
+
+.image-credit[Fischer and Smith (2018) AS&T]
+
+---
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+Detection limits are ~0.6 Mm$^{-1}$ (2-minute, 2-$\sigma$).  
+Commercial instrument is 1 Mm$^{-1}$ for 10-minute average.
+
+<!-- <img src="./img/wcu-tt_mp-case-montage.png", style="height: 425px;"> -->
+<!-- <img src="./img/wcu-tt_mp-case-open-no-lid.png", style="height: 425px;"> -->
+<img src="./img/wcu-tt_background-signal.png", style="height: 420px;">
+
+.image-credit[Fischer and Smith (2018) *AS&T*]
+
+---
+exclude: true
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+The 'MultiPAS' PAS is portable.
+
+<!-- <img src="./img/wcu-tt_mp-case-montage.png", style="height: 425px;"> -->
+<!-- <img src="./img/wcu-tt_mp-case-open-no-lid.png", style="height: 425px;"> -->
+<img src="./img/wcu-tt_mp-case-nobg.jpg", style="height: 425px;">
+
+---
+
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+BC and BrC can be separated with a multi-exponential fit:  
+
+$$\alpha (\lambda) = \beta\_{BC} \lambda^{-1.0} + \beta\_{BrC} \lambda^{-AAE\_{BrC}}$$
+
+<img src="./img/wcu-tt_ambient-bc-brc.png", style="height: 375px;">
+
+.image-credit[Fischer (2018) Portable Instrumentation for UV-visible Spectroscopy of Ambient and Laboratory-generated Aerosols]
+
+---
+exclude: true
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+The MultiPAS instruments took part in BC4 and BC5 to study effects of coatings on black carbon.
+
+<img src="./img/wcu-tt_bc5-block-diagram.png">
+
+---
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+The measured soot spectrum agrees well with literature values.
+
+<img src="./img/wcu-tt_bc5-spectrum.png" style="height: 400px;">
+
+---
+exclude: true
+class: center
+
+# instrumentation | <b>MultiPAS</b>
+
+Some differences are seen when compared to other instruments.
+
+<img src="./img/wcu-tt_bc5_intercomparison.png" style="height: 515px;">
+
+
+---
+exclude: true
+# applications
+
+## Discrepancies in PAS measurements
+
+- NIST Intercomparison
+- How to calibrate a PAS?
+
+## Discrepancies in "online" vs. "offline" measurements
+
+- Filter-based vs. PAS measurements
+- Evidence for a BC-BrC continuum
+
+## Reconciling laboratory exerpiments, models, and ambient measurements
+
+- Coated soot absorption enhancement
+
+---
+exclude: true
+# Applications
+
+---
+exclude: true
+class: center
+
+# applications | <b>PAS Calibration</b>
+
+There is no agreed-upon calibration standard for PAS, resulting in measurement discrepancies.
+
+<img src="./img/wcu-tt_nist.png" style="height: 400px;">
+
+.image-credit[NIST Technical Note 1989]
+
+
+---
+exclude: true
+
+class: center
+
+# applications | <b>PAS Calibration</b>
+
+Many labs use ozone to calibrate, but...
+
+ozone photodissociates below 1100 nm.
+
+<!-- $$\ce{O_3} + h\nu \text{ (>1.1 eV}) \ce{->} \ce{O_2} (^3\Sigma_g^-) + \ce{O(^3P)}$$
+ -->
+
+<img src="./img/wcu-tt_no2-cal.png", style = "height: 350px;">
+
+.image-credit[Fischer and Smith (2018) *Atmos. Meas. Tech.*]
+
+???
+
+(1.1 eV = 1127 nm)
+
+
+
+---
+exclude: true
+class: center
+
+# applications | <b>PAS Calibration</b>
+
+<img src="./img/wcu-tt_o3-irradiation.png", style = "height: 350px;">
+
+.image-credit[Fischer and Smith (2018) *Atmos. Meas. Tech.*]
+
+---
+exclude: true
+
+class: center
+
+# applications | <b>PAS Calibration</b>
+
+<img src="./img/wcu-tt_o3-model.png", style = "height: 350px;">
+
+.image-credit[Fischer and Smith (2018) *Atmos. Meas. Tech.*]
+
+---
+exclude: true
+class: center
+
+# applications | <b>Coated Soot</b>
+
+Soot exihibits absorption enhancement when coated.
+
+$R_{BC} = \frac{\text{Diameter of Coated Particle}}{\text{Diameter of Soot Core}}$
+
+---
+exclude: true
+class: center
+
+# applications | <b>Coated Soot</b>
+
+Ambient measurements do not agree with theory or laboratory measurements.
+
+<img src="./img/wcu-tt_pnas-fig1.png", style = "height: 400px;">
+
+.image-credit[Fierce et al (2020) PNAS]
+
+---
+exclude: true
+
+class: center
+
+# applications | <b>Coated Soot</b>
+
+Particle-to-particle morphology differences (mostly) explain this.
+
+<img src="./img/wcu-tt_pnas-fig2.png", style = "height: 400px;">
+
+.image-credit[Fierce et al (2020) PNAS]
+---
+class: center
+
+# Differences between online and offline measurements
+
+---
+class: center
+
+# applications | <b>Online vs. Offline</b>
+
+A laboratory experiment was designed to compare filter-based and PAS measurements.
+
+<img src="./img/wcu-tt_rawad-combustion-setup-dark.png", style = "height: 400px;">
+
+.image-credit[Adapted from Cheng et al (2021) AS&T]
+---
+class: center
+
+# applications | <b>Online vs. Offline</b>
+
+Measurements of filter extracts disagree with PAS measurements.
+
+<img src="./img/wcu-tt_rawad-extract-efficiency.png", style = "height: 400px;">
+.image-credit[Cheng et al (2021) AS&T]
+
+---
+exclude: true
+class: center
+
+# applications | <b>BrC Continuum</b>
+
+These same data suggest BC and BrC are extremes of the same, not distinct categories.
+
+<img src="./img/wcu-tt_rawad-continuum.png", style = "height: 400px;">
+
+.image-credit[Cheng et al (2021) AS&T]
+
+---
+class: center
+
+# applications | <b>Aethalometer</b>
+
+The aethalometer provides real-time measurements of aerosol absorption by measuring filter transmission.
+
+<img src="./img/wcu-tt_aeth-principal.png" style = "height: 400px;">
+
+---
+class: center
+
+# applications | <b>Aethalometer</b>
+
+The aethalometer and PAS report vastly different absorbances.
+
+<img src="./img/wcu-tt_aeth-raw.png" style = "height: 400px;">
+
+---
+exclude: true
+class: center
+
+# applications | <b>Aethalometer</b>
+
+The aethalometer and PAS report vastly different absorbances.
+
+<img src="./img/wcu-tt_mp-ambient-ts.png" style = "height: 400px;">
+
+---
+class: center
+
+# applications | <b>Aethalometer</b>
+
+The aethalometer and PAS measure the same AAE.
+
+<img src="./img/wcu-tt_aeth-aae.png" style = "height: 400px;">
+
+---
+class: center
+
+# applications | <b>Aethalometer</b>
+
+And the AAE can be used to determine a correction factor!
+
+<img src="./img/wcu-tt_aeth-correction.png" style = "height: 400px;">
+
+
+---
+
+# Low-cost Instrumentation
+
+---
+class: center
+
+# low-cost sensors | <b>wheeCAIR</b>
+
+Numerous low-cost sensors have come to market over the past 5-10 years.
+
+<img src="./img/wcu-tt_wheeCAIR-sensors-overview.png", style="height: 175px;">
+
+<img src="./img/wcu-tt_wheeCAIR-instrument-diagram.png", style="height: 200px;">
+
+.image-credit[Top images (L to R): Shinyei, AirBeam, PurpleAir, Dylos, TSI]
+
+---
+class: center
+
+# low-cost sensors | <b>wheeCAIR</b>
+
+The Cullowhee Clean Air sensor is a low-cost aerosol sensor built by students.  (~$100 / sensor)
+
+<img src="./img/wcu-tt_wheeCAIR-block-diagram.png", style = "height: 400px;">
+
+---
+class: center
+
+# low-cost sensors | <b>wheeCAIR</b>
+
+Students in CHEM 191 assembled and programmed the sensors and deployed them at Purchase Knob, NC.
+
+<img src="./img/wcu-tt_purchase-knob.jpg", style = "height: 400px;">
+
+---
+class: center
+
+# low-cost sensors | <b>wheeCAIR</b>
+
+The sensors agree well with each other but are very sensitive to high humidity and fog.
+
+<img src="./img/wcu-tt_wheeCAIR-time-series.png", style = "height: 400px;">
+
+---
+exclude: true
+class: center
+
+# low-cost sensors | <b>wheeCAIR</b>
+
+These sensors allow for personal exposure monitoring.
+
+<img src="./img/wcu-tt_wheeCAIR-snowday.png">
+
+---
+exclude: true
+class: center
+
+# low-cost sensors | <b>wheeCAIR</b>
+
+These sensors allow for personal exposure monitoring.
+
+<img src="./img/wcu-tt_wheeCAIR-snowday-smoke-picture.png">
+
+---
+exclude: true
+class: center
+
+# low-cost sensors | <b>wheeCAIR</b>
+
+These sensors allow for personal exposure monitoring.
+
+<img src="./img/wcu-tt_wheeCAIR-snowday-distance.png">
+
+---
+exclude: true
+class: center
+
+# low-cost sensors | <b>wheeCAIR</b>
+
+How can low-cost sensors be improved?
+
+<img src="./img/wcu-tt_wheeCAIR-instrument-diagram.png">
+---
+exclude: true
+class: center
+
+# low-cost sensors | <b>wheeCAIR</b> | <b>wheeCAIR</b>
+
+The sensors agree well with each other but are very sensitive to high humidity and fog.
+
+<img src="./img/wcu-tt_wheeCAIR-scatter.png", style = "height: 400px;">
+
+---
+exclude: true
+class: center
+
+# low-cost instrument | <b>LED PAS</b>
+
+<div class="mermaid", style = "margin-top: 150px;">
+graph TD
+  id1(spectroscopy)-->id2(Low-cost PAS)
+  id1(spectroscopy)-->id3(NIR BBCES)
+</div>
+
+---
+class: center
+
+# low-cost instrument | <b>LED PAS</b>
+
+Is it possible to build a low-cost PAS?
+
+<img src="./img/wcu-tt_led-pas-diagram.png", style = "height: 400px;">
+
+---
+
+# Broadband Cavity Ehanced Spectroscopy
+
+---
+class: center
+
+# ces | <b>BBCES</b>
+
+Cavity enhanced spectroscopy uses an optical cavity to achieve sensitive measurements of light extinction.
+
+<img src="https://pubs.rsc.org/image/article/2017/fd/c7fd00001d/c7fd00001d-f2_hi-res.gif">
+
+.image-credit[Brown et al (2017) [Faraday Discussions](https://pubs.rsc.org/is/content/articlelanding/2017/fd/c7fd00001d#!divAbstract)]
+
+---
+exclude: true
+
+class: center
+
+# ces | <b>BBCES</b>
+
+Broadband Cavity Enahanced Spectroscopy (BBCES)
+
+$\alpha_{ext}(\lambda) = \left(\frac{I_0(\lambda)}{I(\lambda)} - 1\right) \left(\frac{1-R(\lambda)}{d}\right)$
+
+<img src="./img/wcu-tt_bbces-graphic.png", style = "width: 650px;">
+<!-- <img src="./img/wcu-tt_bbces-block-diagram.png", style = "width: 650px;"> -->
+
+---
+exclude: true
+
+class: center
+
+# ces | <b>BBCES</b>
+
+BBCES can be used to measure *extinction* by aerosols.
+
+$\alpha\_{ext} = \alpha\_{scatter} + \alpha\_{abs}$
+
+<img src="./img/wcu-tt_bbces-ambient.png", style = "height: 425px;">
+
+---
+exclude: true
+class: center
+
+# ces | <b>BBCES</b>
+
+BBCES can be used to measure absorption by trace gases.
+
+<img src="./img/wcu-tt_bbces-no2.png">
+
+
+
+---
+class: center
+
+# ces | <b>BBCES</b>
+
+Field-deployable NIR-BBCES for plant volatile emissions
+
+<img src="./img/wcu-tt_ir-bbces-diagram.png", style = "height: 400px;">
+
+---
+# acknowledgements | <b>Thank you!</b>
+
+- Dr. Geoff Smith and Smith Lab (UGA Chemistry)
+- Dr. Rawad Saleh and Saleh lab (UGA COE)
+- WCU CHPH and CAS
+- Dr. Cynthia Atterholt (WCU CHPH) 
+- Boston College: Paul Davidovitz, Lindsay Renbaumm-Wolff and others
+- Aerodyne Research: Tim Onasch and Andy Freedman
+<!-- - Dr. Chris Zangmeister & Dr. Jimmy Radney (NIST) -->
+<!-- - Dr. Chris Cappa and Cappa Lab (UC Davis) -->
+<!-- - Brookhaven National Lab: Laura Fierce, Arthur Sedlacek, Ernie Lewis -->
+- Lewis Fortner and Staff (UGA Instrument Shop)
+
+
+
+---
+
+class: img-full
+
+# questions?
+
+<!-- <img src="./img/wcu-tt_mp-case-montage.png", style="height: 425px;"> -->
+<!-- <img src="./img/wcu-tt_mp-case-open-no-lid.png", style="height: 425px;"> -->
+<img src="./img/wcu-tt_mp-dark.jpg">
+
+
+<!-- =============================================================================== -->
+
+
+    </textarea>
+    <script src="/assets/js/include-html.js" type="text/javascript"></script>
+    <script src="remark.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script> -->
+    <script src="https://kit.fontawesome.com/efbc54fa3b.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          packages: {'[+]': ['mhchem']}
+        },
+        loader: {load: ['[tex]/mhchem']},
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create(
+        {
+          navigation: {scroll: false, touch: true},
+          slideNumberFormat: '%current%',
+          highlightLanguage: 'r',
+          highlightStyle: 'atom-one-light',
+        });
+        // MathJax.Hub.Config({
+        //   tex2jax: {
+        //     inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+        //     processEscapes: true,
+        //     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        //   }            });
+         MathJax.Hub.Configured();
+         mermaid.initialize({
+            startOnLoad: false,
+            cloneCssStyles: false,
+            theme: null
+          });
+
+        function initMermaid(s) {
+          var diagrams = document.querySelectorAll('.mermaid');
+          var i;
+          for(i=0;i<diagrams.length;i++){
+            if(diagrams[i].offsetWidth>0){
+              mermaid.init(undefined, diagrams[i]);
+            }
+          }
+        }
+        slideshow.on('afterShowSlide', initMermaid);
+        initMermaid(slideshow.getSlides()[slideshow.getCurrentSlideIndex()])
+    </script>
+    </body>
+</html>

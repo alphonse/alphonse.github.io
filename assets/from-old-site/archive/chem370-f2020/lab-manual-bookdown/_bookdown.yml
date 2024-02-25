@@ -1,0 +1,26 @@
+book_filename: "c370-lab-manual"
+clean: [packages.bib, bookdown.bbl]
+delete_merged_file: true
+language:
+  label:
+    fig: "FIGURE "
+    tab: "TABLE "
+  ui:
+    edit: "Edit"
+    chapter_name: "Lab "
+output_dir: "../lab-manual"
+rmd_files: [
+            "index.Rmd",
+            "00C_preface.Rmd",
+            "00A_syllabus.Rmd",
+            "01_R.Rmd",
+            "01_gc-tcd.Rmd",
+            "02_uv-vis.Rmd",
+            "03_vape.Rmd",
+            "04_acetaminophen.Rmd",
+            "A1_R-cookbook.Rmd",
+            "A2_statistical-data-analysis.Rmd",
+            "A3_lab-notebooks.Rmd",
+            "A4_schedule.Rmd",
+            "A5_assignment-checklist.Rmd"
+            ]

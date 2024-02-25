@@ -1,0 +1,50 @@
+# Appendix 4: Schedule of Labs {-}
+
+
+*This schedule is subject to change as needed.*
+
+| Week | Week Beginning | Lab Activity                        | Due                                          |
+| ---- | -------------- | ----------------------------------- | -------------------------------------------- |
+| 1    | 8/17           | Safety Lecture, Intro to R/Markdown | Markdown Tutorial, R Tutorial (honor system) |
+| 2    | 8/24           | GC Lab                              |                                              |
+| 3    | 8/31           | GC Data Analysis                    | GC Notebook + Worksheet                      |
+| 4    | 9/7            | UV-vis Lab                          |                                              |
+| 5    | 9/14           | UV-vis Data Analysis                | UV-vis Notebook + Worksheet                  |
+| 6    | 9/21           | Rotations                           | Instrument Quizzes Passed                    |
+| 7    | 9/28           | Rotations                           |                                              |
+|      |                | *Writing Workshop*                  |                                              |
+| 8    | 10/5           | Rotations                           |                                              |
+| 9    | 10/12          | Rotations                           | Notebook 1 + 2                               | 
+| 10   | 10/19          | Rotations                           | Intro + Methods                              |
+| 11   | 10/26          | Rotations                           |                                              |
+| 12   | 11/2           | Rotations                           | All 4 Notebooks, All 4 Analysis Worksheets   |
+| 13   | 11/9           | Rotations                           | Full Draft                                   |
+| 14   | 11/16          | Lab & Instrument Clean              | Peer Review                                  |
+| 15   | 11/23          | *No Labs (Thanksgiving)*            |                                              |
+| 15   | 11/23          | *No Labs (Final Exams)*             | Final Report                                 |
+
+<!-- | Week Beginning |              Lab Activity               |                                                          Due                                                           |
+| -------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 2020-01-13     | Safety Lecture, Lab Notebooks           | [Install Octave + Jupyter]({{site.baseurl}}/chem370/lab-manual/appendix-1-getting-started-in-octave-and-jupyter-lab.html)  |
+| 2020-01-20     | *No labs (MLK Day)*                     | [MATLAB/Octave/Markdown Tutorial]({{site.baseurl}}/chem370/assignments/matlab-tutorial)                                    |
+| 2020-01-27     | UV-vis (Fluorescence): Quantify quinine |                                                                                                                        |
+| 2020-02-03     | Octave & Data Analysis                  | [Lab ZIP Folder 1]({{site.baseurl}}/chem370/lab-manual/uv-visible-spectroscopy.html)                                       |
+| 2020-02-10     | GC (Gow-Mac): Percent composition       | [Lab ZIP Folder 2]({{site.baseurl}}/chem370/lab-manual/gas-chromatography-with-thermal-conductivity-detection-gc-tcd.html) |
+|                | *Instrument Test 1*                     |                                                                                                                        |
+| 2020-02-17     | Rotations                               |                                                                                                                        |
+|                | *Group Kickoff Meeting*                 |                                                                                                                        |
+| 2020-02-24     | Rotations                               |                                                                                                                        |
+|                | *Writing Workshop*                      |                                                                                                                        |
+| 2020-03-02     | Rotations                               | Notebook 1 + 2                                                                                                         |
+| 2020-03-09     | *No Labs (Spring Break)*                |                                                                                                                        |
+| 2020-03-16     | ~~Rotations~~                           |                                                                                                                        |
+|                | *No Labs (Spring Break Extended)*       |                                                                                                                        |
+| 2020-03-23     | ~~Rotations~~ Flame AA / FTIR           | Intro + Methods                                                                                                        |
+| 2020-03-30     | ~~Rotations~~ HPLC / GCMS               |                                                                                                                        |
+| 2020-04-06     | *No Labs (Easter)*                      |                                                                                                                        |
+| 2020-04-13     | ~~Rotations~~                           | All 4 Notebooks, All 4 Analysis Worksheets                                                                             |
+| 2020-04-20     | ~~Rotations~~                           | Full Draft                                                                                                             |
+| 2020-04-27     | ~~Lab & Instrument Clean Up~~           | Peer Review, Final Report                                                                                              |
+| 2020-05-04     | *No Labs (Final Exams)*                 |                                                                                                                        | -->
+
+Students will be required to attend instrumentation workshops outside of class to learn how to use each instrument.  They will take a multiple-choice test to get a certification for that instrument.  Each student must be certified before using an instrument.  This certification contributes to your grade through SLO #1 on the syllabus.

@@ -1,0 +1,39 @@
+---
+title: 'CHEM 370 Lab Manual'
+author: "Al Fischer"
+date: "Western Carolina University"
+output:
+  html_document:
+    df_print: paged
+    highlight: pygments
+  tufte_book2:
+    highlight: pygments
+description: 'Lab Manual for CHEM 370: Instrumental Analysis Laboratory'
+documentclass: lab
+link-citations: yes
+bibliography: book.bib
+site: bookdown::bookdown_site
+biblio-style: apalike
+graphics: yes
+colorlinks: yes
+cover-image: "images/cover-image-mass-spec.png"
+sharing: false
+
+---
+
+# {-}
+
+<center>
+
+![Public domain [image](https://commons.wikimedia.org/wiki/File:Mass_Spectrometer_Schematic.svg#/media/File:Mass_Spectrometer_Schematic.svg) of mass spectrometer.](images/cover-image-mass-spec.png)
+
+<small>
+
+Copyright 2020 Al Fischer
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+</small>
+
+
+</center>

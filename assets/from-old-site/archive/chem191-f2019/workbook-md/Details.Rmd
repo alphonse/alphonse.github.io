@@ -1,0 +1,45 @@
+# Appendix D: Gory Details {-}
+
+## Using the Snooze Library {-}
+
+The Snooze library for Teensy allows us to put the Teensy into a hibernation mode, wherein it uses very little power.  The Snooze library and it's documentation can be found here: [https://github.com/duff2013/Snooze]().
+
+The library allows for numerous wakeups, including checking if a button is pressed, using a delay, and checking for a voltage threshold to be crossed among other options.   We'll use the real-time clock (RTC) wakeup for this project.  The RTC wakeup allows the user to wake the Teensy up after a defined amount of time, as counted in hours, minutes, and/or seconds by the RTC on the Teensy.
+
+The first step to using Snooze is to call the library, load the alarm driver, and configure the SnoozeBlock to use the alarm driver.  All of this goes *before* the `setup()` portion of the program.
+
+```{Rcpp, eval = FALSE}
+#include <Snooze.h>
+SnoozeAlarm alarm;
+SnoozeBlock config_teensy35(alarm)
+```
+
+Then, we set the RTC timer for the desired snooze period (in the `setup()` function).  In the example below the Teensy will wake up after 5 minutes.
+
+```{Rcpp, eval = FALSE}
+alarm.setRtcTimer(0, 5, 0); // h, m, s
+```
+
+Finally, we put the Teensy into hibernation mode `loop()` function.  Other options exist, such as deep sleep and sleep, but hibernate uses the least power.
+
+```{Rcpp, eval = FALSE}
+int who;
+who = Snooze.hibernate(config_teensy35);
+```
+
+The Snooze function will return the pin number that caused the Teensy to wake up.  The RTC wakes the Teensy up on pin 35.  To know when that's happened, we just wait until `who` is set to 35.
+
+```{Rccp, eval = FALSE}
+if (who == 35) {
+  # do something here
+}
+```
+
+## Using the RTC {-}
+
+- The Teensy 3.5 has an oscillator onboard.  The battery is included on the WheeCAIR PCB.
+- The coin cell (CR 1225) battery allows the RTC to keep time even when the board is not plugged in.
+- The RTC is not temperature compensated so it may drift over time.
+- The RTC runs during hibernation at full functionality.  However, the Time library needs to resync everytime the Teensy wakes up using `setSyncProvider(getTeensy3Time);`
+
+## Char[] vs. String {-}

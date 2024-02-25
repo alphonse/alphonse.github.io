@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 3 Voltage | CHEM 191 Workbook: Building a Teensy Air Quality Monitor</title>
+  <meta name="description" content="Course Materials for CHEM 191: Issues in Environmental Chemistry" />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercise 3 Voltage | CHEM 191 Workbook: Building a Teensy Air Quality Monitor" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Course Materials for CHEM 191: Issues in Environmental Chemistry" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercise 3 Voltage | CHEM 191 Workbook: Building a Teensy Air Quality Monitor" />
+  
+  <meta name="twitter:description" content="Course Materials for CHEM 191: Issues in Environmental Chemistry" />
+  
+
+<meta name="author" content="Al Fischer" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="blink-an-led.html">
+<link rel="next" href="functions.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://alphonse.github.io/archive/chem191-f2019">CHEM 191 Main Page</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#what-is-arduino"><i class="fa fa-check"></i>What is Arduino?</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#ok-but-what-is-teensy"><i class="fa fa-check"></i>OK, but what is Teensy?</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#using-this-book"><i class="fa fa-check"></i>Using this Book</a><ul>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#notes-and-warnings"><i class="fa fa-check"></i>Notes and Warnings</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#about-electricity"><i class="fa fa-check"></i>About Electricity</a><ul>
+<li class="chapter" data-level="0.0.1" data-path="preface.html"><a href="preface.html#is-it-dangerous"><i class="fa fa-check"></i><b>0.0.1</b> Is it dangerous?</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#additional-resources"><i class="fa fa-check"></i>Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html"><i class="fa fa-check"></i><b>1</b> Getting Started with Arduino</a><ul>
+<li class="chapter" data-level="" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#introduction"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1.1" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#install-the-arduino-ide"><i class="fa fa-check"></i><b>1.1</b> Install the Arduino IDE</a></li>
+<li class="chapter" data-level="1.2" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#install-teensyduino"><i class="fa fa-check"></i><b>1.2</b> Install Teensyduino</a></li>
+<li class="chapter" data-level="1.3" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#test-the-teensy"><i class="fa fa-check"></i><b>1.3</b> Test the Teensy!</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#check-the-board"><i class="fa fa-check"></i><b>1.3.1</b> Check the board</a></li>
+<li class="chapter" data-level="1.3.2" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#check-the-software"><i class="fa fa-check"></i><b>1.3.2</b> Check the software</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="blink-an-led.html"><a href="blink-an-led.html"><i class="fa fa-check"></i><b>2</b> Blink an LED</a><ul>
+<li class="chapter" data-level="" data-path="blink-an-led.html"><a href="blink-an-led.html#introduction-1"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="blink-an-led.html"><a href="blink-an-led.html#how-are-things-connected-to-a-teensy"><i class="fa fa-check"></i>How are things connected to a Teensy?</a></li>
+<li class="chapter" data-level="" data-path="blink-an-led.html"><a href="blink-an-led.html#what-is-a-program"><i class="fa fa-check"></i>What is a program?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.1" data-path="blink-an-led.html"><a href="blink-an-led.html#connecting-the-led"><i class="fa fa-check"></i><b>2.1</b> Connecting the LED</a></li>
+<li class="chapter" data-level="2.2" data-path="blink-an-led.html"><a href="blink-an-led.html#program-the-arduino"><i class="fa fa-check"></i><b>2.2</b> Program the Arduino</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="blink-an-led.html"><a href="blink-an-led.html#one-color"><i class="fa fa-check"></i><b>2.2.1</b> One Color</a></li>
+<li class="chapter" data-level="2.2.2" data-path="blink-an-led.html"><a href="blink-an-led.html#three-colors"><i class="fa fa-check"></i><b>2.2.2</b> Three Colors</a></li>
+<li class="chapter" data-level="2.2.3" data-path="blink-an-led.html"><a href="blink-an-led.html#make-your-own-changes"><i class="fa fa-check"></i><b>2.2.3</b> Make Your Own Changes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="voltage.html"><a href="voltage.html"><i class="fa fa-check"></i><b>3</b> Voltage</a><ul>
+<li class="chapter" data-level="" data-path="voltage.html"><a href="voltage.html#introduction-2"><i class="fa fa-check"></i>Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>4</b> Functions</a></li>
+<li class="chapter" data-level="5" data-path="steps-to-a-successful-project.html"><a href="steps-to-a-successful-project.html"><i class="fa fa-check"></i><b>5</b> Steps to a Successful Project</a></li>
+<li class="chapter" data-level="6" data-path="soldering-and-pcb-assembly.html"><a href="soldering-and-pcb-assembly.html"><i class="fa fa-check"></i><b>6</b> Soldering and PCB Assembly</a></li>
+<li class="chapter" data-level="7" data-path="testing-and-calibration.html"><a href="testing-and-calibration.html"><i class="fa fa-check"></i><b>7</b> Testing and Calibration</a></li>
+<li class="chapter" data-level="" data-path="appendix-a-arduino-cookbook.html"><a href="appendix-a-arduino-cookbook.html"><i class="fa fa-check"></i>Appendix A: Arduino Cookbook</a><ul>
+<li class="chapter" data-level="" data-path="appendix-a-arduino-cookbook.html"><a href="appendix-a-arduino-cookbook.html#recipe-1"><i class="fa fa-check"></i>Recipe 1</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-b-gory-details.html"><a href="appendix-b-gory-details.html"><i class="fa fa-check"></i>Appendix B: Gory Details</a><ul>
+<li class="chapter" data-level="" data-path="appendix-b-gory-details.html"><a href="appendix-b-gory-details.html#using-the-snooze-library"><i class="fa fa-check"></i>Using the Snooze Library</a></li>
+<li class="chapter" data-level="" data-path="appendix-b-gory-details.html"><a href="appendix-b-gory-details.html#using-the-rtc"><i class="fa fa-check"></i>Using the RTC</a></li>
+<li><a href="appendix-b-gory-details.html#char-vs.string">Char<span></span> vs. String</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html"><i class="fa fa-check"></i>Appendix C: Functions</a><ul>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#getteensy3time"><i class="fa fa-check"></i>getTeensy3Time()</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#setbmesamplingparameters"><i class="fa fa-check"></i>setBMESamplingParameters()</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#initializeboard"><i class="fa fa-check"></i>initializeBoard()</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#pmstartmeasurement"><i class="fa fa-check"></i>pmStartMeasurement()</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#pmstopmeasurement"><i class="fa fa-check"></i>pmStopMeasurement()</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#writefilechar-filename16"><i class="fa fa-check"></i>writeFile(char filename[16])</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#blink"><i class="fa fa-check"></i>blink()</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#filldigitsint-digits"><i class="fa fa-check"></i>fillDigits(int digits)</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#printtimeint-h-int-m-int-s"><i class="fa fa-check"></i>printTime(int h, int m, int s)</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#printdateint-y-int-m-int-d"><i class="fa fa-check"></i>printDate(int y, int m, int d)</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#printdatetimestring-d-string-t"><i class="fa fa-check"></i>printDateTime(String d, String t)</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#printdata"><i class="fa fa-check"></i>printData()</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-functions.html"><a href="appendix-c-functions.html#createfilenameint-y-int-m-int-d"><i class="fa fa-check"></i>createFileName(int y, int m, int d)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-d-strategies-for-troubleshooting.html"><a href="appendix-d-strategies-for-troubleshooting.html"><i class="fa fa-check"></i>Appendix D: Strategies for Troubleshooting</a></li>
+<li class="chapter" data-level="" data-path="glossary-and-abbreviations.html"><a href="glossary-and-abbreviations.html"><i class="fa fa-check"></i>Glossary and Abbreviations</a><ul>
+<li><a href="glossary-and-abbreviations.html#current-i">Current (<em>i</em>)</a></li>
+<li class="chapter" data-level="" data-path="glossary-and-abbreviations.html"><a href="glossary-and-abbreviations.html#electricity"><i class="fa fa-check"></i>Electricity</a></li>
+<li class="chapter" data-level="" data-path="glossary-and-abbreviations.html"><a href="glossary-and-abbreviations.html#led"><i class="fa fa-check"></i>LED</a></li>
+<li><a href="glossary-and-abbreviations.html#power-p">Power (<em>P</em>)</a></li>
+<li><a href="glossary-and-abbreviations.html#resistance-r">Resistance (<em>R</em>)</a></li>
+<li><a href="glossary-and-abbreviations.html#voltage-v">Voltage (<em>V</em>)</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CHEM 191 Workbook: Building a Teensy Air Quality Monitor</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="voltage" class="section level1">
+<h1><span class="header-section-number">Exercise 3</span> Voltage</h1>
+<p><strong>Objective:</strong>
+<strong>To turn in:</strong></p>
+<div id="introduction-2" class="section level2 unnumbered">
+<h2>Introduction</h2>
+<p>In the last exercise you used a Teensy to turn a light on and off, although we did not discuss what was happening electrically.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="blink-an-led.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["chem191.github.io.pdf"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

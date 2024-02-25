@@ -1,0 +1,23 @@
+# Appendix 5: Assignment Checklist {-}
+
+This list shows the expected assignments for the semester.  You may use it to keep track of your progress.  It is subject to change as needed.
+
+***Lab assignments are due at 23:59:59 (midnight) the night before lab.***  For example, for Thursday lab, all assignments will be due at 23:59:59 on Wednesday night (unless otherwise specified).  
+
+A checklist of assignments is provided below to help you keep track of your assignments.  Due dates are listed on the [submissions page]({{site.url}}/archive/chem370-f2020/submissions).
+
+| Assignment                     | Grade (pts) | Out of (pts) |
+| ------------------------------ | ----------- | ------------ |
+| GC Analysis + Notebook         |             |              |
+| UV-vis Analysis + Notebook     |             |              |
+| HPLC Competency Quiz           |             |              |
+| GCMS Competency Quiz           |             |              |
+| FAAS Competency Quiz           |             |              |
+| FTIR Competency Quiz           |             |              |
+| Rotation Notebook 1 & 2        |             |              |
+| Intro + Methods Draft          |             |              |
+| Rotation Notebooks 1-4         |             |              |
+| Full Paper Draft               |             |              |
+| Peer Review                    |             |              |
+| Lab Safety/Participation Grade |             |              |
+| Group Participation Grade      |             |              |

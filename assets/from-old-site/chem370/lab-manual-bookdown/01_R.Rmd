@@ -1,0 +1,110 @@
+# (PART) Introduction {-}
+
+# Getting Started in R
+
+##### **Objective** | Become familiar with Markdown and install R + RStudio on your computer {-}
+
+##### **To Turn In**  {-}
+
+This Lab will be completed on the honor system.  You must complete the following activities before Week 2 or you will not be able to participate in lab.
+
+- [Markdown Tutorial](https://www.markdowntutorial.com/)
+- Install R + RStudio + `instRumental` package
+- Create a Lab Notebook Template for Lab 1
+
+##### **Student Learning Outcomes** | *By the end of this lab, students will:*   {-}
+
+  - Familiarize themselves with Markdown syntax.
+  - Create a working installation of R + RStudio on their computer.
+  - Understand how to create a lab notebook template in RStudio.
+
+## Introduction {#r-intro -}
+
+Chem 370 lab will make extensive use of electronic lab notebooks.  We'll use two tools to achieve a robust electronic lab notebook: (1) **R Markdown Notebooks**, (2) the **R** programming language, and (3) the [RStudio](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwictpuN2IvqAhVtl3IEHUhSCUUQFjAAegQIAhAC&url=https%3A%2F%2Frstudio.com%2F&usg=AOvVaw2mM_qCjo878d2q5bcC0XUS) integrated development (IDE, a tool that will make it easier to use items 1 and 2).  The R Markdown (RMD) notebook provides a place to write everything that would normally go in your lab notebook, but is entirely electronic.  The R language is used to process data in a fashion similar to Excel, except that all actions are done by issuing commands rather than through a graphical interface.  Importantly, this configuration allows all of the data processing steps and data files you have in electronic form to be displayed directly in your lab notebook!  You'll learn more about what these software are as you complete this lab activity.
+
+The configuration described above requires the R language and the RStudio IDE.  These are both freely available online for Windows, Mac OSX, and Linux.  You have several options when using the software: (1) You may install R and RStudio directly on your personal computer (recommended) or (2) use R and RStudio through WCU’s VCAT interface (might be useful as a backup if your computer isn't cooperating). 
+
+Know up front that learning to program can be a daunting experience and takes time to learn.  You'll experience many occasions in which your code won't run, and you'll have to figure out why.  This can be frustrating at times, and you may often feel lost.  But programming can also be very rewarding once you start to get the hang of it!  To help with your transition into the world of programmatic data analysis, you'll be provided with several forms of tutorials.  Some will be built directly into RStudio, and you'll be able to access them after installing the Chem 370 add-on package; others will be in the form of video tutorials in which I'll walk you through various steps of installing the software, navigating it, and processing your data.
+
+Your goals for this lab are to become familiar with the Markdown syntax, install R and R+Studio on your computer, and then create a lab notebook template using R Markdown that you'll use to record details and data next week in lab (so make sure you bring your computer next week!).
+
+## Learning Markdown {#learning-markdown}
+
+**Markdown** is a markup language that was developed by John Gruber and Aaron Swartz in the mid-2000's.  It provides a simple, streamlined utility for word processing and web page creation.  It's been adopted in many places, which numerous websites, message boards, blogs, and even all the materials for this course being written in Markdown.  In essence, the writer creates a plain text document (extension: `.txt` or `.md`) and uses software to render the Markdown into a nicely formatted document (originally just HTML (web format), but now there's support for PDFs, Word Docs, and more).  The language is quite simple; if you can use Word, you can easily use Markdown.  The tutorial linked below will help you get started.
+
+- **TASK:** Complete the [Markdown Tutorial](https://www.markdowntutorial.com/)
+
+## Installing R + RStudio {#install-r}
+
+**R** is the programming language we'll use to process data this semester.  We'll discuss more of the details about what R is and why we're using it in a few weeks.  For now we just need to get it installed and create a basic Markdown document.  **RStudio** is a peice of software called an *integrated development environment* (IDE) that provides a unified interface for all the tools we need to use R.  It is ***highly*** recommended that you use RStudio to interact with R.  The steps below will walk you through installing both of them.
+
+The following video shows you how to complete the steps listed below:
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=ed1aed5a-b9ce-4d6b-8be1-ac2900f491ee&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
+### Install R (Must be done first)
+
+1. Open a web browser and navigate to the [Duke University R Mirror](http://archive.linux.duke.edu/cran/) and click the link for your operating system (Windows, Mac OSX, Linux).  
+2. Follow the on-screen prompts to install R (will vary by operating system).
+
+### Install RStudio
+
+1. *Once you've successfully installed R*, navigate to the [RStudio downloads page](https://rstudio.com/products/rstudio/download/#download) and click the link to download the version that matches your operating system.  
+2. Follow the on-screen prompts to install RStudio (will vary by operating system).
+
+### Installing the CHEM 370 Package {#installing-c370-package}
+
+One of the great things about R is that anyone can develop add-ons (called "packages") for it.  I've developed a package for Chem 370 that has functions and tutorials specifically for this class.  You'll need to install it to follow along with the tutorials.
+
+1. Once you've installed R and RStudio, you open up RStudio (opening RStudio also opens an R session automatically).  
+1. Install the `devtools` package, which will make it easier to install the Chem 370 package.
+    1. In RStduio, navigate to the **Packages** tab in the lower right pane and click **Install**.
+    1. In the dialog that opens, type in `devtools` on the *Packages* line.
+    1. Click **Install**.
+    
+    *If you get a "non-zero exit status" or error message, read through it to see if you find "package 'XYZ' not available" and then install the package(s) it mentions.  Try installing `devtools` again after that.* 
+    
+1. *Install the `instRumental` package*: In Rstudio, find the **Console** tab in the lower left pane.  Copy and paste the following lines *exactly*:
+      
+      ```{r eval=F}
+      require(devtools)
+      install.packages("learnr")
+      install_github("rstudio-education/gradethis")
+      install_github("dr-fischer/instRumental")
+      ```
+      
+The `instRumental` package should now be installed on your system.
+
+
+## Completing the R Tutorial
+
+1. Complete the *Lab 1A: What is R?* tutorial under the **Tutorial** tab in the top left pane of RStudio.
+
+The following video shows you how to start the tutorial, assuming you have installed the `instRumental` package (Exercise 1.2).
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7a007287-4992-403c-8200-ac2900f6b9c8&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
+## Creating a Lab Notebook Project {#create-lab-notebook}
+
+The following video shows you how to complete the steps listed below, assuming you have installed the `instRumental` package (Exercise 1.2).
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=6eb34eb7-dc9e-4a3b-8f4b-ac2900f6ccb0&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
+### Create a Project
+
+In this step, you'll create an R "project" for lab 1.  The project will help keep all your files for lab 1 organized.  You should create a separate project for each lab.
+
+1. In RStudio, click the **Project: (none)** button in the top corner and then click **New Project...*
+1. Choose **New Directory** and **New Project**.
+1. Type in **Lab 2: GC-TCD** in the *Directory name* line.  In the *Create project as subdirectory of:* box choose **Browse**.  Then:
+    1. Navigate to your `Documents` folder (or another directory if you prefer to save your notebooks somewhere else).
+    1. Create a **New Directory**/**New Folder** and call in **`lab-notebooks`**.
+    1. Click OK to exit the dialog.  The path should be set to something like `~/Documents/lab-notebooks` (may vary slightly depending on your OS).
+1. Click **Create Project**.  You'll see that project icon in the top right corner now read **Project: Lab 2: GC-TCD**.
+
+### Create a Notebook File
+
+1. Load the Chem 370 learnR package: Go to the **Packages** tab in the bottom right pane and check `instRumental` on.  You should load this package each time you start R.
+1. In the top left corner, click the **New File** icon and choose **R Markdown**.
+1. In the new window that opens, choose **From Template** (left side) and then **Chem 370 Lab Notebook**. Enter ***lab2_gc-tcd*** for the title (i.e. filename) and your name for the author.  Make sure the output is set to HTML and click **OK**.  Use this format for all your lab notebooks this semester.
+1. The notebook document is populated with a bare bones template for use in lab.  Fill in a title and your name, and write and introduction before lab next week.  This template also contains the questions you will answer when you finish the lab for grading.

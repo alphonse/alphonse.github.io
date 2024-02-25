@@ -1,0 +1,22 @@
+book_filename: "c370-lab-manual"
+clean: [packages.bib, bookdown.bbl]
+delete_merged_file: true
+language:
+  label:
+    fig: "FIGURE "
+    tab: "TABLE "
+  ui:
+    edit: "Edit"
+    chapter_name: "Lab "
+output_dir: "../lab-manual"
+rmd_files: [
+            "index.Rmd",
+            "00_preface.Rmd",
+            "01_uv-vis.Rmd",
+            "02_gc-tcd.Rmd",
+            "03_vape.Rmd",
+            "04_acetaminophen.Rmd",
+            "05_octave-getting-started.Rmd",
+            "06_octave-cookbook.Rmd",
+            "07_statistical-data-analysis.Rmd"
+            ]

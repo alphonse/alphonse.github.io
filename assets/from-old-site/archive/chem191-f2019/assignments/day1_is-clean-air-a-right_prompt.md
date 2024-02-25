@@ -1,0 +1,3 @@
+*Write a 1 or 2 paragraph argument based on the following prompt:*
+
+Environmental issues are rarely clear cut.  Although the effects of anthropogenic (human) actions on the environment are often known, it may be more difficult to understand full economic and social ramifications of the effects.  Considering the following excerpts, do you think a policy such as the Clean Power Plan (CPP) would have a net positive or net negative on the United States and the world as a whole?  Do you think governments should be required to protect air for their citizens, or is it just as important to consider the effects of legislation on businesses?  Use examples from the excerpts to support your opinion.

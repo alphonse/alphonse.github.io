@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lab 5 FTIR | CHEM 370 Lab Manual</title>
+  <meta name="description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lab 5 FTIR | CHEM 370 Lab Manual" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lab 5 FTIR | CHEM 370 Lab Manual" />
+  
+  <meta name="twitter:description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory" />
+  
+
+<meta name="author" content="Al Fischer, PhD" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="hplc-1.html">
+<link rel="next" href="python-cookbook.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://alphonse.github.io/chem370">CHEM 370 Main Page</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#what-is-arduino"><i class="fa fa-check"></i>What is Arduino?</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#ok-but-what-is-teensy"><i class="fa fa-check"></i>OK, but what is Teensy?</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#using-this-book"><i class="fa fa-check"></i>Using this Book</a><ul>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#notes-and-warnings"><i class="fa fa-check"></i>Notes and Warnings</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#is-this-work-dangerous"><i class="fa fa-check"></i>Is this work dangerous?</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#additional-resources"><i class="fa fa-check"></i>Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="uv-visible-spectroscopy.html"><a href="uv-visible-spectroscopy.html"><i class="fa fa-check"></i><b>1</b> UV-visible Spectroscopy</a><ul>
+<li class="chapter" data-level="" data-path="uv-visible-spectroscopy.html"><a href="uv-visible-spectroscopy.html#introduction"><i class="fa fa-check"></i>Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="gas-chromatography-with-thermal-conductivity-detection-gc-tcd.html"><a href="gas-chromatography-with-thermal-conductivity-detection-gc-tcd.html"><i class="fa fa-check"></i><b>2</b> Gas Chromatography with Thermal Conductivity Detection (GC-TCD)</a><ul>
+<li class="chapter" data-level="" data-path="gas-chromatography-with-thermal-conductivity-detection-gc-tcd.html"><a href="gas-chromatography-with-thermal-conductivity-detection-gc-tcd.html#introduction-1"><i class="fa fa-check"></i>Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="rotation-a-e-cigarette-liquid.html"><a href="rotation-a-e-cigarette-liquid.html"><i class="fa fa-check"></i><b>3</b> Rotation A: e-Cigarette Liquid</a><ul>
+<li class="chapter" data-level="" data-path="rotation-a-e-cigarette-liquid.html"><a href="rotation-a-e-cigarette-liquid.html#introduction-2"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="rotation-a-e-cigarette-liquid.html"><a href="rotation-a-e-cigarette-liquid.html#gc-ms"><i class="fa fa-check"></i>GC-MS</a><ul>
+<li class="chapter" data-level="3.0.1" data-path="rotation-a-e-cigarette-liquid.html"><a href="rotation-a-e-cigarette-liquid.html#sample-preparation"><i class="fa fa-check"></i><b>3.0.1</b> Sample Preparation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rotation-a-e-cigarette-liquid.html"><a href="rotation-a-e-cigarette-liquid.html#hplc"><i class="fa fa-check"></i>HPLC</a></li>
+<li class="chapter" data-level="" data-path="rotation-a-e-cigarette-liquid.html"><a href="rotation-a-e-cigarette-liquid.html#flame-aa"><i class="fa fa-check"></i>Flame AA</a></li>
+<li class="chapter" data-level="" data-path="rotation-a-e-cigarette-liquid.html"><a href="rotation-a-e-cigarette-liquid.html#ft-ir"><i class="fa fa-check"></i>FT-IR</a></li>
+<li class="chapter" data-level="" data-path="rotation-a-e-cigarette-liquid.html"><a href="rotation-a-e-cigarette-liquid.html#data-processing"><i class="fa fa-check"></i>Data Processing</a></li>
+<li class="chapter" data-level="3.1" data-path="rotation-a-e-cigarette-liquid.html"><a href="rotation-a-e-cigarette-liquid.html#rotation-b-acetaminophen"><i class="fa fa-check"></i><b>3.1</b> Rotation B: Acetaminophen</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction-3.html"><a href="introduction-3.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="4" data-path="hplc-1.html"><a href="hplc-1.html"><i class="fa fa-check"></i><b>4</b> HPLC</a><ul>
+<li class="chapter" data-level="4.1" data-path="hplc-1.html"><a href="hplc-1.html#safety"><i class="fa fa-check"></i><b>4.1</b> Safety</a></li>
+<li class="chapter" data-level="4.2" data-path="hplc-1.html"><a href="hplc-1.html#procedure"><i class="fa fa-check"></i><b>4.2</b> Procedure</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="hplc-1.html"><a href="hplc-1.html#standard-preparation"><i class="fa fa-check"></i><b>4.2.1</b> Standard Preparation</a></li>
+<li class="chapter" data-level="4.2.2" data-path="hplc-1.html"><a href="hplc-1.html#sample-preparation-1"><i class="fa fa-check"></i><b>4.2.2</b> Sample Preparation</a></li>
+<li class="chapter" data-level="4.2.3" data-path="hplc-1.html"><a href="hplc-1.html#instrumentation"><i class="fa fa-check"></i><b>4.2.3</b> Instrumentation</a></li>
+<li class="chapter" data-level="4.2.4" data-path="hplc-1.html"><a href="hplc-1.html#waste-disposal-and-cleanup"><i class="fa fa-check"></i><b>4.2.4</b> Waste Disposal and Cleanup</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="hplc-1.html"><a href="hplc-1.html#data-processing-1"><i class="fa fa-check"></i><b>4.3</b> Data Processing</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ftir.html"><a href="ftir.html"><i class="fa fa-check"></i><b>5</b> FTIR</a><ul>
+<li class="chapter" data-level="5.1" data-path="ftir.html"><a href="ftir.html#safety-1"><i class="fa fa-check"></i><b>5.1</b> Safety</a></li>
+<li class="chapter" data-level="5.2" data-path="ftir.html"><a href="ftir.html#procedure-1"><i class="fa fa-check"></i><b>5.2</b> Procedure</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="ftir.html"><a href="ftir.html#sample-preparation-2"><i class="fa fa-check"></i><b>5.2.1</b> Sample Preparation</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ftir.html"><a href="ftir.html#instrumentation-1"><i class="fa fa-check"></i><b>5.2.2</b> Instrumentation</a></li>
+<li class="chapter" data-level="5.2.3" data-path="ftir.html"><a href="ftir.html#waste-disposal-and-cleanup-1"><i class="fa fa-check"></i><b>5.2.3</b> Waste Disposal and Cleanup</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="ftir.html"><a href="ftir.html#data-processing-2"><i class="fa fa-check"></i><b>5.3</b> Data Processing</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="python-cookbook.html"><a href="python-cookbook.html"><i class="fa fa-check"></i><b>6</b> Python Cookbook</a><ul>
+<li class="chapter" data-level="" data-path="python-cookbook.html"><a href="python-cookbook.html#introduction-4"><i class="fa fa-check"></i>Introduction</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>.
+<a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200&display=swap" rel="stylesheet">
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CHEM 370 Lab Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ftir" class="section level1">
+<h1><span class="header-section-number">Lab 5</span> FTIR</h1>
+<p>This lab will use the Perkin Elmer Spectrum One FT-IR (Fourier-transform infrared spectrometer) to determine whether samples of Tylenol (acetaminophen) are pure. The Spectrum One is in NS 226.</p>
+<p>Before lab, read <em>Standardization of Raman Spectra for Transfer of Spectral Libraries Across Different Instruments</em>. Focus on the paragraph regarding HQI calculation.</p>
+<div id="safety-1" class="section level2">
+<h2><span class="header-section-number">5.1</span> Safety</h2>
+<p>This lab will require the use of small amounts of <a href="http://www.sciencelab.com/msds.php?msdsId=9927062">acetone</a>; avoid contact with skin and eyes.</p>
+</div>
+<div id="procedure-1" class="section level2">
+<h2><span class="header-section-number">5.2</span> Procedure</h2>
+<div id="sample-preparation-2" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Sample Preparation</h3>
+<ol style="list-style-type: decimal">
+<li>Determine the mass of all contents of your sample vials.</li>
+<li>Grind your samples into a fine, homogenous powder using a mortar and pestle.</li>
+<li>Cone a quarter your samples on weighing paper until you have approximately 100 mg of each for FT-IR, and store the extra sample in scintillation vials.</li>
+</ol>
+</div>
+<div id="instrumentation-1" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> Instrumentation</h3>
+<ol style="list-style-type: decimal">
+<li>Record a background spectrum on the FT-IR according to the FT-IR SOP.</li>
+<li>Place approximately 33 mg of one sample on the ATR window and acquire a spectrum.</li>
+<li>Wet a Kimwipe with a small amount of acetone and clean the ATR cell and anvil with it.</li>
+<li>Repeat the above steps 2 more times, for a total of three spectra.</li>
+<li>Repeat the above steps for each sample, for a total of three spectra per sample.</li>
+<li>Make sure you leave the instrument and your work area clean, and log out of the computer.</li>
+</ol>
+</div>
+<div id="waste-disposal-and-cleanup-1" class="section level3">
+<h3><span class="header-section-number">5.2.3</span> Waste Disposal and Cleanup</h3>
+<ul>
+<li>Clean the IR with acetone and replace the cover.</li>
+<li>Brush up any acetaminophen powder on and around the IR.</li>
+<li>Use a minimal amount of warm water to rinse any powdered acetaminophen into the bottle labelled “Hazardous Waste: Lab 2 Acetaminophen” that is stored under the sample prep hood in the Instrument Lab.</li>
+<li>Make sure your work area and the instrument are cleaner than you found them.</li>
+</ul>
+</div>
+</div>
+<div id="data-processing-2" class="section level2">
+<h2><span class="header-section-number">5.3</span> Data Processing</h2>
+<ul>
+<li>You will need to export you data as a CSV file. The Spectrum One does this automatically. Just copy the exported data from the “Spectrum One Data Folder” (there is a shortcut on the desktop) to your folder on NEON.</li>
+<li>Baseline correct your spectra by subtracting the minimum value from each data point. This should make the minimum value on your plot 0.</li>
+<li>Normalize your spectra by converting from absorbance units to relative absorbance. Your final plot should range from 0 to 1.</li>
+<li>Calculate the Hit Quality Index according to Eq. 2 in Rodriguez et al (2011). Be mindful of the difference between “x” (multiplication) and “·” (dot product).</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="hplc-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python-cookbook.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"download": "pdf"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

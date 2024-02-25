@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lab 1 Getting Started with Arduino | CHEM 370 Lab Manual</title>
+  <meta name="description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lab 1 Getting Started with Arduino | CHEM 370 Lab Manual" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lab 1 Getting Started with Arduino | CHEM 370 Lab Manual" />
+  
+  <meta name="twitter:description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory" />
+  
+
+<meta name="author" content="Al Fischer, PhD" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="preface.html">
+<link rel="next" href="blink-an-led.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://alphonse.github.io/chem370">CHEM 370 Main Page</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#what-is-arduino"><i class="fa fa-check"></i>What is Arduino?</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#ok-but-what-is-teensy"><i class="fa fa-check"></i>OK, but what is Teensy?</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#using-this-book"><i class="fa fa-check"></i>Using this Book</a><ul>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#notes-and-warnings"><i class="fa fa-check"></i>Notes and Warnings</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#is-this-work-dangerous"><i class="fa fa-check"></i>Is this work dangerous?</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#additional-resources"><i class="fa fa-check"></i>Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html"><i class="fa fa-check"></i><b>1</b> Getting Started with Arduino</a><ul>
+<li class="chapter" data-level="" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#introduction"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1.1" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#install-the-arduino-ide"><i class="fa fa-check"></i><b>1.1</b> Install the Arduino IDE</a></li>
+<li class="chapter" data-level="1.2" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#install-teensyduino"><i class="fa fa-check"></i><b>1.2</b> Install Teensyduino</a></li>
+<li class="chapter" data-level="1.3" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#test-the-teensy"><i class="fa fa-check"></i><b>1.3</b> Test the Teensy!</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#check-the-board"><i class="fa fa-check"></i><b>1.3.1</b> Check the board</a></li>
+<li class="chapter" data-level="1.3.2" data-path="getting-started-with-arduino.html"><a href="getting-started-with-arduino.html#check-the-software"><i class="fa fa-check"></i><b>1.3.2</b> Check the software</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="blink-an-led.html"><a href="blink-an-led.html"><i class="fa fa-check"></i><b>2</b> Blink an LED</a><ul>
+<li class="chapter" data-level="" data-path="blink-an-led.html"><a href="blink-an-led.html#introduction-1"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="blink-an-led.html"><a href="blink-an-led.html#how-are-things-connected-to-a-teensy"><i class="fa fa-check"></i>How are things connected to a Teensy?</a></li>
+<li class="chapter" data-level="" data-path="blink-an-led.html"><a href="blink-an-led.html#the-solderless-breadboard"><i class="fa fa-check"></i>The solderless breadboard</a></li>
+<li class="chapter" data-level="" data-path="blink-an-led.html"><a href="blink-an-led.html#what-is-a-program"><i class="fa fa-check"></i>What is a program?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.1" data-path="blink-an-led.html"><a href="blink-an-led.html#connecting-the-led"><i class="fa fa-check"></i><b>2.1</b> Connecting the LED</a></li>
+<li class="chapter" data-level="2.2" data-path="blink-an-led.html"><a href="blink-an-led.html#program-the-teensy"><i class="fa fa-check"></i><b>2.2</b> Program the Teensy</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="blink-an-led.html"><a href="blink-an-led.html#one-color"><i class="fa fa-check"></i><b>2.2.1</b> One Color</a></li>
+<li class="chapter" data-level="2.2.2" data-path="blink-an-led.html"><a href="blink-an-led.html#three-colors"><i class="fa fa-check"></i><b>2.2.2</b> Three Colors</a></li>
+<li class="chapter" data-level="2.2.3" data-path="blink-an-led.html"><a href="blink-an-led.html#make-your-own-changes"><i class="fa fa-check"></i><b>2.2.3</b> Make Your Own Changes</a></li>
+<li class="chapter" data-level="2.2.4" data-path="blink-an-led.html"><a href="blink-an-led.html#turn-in"><i class="fa fa-check"></i><b>2.2.4</b> Turn in</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>.
+<a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200&display=swap" rel="stylesheet">
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CHEM 370 Lab Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="getting-started-with-arduino" class="section level1">
+<h1><span class="header-section-number">Lab 1</span> Getting Started with Arduino</h1>
+<p><strong>Objective:</strong> Install Arduino and Teensyduino<br />
+<strong>To turn in:</strong> Nothing! Make sure your software is installed and working so you’re ready for the next class period.</p>
+<div id="introduction" class="section level2 unnumbered">
+<h2>Introduction</h2>
+<p><strong>Arduino</strong> is an <a href="http://www.wikipedia.com/wiki/Open-source">open-source</a> platform for developing interactive electronic devices. More specifically, Arduinos are <a href="https://en.wikipedia.org/wiki/Microcontroller"><em>microcontrollers</em></a>, which are essentially small computers that can be programmed to perform a specific task over and over again. Microcontrollers are ubiquitous in the modern world and are embedded in scientific equipment, cars, cell phones, and nearly every other electronic device. Arduino provides a simple, standardized interface for microcontrollers, which has led it to become a very popular tool for hobby projects, citizen science tools, and even art installations. Arduino began in 2005 as a student project at the Interaction Design Institute Ivrea in Ivrea, Italy.</p>
+<div class="figure">
+<img src="images/Arduino_Uno_-_R3.jpg" alt="" />
+<p class="caption"><small><em>An Arduino Uno. This class will use a variant of the Arduino, called the Teensy, as described below. (image credit: <a href="https://commons.wikimedia.org/wiki/File:Arduino_Uno_-_R3.jpg">Spark Fun, CC BY 2.0</a>)</em></small></p>
+</div>
+<p>Using an Arduino requires a <em>program</em>, or a set of commands that are uploaded to the Arduino to have it perform the desired task. In the Arduino community, the term <em>sketch</em> is used synonymously with program. Examples of possible programs include having the Arduino <strong>measure</strong> things like temperature, light, or humidity, or <strong>control</strong> things like lights or motors. You could even have it measure the temperature and turn on a heater when it gets too cold. Although an Arduino can run as a stand-alone device once setup, it must first be programmed by a computer.</p>
+<p>To program the Arduino, we’ll use the a piece of software called an <em>integrated development environment</em> (IDE) that’s available for free on the <a href="http://www.arduino.cc">Arduino website</a>. The IDE is shown in the figure below. At the top of the IDE is the menu bar, just like any other program. The middle part of the IDE is the “text area”, and looks like a text editor or simple word processing program. The text area is where you write the code. Finally, the black bottom region of the editor is the message area; this is the area where important messages detailing errors and successes will be displayed. Arduino code is written in the programming language <em>C</em> – probably the most commonly used language in the world – but the IDE handles some of the programming behind the scenes to make it easier for the user.</p>
+<div class="figure">
+<img src="images/Arduino_IDE_-_Blink.png" alt="" />
+<p class="caption"><small><em>Arduino IDE showing an example program (image credit: <a href="https://commons.wikimedia.org/wiki/File:Arduino_IDE_-_Blink.png">Cedar101 [CC0], wikimedia.org</a>)</em></small></p>
+</div>
+<p>Part of the beauty of Arduino is its open-source nature. Many spin-offs and flavors of Arduino exist due to it’s open-source nature, each with its own unique benefits. In this class, we’ll use a variant of Arduino called the <strong><em>Teensy</em></strong> (specifically Teensy 3.5). The Teensy is programmed in the same way as an Arduino, but has a smaller form-factor and more capabilities than a standard Arduino. The picture below shows a Teensy 3.5 and the functions of each connection on the Teensy. Seeing all the functions laid out like that can be overwhelming, but we’ll walk through the ones we need to use step-by-step in future exercises.</p>
+<div class="figure">
+<img src="images/card8a_rev2.png" alt="" />
+<p class="caption"><small><em>A Teensy Board, with the pin (connection) numbers and functionalities shown (reprinted from <a href="https://www.pjrc.com/teensy/pinout.html">PJRC.com</a>).</em></small></p>
+</div>
+<p>This exercise will walk you through installation of the Arduino IDE, the software for the Teensy (Teensyduino), and an initial check of the board.</p>
+</div>
+<div id="install-the-arduino-ide" class="section level2">
+<h2><span class="header-section-number">1.1</span> Install the Arduino IDE</h2>
+<blockquote>
+<p><em>You MUST follow the order of the instructions here or Teensyduino will not work!</em></p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>Use a web browser to navigate to <a href="https://www.arduino.cc/en/Main/OldSoftwareReleases#previous">https://www.arduino.cc/en/Main/OldSoftwareReleases#previous</a>.</li>
+<li>Download the installer for version <strong>1.8.6</strong>. You must choose the installer appropriate for your operating system.</li>
+<li>Choose <strong>Just Download</strong> to download the software, or make a donation if you’re feeling generous!</li>
+<li>Open the file that downloads and run the installer.</li>
+<li>Open the Arduino program to make sure it runs and to prepare for the next steps.</li>
+</ol>
+</div>
+<div id="install-teensyduino" class="section level2">
+<h2><span class="header-section-number">1.2</span> Install Teensyduino</h2>
+<ol style="list-style-type: decimal">
+<li>Use a web browser to navigate to <a href="https://www.pjrc.com/teensy/td_download.html">https://www.pjrc.com/teensy/td_download.html</a>.</li>
+<li>Download the correct installer for your operatring system. Note that steps 1 and 2 on the Teensy page should have been completed when you installed the Arduino IDE, above.</li>
+<li>Run the installer. When prompted:</li>
+<li>Select the <code>Arduino/</code> folder for the install location. If <strong>Next</strong> is greyed out you probably downloaded the wrong version of the Arduino IDE.</li>
+<li>Select <strong>All</strong> when asked which additional libraries to install.</li>
+</ol>
+</div>
+<div id="test-the-teensy" class="section level2">
+<h2><span class="header-section-number">1.3</span> Test the Teensy!</h2>
+<div id="check-the-board" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Check the board</h3>
+<ol style="list-style-type: decimal">
+<li><p>Plug your Teensy into the computer via the USB connection.</p>
+<blockquote>
+<p>BE <strong><em>EXTREMELY</em></strong> CAREFUL WITH THE USB CONNECTION ON THE TEENSY. THEY BREAK <strong><em>VERY</em></strong> EASILY!!</p>
+</blockquote></li>
+<li><p>You should see the orange light blinking on the Teensy. If you do not, something is wrong with your Teensy and you should notify your instructor.</p></li>
+</ol>
+</div>
+<div id="check-the-software" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Check the software</h3>
+<ol style="list-style-type: decimal">
+<li>Open the Arduino IDE.</li>
+<li>Click <code>Tools &gt; Board &gt; Teensy 3.5</code></li>
+<li>Click <code>File &gt; Examples &gt; 01.Basics &gt; Blink</code>.</li>
+<li>Find the part in the program that says <code>delay(1000)</code> and change it to <code>delay(500)</code>.</li>
+<li>Click <strong>Verify</strong> in the software (checkmark button in upper left corner).</li>
+<li>Press the white button on the top of the Teensy.</li>
+<li>Press upload in the software (right arrow button, next to checkmark).</li>
+<li>You should see the orange light blink more quickly. If you encountered any errors, something could be wrong with your software installation or you may have made a typo in the code. Notify your instructor of any problems.</li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="preface.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="blink-an-led.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"download": "pdf"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

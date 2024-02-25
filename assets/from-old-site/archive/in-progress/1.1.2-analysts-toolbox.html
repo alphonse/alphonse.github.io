@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Analyst's Toolbox</title>
+    <link rel="stylesheet" type="text/css" href="remark.css">
+    <link rel="stylesheet" type="text/css" href="mermaid.css">
+    <div w3-include-html="slide-types.html"></div>
+    <div w3-include-html="common-text.html"></div>
+  </head>
+  <body>
+  <textarea id="source">
+
+layout: true
+
+.footer[
+- <div class="tooltip"><a href="/devel/chem370"><i class="fas fa-home"></i></a> <span class="tooltiptext">Go to C370 Main Page</span></div>
+- <div class="tooltip"><a href="/devel/chem370/lectures"><i class="fas fa-chalkboard-teacher"></i></a><span class="tooltiptext">Go to Lecture List</span></div>
+- [<div class="tooltip"><i class="fas fa-list"></i><span class="tooltiptext">Go to Table of Contents</span></div>](#contents)
+- <div class="tooltip"><i class="fas fa-question"></i><span class="tooltiptext">Press <kbd>Shift</Kbd> + <kbd>?</kbd> for Navigation Tips!</span></div>
+]
+    
+---
+class: img-right
+
+<h1 style = "font-size: 64px;">
+The Analyst's Toolbox
+</h1>
+
+<img src="https://www.wcu.edu/WebGraphics/CHPH_gcms_clean.jpg">
+
+**Dr. Al Fischer**  
+
+Chem 370 | Instrumental Analysis I  
+Western Carolina University
+
+## Reading
+
+1. Granger Ch 1
+1. [Harvey](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29) Chs 1 + 2
+
+## Table of Contents
+
+1. [What is Analytical Chemistry?](#analtyical-chemistry)
+1. [Analytical Chemistry vs. Analysis](#anal-chem-vs-analysis)
+1. [Analytical Perspective](#analytical-perspective)
+1. [The Work of an Analytical Chemist](#work-of-analytical-chemist)
+
+---
+
+# Modern Analytical Chemistry
+
+> Analytical chemistry is the science of inventing and applying the concepts, principles, and...strategies for measuring the characteristics of chemical systems.  
+>
+> *- David Harvey*  
+> *Analytical Chemistry 2.1*
+
+Modern analtical chemistry often relies on *instruments*.
+
+???
+
+In the last lesson we discussed how analytical chemists take non-routine analysis problems and make them routine.  We spoke generally about analytical chemistry.  In this lesson we'll focus more on the subset of analytical chemistry called instrumental analysis.
+
+We've studied how flame atmoic absorption spectroscopy came to be and observed how it supplanted gravimetric methods of metal analysis.  Flame AA is an example of an *instrumental analysis* --  using electronic instruments in analytical chemistry.  If you take a look around a modern chemistry lab you'll like find chemical instrumentation, and it won't take long to realize that instrumental analysis has come to be a dominate area of modern analytical chemistry.
+
+--
+
+> **Chemical instrumentation** refers to electronic and/or optical devices used to study the chemical properties of a sample. 
+
+???
+
+But what is an *instrument*?  Simply, an instrument is an electronic and/or optical assembly used to study the chemical properties of a sample.  Most instruments today are controlled by a computer, but there's nothing stating an instrument *must* be computer controlled.
+
+- utilizes chemical properties of analyte and its matrix
+
+
+
+---
+
+# The Analyst's Toolbox
+
+> As we introduce new techniques, it is important that you incorporate them in the context of the techniques with which you are already familiar.  
+> *- Granger*  
+> *Instrumental Analysis*
+
+<div class="mermaid">
+  graph TB
+     A(Chromatography) -.-> B(Spectroscopy)
+     A(Chromatography) -.-> C(Mass Spectrometry)
+     click A callback "Chromatography separates complex mixtures"
+     click B callback "Spectroscopy utilizes light to probe a sample"
+     click C callback "Mass spectrometry is used for structural determination"
+</div>
+
+---
+
+# Sample Preparation
+
+An instrument will always give you a result; the result is not always the answer.  One step in getting the correct answer from the instrument is properly preparing your samples.
+
+> Garbage in, Garbage Out!
+>
+> *- D.C. Harris*  
+> Quantitative Chemical Analysis
+
+---
+class: img-full
+
+# Standard Methods
+
+<a href="https://chem.libretexts.org/@api/deki/files/159870/Figure3.2.png?revision=1&size=bestfit&width=493&height=329"><img src="https://chem.libretexts.org/@api/deki/files/159870/Figure3.2.png?revision=1&size=bestfit&width=493&height=329" class="img-center-v"></a>
+
+<div class="image-caption"> 
+Flow diagram illustrating the relationship between techinques, methods, procedures, and protocols.
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC-BY-SA </a>
+ from <a src="https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_(Harvey)">Analytical Chemistry 2.1</a>
+</div>
+
+???
+
+Fortunately for the analyst, many agencies employ analytical chemists for the sole purpose of developing standard methods and protocols for the techniques we'll cover in this course.  The terminology can get confusing here, so it helps to go over some definitions.  
+
+The book defines the following terms (reprinted verbatim from [*Analytical Chemistry 2.1*](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29/03%3A__The_Vocabulary_of_Analytical_Chemistry/3.02%3A_Techniques%2C_Methods%2C_Procedures%2C_and_Protocols)):
+   
+- **Technique:** any chemical or physical principle that we can use to study an analyte.  In this course, 'technique' is nearly synonymous with 'instrument'.
+- **Method:** the application of a technique for a specific type of sample.
+- **Procedure:** a set of written directions that tell us how to apply a method to a particular sample, including information on how to collect the sample, how to handle interferents, and how to validate results.
+- **Protocol:** a set of stringent guidelines that specify a procedure that an analyst must follow if an agency is to accept the results.
+
+---
+class: img-full
+
+# Sample Preparation
+
+## Some Terms:
+
+- **Analyte:** The portion the sample mixture you are probing
+- **Matrix:** Everything else in the sample (solvent, other trace species, solids)
+
+![image of analyte-matrix](https://upload.wikimedia.org/wikipedia/commons/b/b8/Placeholder-image.png)
+
+# Ways of Preparing Your Sample
+
+# Goals of this Class
+
+# Some cool eamples!
+
+<!-- =============================================================================== -->
+
+
+    </textarea>
+    <script src="/assets/js/include-html.js" type="text/javascript"></script>
+    <script src="remark.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/efbc54fa3b.js"></script>
+    <script type="text/javascript">     
+         var slideshow = remark.create(
+           {
+             navigation: {scroll: false, touch: true},
+             slideNumberFormat: '%current%',
+             highlightLanguage: 'r',
+             highlightStyle: 'atom-one-light',
+           });
+        MathJax.Hub.Config({
+             tex2jax: {
+             skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+             }
+         });
+         MathJax.Hub.Configured();
+         mermaid.initialize({
+            startOnLoad: false,
+            cloneCssStyles: false,
+            theme: null
+          });
+          
+        function initMermaid(s) {
+          var diagrams = document.querySelectorAll('.mermaid');
+          var i;
+          for(i=0;i<diagrams.length;i++){
+            if(diagrams[i].offsetWidth>0){
+              mermaid.init(undefined, diagrams[i]);
+            }
+          }
+        }
+        slideshow.on('afterShowSlide', initMermaid);
+        initMermaid(slideshow.getSlides()[slideshow.getCurrentSlideIndex()])
+    </script>
+    </body>
+</html>
