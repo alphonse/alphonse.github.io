@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CHEM 370 | Week 14</title>
+    <link rel="stylesheet" type="text/css" href="remark-dark.css">
+    <link rel="stylesheet" type="text/css" href="mermaid.css">
+    <div w3-include-html="slide-types.htm"></div>
+    <div w3-include-html="common-text.htm"></div>
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+
+---
+
+<h2 style = "text-align: right; font-weight: bold;">14.0.1</h2>
+<h1 style = "text-align: left; font-weight: bold; margin-left: 40px;">Week 14 Intro</h1>
+
+---
+
+- Exam 3 this week!
+  - Mass spec, chromatography (LC + GC basics), IR, and structural determination
+  - 1 page study guide permitted
+  - You will be provided a correlation table and MS tables
+- Final exam reveiew exercise next week
+- Final exam first week of December (remote)
+- Final is cumulative, and will include this week's GC info
+
+---
+
+<h2 style = "text-align: right; font-weight: bold;">14.1.1</h2>
+<h1 style = "text-align: left; font-weight: bold; margin-left: 40px;">Gas Chromatography</h1>
+<h3 style = "text-align: left; font-weight: bold; margin-left: 40px;">Inlets and Columns</h3>  
+<h5 style = "text-align: left; font-weight: bold; margin-left: 40px;">Granger 16.1 - 16.5</h5>
+
+---
+
+class: center
+
+**Chromatography** separates a sample using a *mobile phase* and *stationary phase*.
+
+<img src="img/chrom_tlc.png" style = "margin-top: 50px; margin-left: auto; margin-right: auto;">
+<img src="img/chrom_column.png" style = "margin-top: 50px; margin-left: auto; margin-right: auto;">
+
+---
+
+<h2 style = "text-align: right; font-weight: bold;">14.1.2</h2>
+<h1 style = "text-align: left; font-weight: bold; margin-left: 40px;">Gas Chromatography</h1>
+<h3 style = "text-align: left; font-weight: bold; margin-left: 40px;">Detectors</h3>  
+<h5 style = "text-align: left; font-weight: bold; margin-left: 40px;">Granger 16.6</h5>
+
+---
+
+| Name | Principle | Detection Limits | Good For | Drawbacks | Advantages | 
+| :----- | :-----: | :-----: | :-----: | :-----: |
+| FID | Ionizing H$\_2$ Flame| pg/s | Hydrocarbons | ~~N~~, ~~P~~, ~~CO$\_2$~~ | Cheap, robust |
+| ECD | Ionizing $\beta$-emitter | fg/s | Halogens | Radioactive | - |
+| TCD | Thermal Conductivity | $\mu$g/s | Hydrocarbons | Poor LOD | Cheap, robust, uniform response, non-destructive |
+| MS | Mass Spectrometry | ag | Universal | Expensive, vacuum | Molecular structure, sensitive |
+
+---
+
+| Name | Principle | Detection Limits | Good For | Drawbacks | Advantages | 
+| :----- | :-----: | :-----: | :-----: | :-----: |
+| FID | Ionizing H$\_2$ Flame| pg/s | Hydrocarbons | ~~N~~, ~~P~~, ~~CO$\_2$~~ | Cheap, robust |
+| ECD | Ionizing $\beta$-emitter | fg/s | Halogens | Radioactive | -`` |
+| TCD | Thermal Conductivity | $\mu$g/s | Hydrocarbons | Poor LOD | Cheap, robust, uniform response, non-destructive |
+| FPD | Optical Emission | fg/s | P, S | Not universal | - |
+| AES | Atomic Emission | pg/s | Universal | Expensive, difficult | Atomic ID |
+| FTIR | Infrared Absorption | - | Organics | Expensive, difficult | Functional groups, non-destructive |
+| MS | Mass Spectrometry | ag | Universal | Expensive, vacuum | Molecular structure, sensitive |
+
+---
+class: center
+
+Evolution of the ECD
+
+<img src="img/gc_ecd.png" style = "margin-left: auto; margin-right: auto;">
+
+.image-credit[[Science Museum London - Science and Society Picture Library](https://commons.wikimedia.org/w/index.php?curid=28024345) / CC BY-SA 2.0 | [Science History Institute](https://commons.wikimedia.org/w/index.php?curid=29169184) / CC BY-SA 3.0 | [Agilent Technologies](https://www.agilent.com/en/product/gas-chromatography/gc-selective-detectors/micro-ecd) / Fair Use]
+
+
+
+
+<!-- =============================================================================== -->
+
+
+    </textarea>
+    <script src="/assets/js/include-html.js" type="text/javascript"></script>
+    <script src="remark.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script> -->
+    <script src="https://kit.fontawesome.com/efbc54fa3b.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          packages: {'[+]': ['mhchem']}
+        },
+        loader: {load: ['[tex]/mhchem']},
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create(
+        {
+          navigation: {scroll: false, touch: true},
+          slideNumberFormat: '%current%',
+          highlightLanguage: 'r',
+          highlightStyle: 'atom-one-light',
+        });
+        // MathJax.Hub.Config({
+        //   tex2jax: {
+        //     inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+        //     processEscapes: true,
+        //     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        //   }            });
+         MathJax.Hub.Configured();
+         mermaid.initialize({
+            startOnLoad: false,
+            cloneCssStyles: false,
+            theme: null
+          });
+
+        function initMermaid(s) {
+          var diagrams = document.querySelectorAll('.mermaid');
+          var i;
+          for(i=0;i<diagrams.length;i++){
+            if(diagrams[i].offsetWidth>0){
+              mermaid.init(undefined, diagrams[i]);
+            }
+          }
+        }
+        slideshow.on('afterShowSlide', initMermaid);
+        initMermaid(slideshow.getSlides()[slideshow.getCurrentSlideIndex()])
+    </script>
+    </body>
+</html>

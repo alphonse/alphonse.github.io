@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Limits of Detection and Quantitation | CHEM 370 Lab Manual</title>
+  <meta name="description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Limits of Detection and Quantitation | CHEM 370 Lab Manual" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="images/cover-image-mass-spec.png" />
+  <meta property="og:description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Limits of Detection and Quantitation | CHEM 370 Lab Manual" />
+  
+  <meta name="twitter:description" content="Lab Manual for CHEM 370: Instrumental Analysis Laboratory" />
+  <meta name="twitter:image" content="images/cover-image-mass-spec.png" />
+
+<meta name="author" content="Al Fischer" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="replicate-measurements.html"/>
+<link rel="next" href="comparing-means.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="http://alphonse.github.io/archive/chem370-f2020">CHEM 370 Main Page</a></li>
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="" data-path="lab-activities.html"><a href="lab-activities.html"><i class="fa fa-check"></i>Lab Activities</a></li>
+<li class="chapter" data-level="" data-path="lab-notebooks.html"><a href="lab-notebooks.html"><i class="fa fa-check"></i>Lab Notebooks</a></li>
+<li class="chapter" data-level="" data-path="features-of-the-book.html"><a href="features-of-the-book.html"><i class="fa fa-check"></i>Features of the Book</a><ul>
+<li><a href="features-of-the-book.html#typographical-conventions"><strong>Typographical Conventions</strong></a></li>
+<li><a href="features-of-the-book.html#e-book-vs.-pdf"><strong>e-Book vs. PDF</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="syllabus.html"><a href="syllabus.html"><i class="fa fa-check"></i>Syllabus</a><ul>
+<li class="chapter" data-level="" data-path="overview.html"><a href="overview.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="syllabus.html"><a href="syllabus.html#student-learning-outcomes"><i class="fa fa-check"></i>Student Learning Outcomes</a></li>
+<li class="chapter" data-level="" data-path="syllabus.html"><a href="syllabus.html#required-course-materials"><i class="fa fa-check"></i>Required Course Materials</a></li>
+<li class="chapter" data-level="" data-path="syllabus.html"><a href="syllabus.html#lab-notebooks-and-data-analysis"><i class="fa fa-check"></i>Lab Notebooks and Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="syllabus.html"><a href="syllabus.html#grading"><i class="fa fa-check"></i>Grading</a></li>
+<li class="chapter" data-level="" data-path="syllabus.html"><a href="syllabus.html#covid19-policies"><i class="fa fa-check"></i>COVID19 Policies</a></li>
+<li class="chapter" data-level="" data-path="syllabus.html"><a href="syllabus.html#course-policies"><i class="fa fa-check"></i>Course Policies</a></li>
+<li class="chapter" data-level="" data-path="syllabus.html"><a href="syllabus.html#institutional-policies"><i class="fa fa-check"></i>Institutional Policies</a></li>
+<li class="chapter" data-level="" data-path="syllabus.html"><a href="syllabus.html#student-resources"><i class="fa fa-check"></i>Student Resources</a></li>
+<li class="chapter" data-level="" data-path="syllabus.html"><a href="syllabus.html#syllabus-updates"><i class="fa fa-check"></i>Syllabus Updates</a></li>
+</ul></li>
+<li class="part"><span><b>I Introduction</b></span></li>
+<li class="chapter" data-level="1" data-path="getting-started-in-r.html"><a href="getting-started-in-r.html"><i class="fa fa-check"></i><b>1</b> Getting Started in R</a><ul>
+<li class="chapter" data-level="" data-path="r-intro.html"><a href="r-intro.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1.1" data-path="learning-markdown.html"><a href="learning-markdown.html"><i class="fa fa-check"></i><b>1.1</b> Learning Markdown</a></li>
+<li class="chapter" data-level="1.2" data-path="install-r.html"><a href="install-r.html"><i class="fa fa-check"></i><b>1.2</b> Installing R + RStudio</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="install-r.html"><a href="install-r.html#install-r-must-be-done-first"><i class="fa fa-check"></i><b>1.2.1</b> Install R (Must be done first)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="install-r.html"><a href="install-r.html#install-rstudio"><i class="fa fa-check"></i><b>1.2.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="1.2.3" data-path="install-r.html"><a href="install-r.html#installing-c370-package"><i class="fa fa-check"></i><b>1.2.3</b> Installing the CHEM 370 Package</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="completing-the-r-tutorial.html"><a href="completing-the-r-tutorial.html"><i class="fa fa-check"></i><b>1.3</b> Completing the R Tutorial</a></li>
+<li class="chapter" data-level="1.4" data-path="create-lab-notebook.html"><a href="create-lab-notebook.html"><i class="fa fa-check"></i><b>1.4</b> Creating a Lab Notebook Project</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="create-lab-notebook.html"><a href="create-lab-notebook.html#create-a-project"><i class="fa fa-check"></i><b>1.4.1</b> Create a Project</a></li>
+<li class="chapter" data-level="1.4.2" data-path="create-lab-notebook.html"><a href="create-lab-notebook.html#create-a-notebook-file"><i class="fa fa-check"></i><b>1.4.2</b> Create a Notebook File</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="gas-chromatography-with-thermal-conductivity-detection-gc-tcd.html"><a href="gas-chromatography-with-thermal-conductivity-detection-gc-tcd.html"><i class="fa fa-check"></i><b>2</b> Gas Chromatography with Thermal Conductivity Detection (GC-TCD)</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="2.1" data-path="lab-procedure.html"><a href="lab-procedure.html"><i class="fa fa-check"></i><b>2.1</b> Lab Procedure</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="lab-procedure.html"><a href="lab-procedure.html#prepare-samples"><i class="fa fa-check"></i><b>2.1.1</b> Prepare Samples</a></li>
+<li class="chapter" data-level="2.1.2" data-path="lab-procedure.html"><a href="lab-procedure.html#setup-the-instrument"><i class="fa fa-check"></i><b>2.1.2</b> Setup the Instrument</a></li>
+<li class="chapter" data-level="2.1.3" data-path="lab-procedure.html"><a href="lab-procedure.html#load-the-syringe"><i class="fa fa-check"></i><b>2.1.3</b> Load the Syringe</a></li>
+<li class="chapter" data-level="2.1.4" data-path="lab-procedure.html"><a href="lab-procedure.html#inject-the-sample"><i class="fa fa-check"></i><b>2.1.4</b> Inject the Sample</a></li>
+<li class="chapter" data-level="2.1.5" data-path="lab-procedure.html"><a href="lab-procedure.html#save-the-data"><i class="fa fa-check"></i><b>2.1.5</b> Save the Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="data-processing.html"><a href="data-processing.html"><i class="fa fa-check"></i><b>2.2</b> Data Processing</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-processing.html"><a href="data-processing.html#step-by-step-instructions"><i class="fa fa-check"></i><b>2.2.1</b> Step-by-Step Instructions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="gctcd-assessment.html"><a href="gctcd-assessment.html"><i class="fa fa-check"></i><b>2.3</b> Assessment</a></li>
+<li class="chapter" data-level="2.4" data-path="gctcd-rubric.html"><a href="gctcd-rubric.html"><i class="fa fa-check"></i><b>2.4</b> Notebook Rubric</a></li>
+<li class="chapter" data-level="" data-path="gctcd-materials.html"><a href="gctcd-materials.html"><i class="fa fa-check"></i>Materials (for Instructors)</a><ul>
+<li class="chapter" data-level="" data-path="gctcd-materials.html"><a href="gctcd-materials.html#materials"><i class="fa fa-check"></i>Materials</a></li>
+<li class="chapter" data-level="" data-path="gctcd-materials.html"><a href="gctcd-materials.html#chemicals"><i class="fa fa-check"></i>Chemicals</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="uv-visible-spectroscopy.html"><a href="uv-visible-spectroscopy.html"><i class="fa fa-check"></i><b>3</b> UV-visible Spectroscopy</a><ul>
+<li class="chapter" data-level="" data-path="uv-vis-intro.html"><a href="uv-vis-intro.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="uv-vis-intro.html"><a href="uv-vis-intro.html#safety"><i class="fa fa-check"></i>Safety</a></li>
+<li class="chapter" data-level="" data-path="uv-vis-intro.html"><a href="uv-vis-intro.html#reference"><i class="fa fa-check"></i>Reference</a></li>
+</ul></li>
+<li class="chapter" data-level="3.1" data-path="uv-vis-procedure.html"><a href="uv-vis-procedure.html"><i class="fa fa-check"></i><b>3.1</b> Lab Procedure</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="uv-vis-procedure.html"><a href="uv-vis-procedure.html#prepare-your-standards"><i class="fa fa-check"></i><b>3.1.1</b> Prepare Your Standards</a></li>
+<li class="chapter" data-level="3.1.2" data-path="uv-vis-procedure.html"><a href="uv-vis-procedure.html#prepare-your-samples"><i class="fa fa-check"></i><b>3.1.2</b> Prepare Your Samples</a></li>
+<li class="chapter" data-level="3.1.3" data-path="uv-vis-procedure.html"><a href="uv-vis-procedure.html#acquire-data"><i class="fa fa-check"></i><b>3.1.3</b> Acquire Data</a></li>
+<li class="chapter" data-level="3.1.4" data-path="uv-vis-procedure.html"><a href="uv-vis-procedure.html#waste-disposal-and-cleanup"><i class="fa fa-check"></i><b>3.1.4</b> Waste Disposal and Cleanup</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="uv-vis-data.html"><a href="uv-vis-data.html"><i class="fa fa-check"></i><b>3.2</b> Data Processing</a></li>
+<li class="chapter" data-level="3.3" data-path="uv-vis-assessment.html"><a href="uv-vis-assessment.html"><i class="fa fa-check"></i><b>3.3</b> Assessment</a></li>
+<li class="chapter" data-level="3.4" data-path="uvvis-rubric.html"><a href="uvvis-rubric.html"><i class="fa fa-check"></i><b>3.4</b> Notebook Rubric</a></li>
+<li class="chapter" data-level="" data-path="uvvis-materials.html"><a href="uvvis-materials.html"><i class="fa fa-check"></i>Materials (for Instructors)</a><ul>
+<li class="chapter" data-level="" data-path="gctcd-materials.html"><a href="gctcd-materials.html#materials"><i class="fa fa-check"></i>Materials</a></li>
+<li class="chapter" data-level="" data-path="uvvis-materials.html"><a href="uvvis-materials.html#solutions"><i class="fa fa-check"></i>Solutions</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Rotations</b></span></li>
+<li class="chapter" data-level="4" data-path="rotation-a-e-cigarette-liquid.html"><a href="rotation-a-e-cigarette-liquid.html"><i class="fa fa-check"></i><b>4</b> Rotation A: e-Cigarette Liquid</a><ul>
+<li class="chapter" data-level="" data-path="memorandum.html"><a href="memorandum.html"><i class="fa fa-check"></i>Memorandum</a><ul>
+<li class="chapter" data-level="" data-path="memorandum.html"><a href="memorandum.html#western-analysts"><i class="fa fa-check"></i>Western Analysts:</a></li>
+<li class="chapter" data-level="" data-path="memorandum.html"><a href="memorandum.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4.1" data-path="gc-ms.html"><a href="gc-ms.html"><i class="fa fa-check"></i><b>4.1</b> GC-MS</a><ul>
+<li class="chapter" data-level="" data-path="uv-vis-intro.html"><a href="uv-vis-intro.html#safety"><i class="fa fa-check"></i>Safety</a></li>
+<li class="chapter" data-level="4.1.1" data-path="gc-ms.html"><a href="gc-ms.html#gcms-instrumentation"><i class="fa fa-check"></i><b>4.1.1</b> Instrumentation</a></li>
+<li class="chapter" data-level="4.1.2" data-path="gc-ms.html"><a href="gc-ms.html#gcms-sample-prep"><i class="fa fa-check"></i><b>4.1.2</b> Sample Preparation</a></li>
+<li class="chapter" data-level="4.1.3" data-path="gc-ms.html"><a href="gc-ms.html#gcms-data-processing-vape"><i class="fa fa-check"></i><b>4.1.3</b> Data Processing</a></li>
+<li class="chapter" data-level="4.1.4" data-path="gc-ms.html"><a href="gc-ms.html#vape-gc-assessment"><i class="fa fa-check"></i><b>4.1.4</b> Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="flame-aa.html"><a href="flame-aa.html"><i class="fa fa-check"></i><b>4.2</b> Flame AA</a><ul>
+<li class="chapter" data-level="" data-path="flame-aa.html"><a href="flame-aa.html#safety-1"><i class="fa fa-check"></i>Safety</a></li>
+<li class="chapter" data-level="4.2.1" data-path="flame-aa.html"><a href="flame-aa.html#standard-preparation"><i class="fa fa-check"></i><b>4.2.1</b> Standard Preparation</a></li>
+<li class="chapter" data-level="4.2.2" data-path="flame-aa.html"><a href="flame-aa.html#vaping-and-sample-preparation"><i class="fa fa-check"></i><b>4.2.2</b> Vaping and Sample Preparation</a></li>
+<li class="chapter" data-level="4.2.3" data-path="flame-aa.html"><a href="flame-aa.html#running-samples"><i class="fa fa-check"></i><b>4.2.3</b> Running Samples</a></li>
+<li class="chapter" data-level="4.2.4" data-path="uv-vis-procedure.html"><a href="uv-vis-procedure.html#waste-disposal-and-cleanup"><i class="fa fa-check"></i><b>4.2.4</b> Waste Disposal and Cleanup</a></li>
+<li class="chapter" data-level="4.2.5" data-path="flame-aa.html"><a href="flame-aa.html#faas-data-processing-vape"><i class="fa fa-check"></i><b>4.2.5</b> Data Processing</a></li>
+<li class="chapter" data-level="4.2.6" data-path="flame-aa.html"><a href="flame-aa.html#vape-faas-assessment"><i class="fa fa-check"></i><b>4.2.6</b> Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="ft-ir.html"><a href="ft-ir.html"><i class="fa fa-check"></i><b>4.3</b> FT-IR</a><ul>
+<li class="chapter" data-level="" data-path="ft-ir.html"><a href="ft-ir.html#safety-2"><i class="fa fa-check"></i>Safety</a></li>
+<li class="chapter" data-level="4.3.1" data-path="ft-ir.html"><a href="ft-ir.html#instrumentation"><i class="fa fa-check"></i><b>4.3.1</b> Instrumentation</a></li>
+<li class="chapter" data-level="4.3.2" data-path="ft-ir.html"><a href="ft-ir.html#waste-disposal-and-cleanup-1"><i class="fa fa-check"></i><b>4.3.2</b> Waste Disposal and Cleanup</a></li>
+<li class="chapter" data-level="4.3.3" data-path="ft-ir.html"><a href="ft-ir.html#ir-data-processing-vape"><i class="fa fa-check"></i><b>4.3.3</b> Data Processing</a></li>
+<li class="chapter" data-level="4.3.4" data-path="ft-ir.html"><a href="ft-ir.html#vape-ftir-assessment"><i class="fa fa-check"></i><b>4.3.4</b> Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="hplc.html"><a href="hplc.html"><i class="fa fa-check"></i><b>4.4</b> HPLC</a><ul>
+<li class="chapter" data-level="" data-path="hplc.html"><a href="hplc.html#safety-3"><i class="fa fa-check"></i>Safety</a></li>
+<li class="chapter" data-level="" data-path="uv-vis-intro.html"><a href="uv-vis-intro.html#reference"><i class="fa fa-check"></i>Reference</a></li>
+<li class="chapter" data-level="4.4.1" data-path="hplc.html"><a href="hplc.html#standard-preparation-1"><i class="fa fa-check"></i><b>4.4.1</b> Standard Preparation</a></li>
+<li class="chapter" data-level="4.4.2" data-path="hplc.html"><a href="hplc.html#running-standards"><i class="fa fa-check"></i><b>4.4.2</b> Running Standards</a></li>
+<li class="chapter" data-level="4.4.3" data-path="hplc.html"><a href="hplc.html#sample-preparation"><i class="fa fa-check"></i><b>4.4.3</b> Sample Preparation</a></li>
+<li class="chapter" data-level="4.4.4" data-path="hplc.html"><a href="hplc.html#running-samples-1"><i class="fa fa-check"></i><b>4.4.4</b> Running Samples</a></li>
+<li class="chapter" data-level="4.4.5" data-path="hplc.html"><a href="hplc.html#waste-disposal-and-cleanup-2"><i class="fa fa-check"></i><b>4.4.5</b> Waste Disposal and Cleanup</a></li>
+<li class="chapter" data-level="4.4.6" data-path="hplc.html"><a href="hplc.html#hplc-data-processing-vape"><i class="fa fa-check"></i><b>4.4.6</b> Data Processing</a></li>
+<li class="chapter" data-level="4.4.7" data-path="hplc.html"><a href="hplc.html#vape-hplc-assessment"><i class="fa fa-check"></i><b>4.4.7</b> Assessment</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="rotation-b-acetaminophen.html"><a href="rotation-b-acetaminophen.html"><i class="fa fa-check"></i><b>5</b> Rotation B: Acetaminophen</a><ul>
+<li class="chapter" data-level="" data-path="am-memo.html"><a href="am-memo.html"><i class="fa fa-check"></i>Memorandum</a><ul>
+<li class="chapter" data-level="" data-path="memorandum.html"><a href="memorandum.html#western-analysts"><i class="fa fa-check"></i>Western Analysts:</a></li>
+</ul></li>
+<li class="chapter" data-level="5.1" data-path="am-hplc.html"><a href="am-hplc.html"><i class="fa fa-check"></i><b>5.1</b> HPLC</a><ul>
+<li class="chapter" data-level="" data-path="uv-vis-intro.html"><a href="uv-vis-intro.html#safety"><i class="fa fa-check"></i>Safety</a></li>
+<li class="chapter" data-level="5.1.1" data-path="flame-aa.html"><a href="flame-aa.html#standard-preparation"><i class="fa fa-check"></i><b>5.1.1</b> Standard Preparation</a></li>
+<li class="chapter" data-level="5.1.2" data-path="hplc.html"><a href="hplc.html#running-standards"><i class="fa fa-check"></i><b>5.1.2</b> Running Standards</a></li>
+<li class="chapter" data-level="5.1.3" data-path="hplc.html"><a href="hplc.html#sample-preparation"><i class="fa fa-check"></i><b>5.1.3</b> Sample Preparation</a></li>
+<li class="chapter" data-level="5.1.4" data-path="flame-aa.html"><a href="flame-aa.html#running-samples"><i class="fa fa-check"></i><b>5.1.4</b> Running Samples</a></li>
+<li class="chapter" data-level="5.1.5" data-path="uv-vis-procedure.html"><a href="uv-vis-procedure.html#waste-disposal-and-cleanup"><i class="fa fa-check"></i><b>5.1.5</b> Waste Disposal and Cleanup</a></li>
+<li class="chapter" data-level="5.1.6" data-path="am-hplc.html"><a href="am-hplc.html#hplc-data-processing-am"><i class="fa fa-check"></i><b>5.1.6</b> Data Processing</a></li>
+<li class="chapter" data-level="5.1.7" data-path="am-hplc.html"><a href="am-hplc.html#am-hplc-assessment"><i class="fa fa-check"></i><b>5.1.7</b> Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="am-ftir.html"><a href="am-ftir.html"><i class="fa fa-check"></i><b>5.2</b> FT-IR</a><ul>
+<li class="chapter" data-level="" data-path="flame-aa.html"><a href="flame-aa.html#safety-1"><i class="fa fa-check"></i>Safety</a></li>
+<li class="chapter" data-level="5.2.1" data-path="am-ftir.html"><a href="am-ftir.html#sample-preparation-1"><i class="fa fa-check"></i><b>5.2.1</b> Sample Preparation</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ft-ir.html"><a href="ft-ir.html#instrumentation"><i class="fa fa-check"></i><b>5.2.2</b> Instrumentation</a></li>
+<li class="chapter" data-level="5.2.3" data-path="ft-ir.html"><a href="ft-ir.html#waste-disposal-and-cleanup-1"><i class="fa fa-check"></i><b>5.2.3</b> Waste Disposal and Cleanup</a></li>
+<li class="chapter" data-level="5.2.4" data-path="data-processing.html"><a href="data-processing.html#data-processing"><i class="fa fa-check"></i><b>5.2.4</b> Data Processing</a></li>
+<li class="chapter" data-level="5.2.5" data-path="am-ftir.html"><a href="am-ftir.html#am-ftir-assessment"><i class="fa fa-check"></i><b>5.2.5</b> Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="am-gcms.html"><a href="am-gcms.html"><i class="fa fa-check"></i><b>5.3</b> GC-MS</a><ul>
+<li class="chapter" data-level="" data-path="ft-ir.html"><a href="ft-ir.html#safety-2"><i class="fa fa-check"></i>Safety</a></li>
+<li class="chapter" data-level="5.3.1" data-path="am-gcms.html"><a href="am-gcms.html#instrumentation-1"><i class="fa fa-check"></i><b>5.3.1</b> Instrumentation</a></li>
+<li class="chapter" data-level="5.3.2" data-path="am-gcms.html"><a href="am-gcms.html#sample-preparation-2"><i class="fa fa-check"></i><b>5.3.2</b> Sample Preparation</a></li>
+<li class="chapter" data-level="5.3.3" data-path="am-gcms.html"><a href="am-gcms.html#data-processing-1"><i class="fa fa-check"></i><b>5.3.3</b> Data Processing</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="am-gc-assessment.html"><a href="am-gc-assessment.html"><i class="fa fa-check"></i><b>5.4</b> Assessment</a></li>
+<li class="chapter" data-level="5.5" data-path="am-faas.html"><a href="am-faas.html"><i class="fa fa-check"></i><b>5.5</b> Flame AA</a><ul>
+<li class="chapter" data-level="" data-path="hplc.html"><a href="hplc.html#safety-3"><i class="fa fa-check"></i>Safety</a></li>
+<li class="chapter" data-level="5.5.1" data-path="hplc.html"><a href="hplc.html#standard-preparation-1"><i class="fa fa-check"></i><b>5.5.1</b> Standard Preparation</a></li>
+<li class="chapter" data-level="5.5.2" data-path="am-faas.html"><a href="am-faas.html#sample-preparation-3"><i class="fa fa-check"></i><b>5.5.2</b> Sample Preparation</a></li>
+<li class="chapter" data-level="5.5.3" data-path="hplc.html"><a href="hplc.html#running-samples-1"><i class="fa fa-check"></i><b>5.5.3</b> Running Samples</a></li>
+<li class="chapter" data-level="5.5.4" data-path="hplc.html"><a href="hplc.html#waste-disposal-and-cleanup-2"><i class="fa fa-check"></i><b>5.5.4</b> Waste Disposal and Cleanup</a></li>
+<li class="chapter" data-level="5.5.5" data-path="am-faas.html"><a href="am-faas.html#data-processing-2"><i class="fa fa-check"></i><b>5.5.5</b> Data Processing</a></li>
+<li class="chapter" data-level="5.5.6" data-path="uv-vis-intro.html"><a href="uv-vis-intro.html#reference"><i class="fa fa-check"></i><b>5.5.6</b> Reference</a></li>
+<li class="chapter" data-level="5.5.7" data-path="am-faas.html"><a href="am-faas.html#am-faas-assessment"><i class="fa fa-check"></i><b>5.5.7</b> Assessment</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-1-r-cookbook.html"><a href="appendix-1-r-cookbook.html"><i class="fa fa-check"></i>Appendix 1: R Cookbook</a><ul>
+<li class="chapter" data-level="" data-path="chromatogram-mass-spectrum-plotting.html"><a href="chromatogram-mass-spectrum-plotting.html"><i class="fa fa-check"></i>Chromatogram &amp; Mass Spectrum Plotting</a></li>
+<li class="chapter" data-level="" data-path="import-data-from-csv.html"><a href="import-data-from-csv.html"><i class="fa fa-check"></i>Import Data from CSV</a></li>
+<li class="chapter" data-level="" data-path="find-peak-area.html"><a href="find-peak-area.html"><i class="fa fa-check"></i>Find Peak Area</a></li>
+<li class="chapter" data-level="" data-path="fit-linear-model-calibration.html"><a href="fit-linear-model-calibration.html"><i class="fa fa-check"></i>Fit Linear Model (Calibration)</a></li>
+<li class="chapter" data-level="" data-path="ir-spectrum-processing.html"><a href="ir-spectrum-processing.html"><i class="fa fa-check"></i>IR Spectrum Processing</a><ul>
+<li class="chapter" data-level="" data-path="ir-spectrum-processing.html"><a href="ir-spectrum-processing.html#pre-processing"><i class="fa fa-check"></i>Pre-processing</a></li>
+<li class="chapter" data-level="" data-path="ir-spectrum-processing.html"><a href="ir-spectrum-processing.html#hit-quality-index-calculation"><i class="fa fa-check"></i>Hit-quality Index Calculation</a></li>
+<li class="chapter" data-level="" data-path="ir-spectrum-processing.html"><a href="ir-spectrum-processing.html#plotting-ir-spectra"><i class="fa fa-check"></i>Plotting IR Spectra</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="serial-dilution.html"><a href="serial-dilution.html"><i class="fa fa-check"></i>Serial Dilution</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-2-statistical-data-analysis.html"><a href="appendix-2-statistical-data-analysis.html"><i class="fa fa-check"></i>Appendix 2: Statistical Data Analysis</a><ul>
+<li class="chapter" data-level="" data-path="types-of-error.html"><a href="types-of-error.html"><i class="fa fa-check"></i>Types of Error</a></li>
+<li class="chapter" data-level="" data-path="replicate-measurements.html"><a href="replicate-measurements.html"><i class="fa fa-check"></i>Replicate Measurements</a></li>
+<li class="chapter" data-level="" data-path="hplc.html"><a href="hplc.html#limits-of-detection-and-quantitation"><i class="fa fa-check"></i>Limits of Detection and Quantitation</a></li>
+<li class="chapter" data-level="" data-path="comparing-means.html"><a href="comparing-means.html"><i class="fa fa-check"></i>Comparing Means</a></li>
+<li class="chapter" data-level="" data-path="outlier-detection.html"><a href="outlier-detection.html"><i class="fa fa-check"></i>Outlier Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-3-lab-notebook-guidelines.html"><a href="appendix-3-lab-notebook-guidelines.html"><i class="fa fa-check"></i>Appendix 3: Lab Notebook Guidelines</a><ul>
+<li class="chapter" data-level="" data-path="appendix-3-lab-notebook-guidelines.html"><a href="appendix-3-lab-notebook-guidelines.html#example-lab-notebooks"><i class="fa fa-check"></i>Example Lab Notebooks</a></li>
+<li class="chapter" data-level="" data-path="appendix-3-lab-notebook-guidelines.html"><a href="appendix-3-lab-notebook-guidelines.html#keeping-an-archival-record"><i class="fa fa-check"></i>Keeping an Archival Record</a></li>
+<li class="chapter" data-level="" data-path="appendix-3-lab-notebook-guidelines.html"><a href="appendix-3-lab-notebook-guidelines.html#writing-your-procedures"><i class="fa fa-check"></i>Writing Your Procedures</a></li>
+<li class="chapter" data-level="" data-path="appendix-3-lab-notebook-guidelines.html"><a href="appendix-3-lab-notebook-guidelines.html#significant-figures"><i class="fa fa-check"></i>Significant Figures</a></li>
+<li class="chapter" data-level="" data-path="appendix-3-lab-notebook-guidelines.html"><a href="appendix-3-lab-notebook-guidelines.html#creating-instrument-tables"><i class="fa fa-check"></i>Creating Instrument Tables</a></li>
+<li class="chapter" data-level="" data-path="appendix-3-lab-notebook-guidelines.html"><a href="appendix-3-lab-notebook-guidelines.html#the-block-diagram"><i class="fa fa-check"></i>The Block Diagram</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-4-schedule-of-labs.html"><a href="appendix-4-schedule-of-labs.html"><i class="fa fa-check"></i>Appendix 4: Schedule of Labs</a></li>
+<li class="chapter" data-level="" data-path="appendix-5-assignment-checklist.html"><a href="appendix-5-assignment-checklist.html"><i class="fa fa-check"></i>Appendix 5: Assignment Checklist</a></li>
+<li class="divider"></li>
+<li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>. <a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li> <link href="https://fonts.googleapis.com/css?family=Barlow|IBM+Plex+Sans:200&display=swap" rel="stylesheet">
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">CHEM 370 Lab Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="limits-of-detection-and-quantitation" class="section level2 unnumbered">
+<h2>Limits of Detection and Quantitation</h2>
+<p>For this course, the <em>Limit of Detection</em> (<span class="math inline">\(LOD_y\)</span>) is defined as 3 times the standard deviation of a blank measurement, <span class="math inline">\(y_blank\)</span>, plus the mean value of the blank (<span class="math inline">\(\bar{y}_{blank}\)</span>). This is the 3<span class="math inline">\(\sigma\)</span> detection limit and is represented as:</p>
+<p><span class="math display">\[
+LOD_y = \bar{y}_{blank} + 3\sigma_{blank}
+\]</span></p>
+<p>When a calibration plot (standard curve) is used, this becomes:</p>
+<p><span class="math display">\[
+LOD_x = \frac{3\sigma_{blank}}{m}
+\]</span></p>
+<p>where <span class="math inline">\(m\)</span> is the slope of the calibration curve and <span class="math inline">\(LOD_x\)</span> is the LOD in the concentration units of the calibration curve.</p>
+<p>The <em>Limit of Quantitation</em> (<span class="math inline">\(LOQ_y\)</span>) is defined as 10 times the standard deviation of the blank:</p>
+<p><span class="math display">\[
+LOQ_y = \bar{y}_{blank} + 10\sigma_{blank}
+\]</span></p>
+<p>When a calibration plot (standard curve) is used, this becomes:</p>
+<p><span class="math display">\[
+LOQ_x = \frac{10\sigma_{blank}}{m}
+\]</span></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="replicate-measurements.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="comparing-means.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["c370-lab-manual.pdf"],
+"toc": {
+"collapse": "section",
+"download": "pdf",
+"sharing": false
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

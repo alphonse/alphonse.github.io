@@ -1,0 +1,364 @@
+# UV-visible Spectroscopy
+
+##### **Objective** | Determine the concentration of quinine in tonic water using spectroscopic methods. {-}
+
+##### **To Turn In** | You should turn a ZIP folder containing:  {-}
+
+1. Your complete lab notebook as an .Rmd and .html file, functioning with no errors.  
+2. Your data files.  
+3. Your completed assessment at the end of your notebook.
+
+##### **Student Learning Outcomes** | *By the end of this lab, students will:*   {-}
+
+  - Recall methods of creating standards and standard curves from Quantitative Analysis.  
+  - Describe the difference between absorption spectroscopy and luminescence spectroscopy.
+  - Calculate the limits of detection and limits of quantitation from a blank sample.
+  - Employ a quality control sample to check the accuracy of their results.
+  - Utilize RMarkdown as an electronic lab notebook.
+  - Utilize R functions to analyze spectroscopic data.
+
+## Introduction {#uv-vis-intro -}
+
+<!-- https://www.youtube.com/watch?v=wxrAELeXlek -->
+
+This lab will use Vernier SpectroVis UV-visible/fluorescence spectrometers to quantify the amount of quinine in tonic water.  You will be given a sample of store-bought tonic water and a concentrated stock solution of quinine.  You will then dilute the stock solution to create a standard curve and measure the concentration of quinine in solution and use quality-control sample of known concentration to test the accuracy of your curve.  This lab will compare results between absorption and fluorescence spectroscopy.  Samples and the QC will be measured in triplicate so that you can get a mean and standard deviation for your measurement, and the limit of quantitation (LOQ) will be determined from a blank sample.
+
+Students should work in pairs for the lab activity and turn in independent data analysis sheets and lab notebooks.
+
+Watch Dr. Fischer teardown a SpectroVis and find out what's inside!
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=50136d4d-483b-4065-9fa2-ac2a00df6b01&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
+### Safety {-}
+
+- This lab uses 0.05 M sulfuric acid ([SDS](https://beta-static.fishersci.com/content/dam/fishersci/en_US/documents/programs/education/regulatory-documents/sds/chemicals/chemicals-s/S25895.pdf)).  Wear goggles and gloves.
+- Tonic water contains quinine hydrochloride and the stock solution contains [quinine sulfate](https://beta-static.fishersci.com/content/dam/fishersci/en_US/documents/programs/education/regulatory-documents/sds/chemicals/chemicals-q/S25510A.pdf).
+- Although samples are over-the-counter products, you should avoid ingesting and/or contacting them with your skin.
+
+### Reference {-}
+
+- Lawson-Wood, Kathryn, and Kieran Evans. “Determination of Quinine
+in Tonic Water Using Fluorescence Spectroscopy,” (Application Note: Fluorescence Spectroscopy) [Link](https://www.perkinelmer.com/lab-solutions/resources/docs/APP_Quinine_in_Tonic_Water_014133_01.pdf)
+
+\newpage
+
+## Lab Procedure {#uv-vis-procedure}
+
+### Prepare Your Standards
+
+1. Create your standards by diluting one of the 100-ppm quinine stock solutions to concentrations of approximately 100, 75, 40, 20, and 10 ppm using the technique of serial dilution.  Use 25 mL volumetric flasks for these dilutions.
+
+    ```{marginfigure}
+    It doesn't matter if you make these concentrations *exactly*, what matters is that you're in the right ballpark and *know* your concentrations exactly.
+    ```
+
+1. Create a quality control sample from a separate stock solution.  Make it roughly 20 ppm.  Use a 50 mL volumetric flask.
+
+    ```{marginfigure}
+    When creating your QC, make sure you use stock solution from a different lot and preferably a different manufacturer.  This helps check for contamination in the chemicals received from the supplier.  You should also do your QC calculations entirely from scratch so that you check your math with the QC.
+    ```
+
+### Prepare Your Samples
+
+1. There is no sample preparation -- run all samples undiluted.
+
+### Acquire Data
+
+*You will need [Vernier Logger Lite](https://www.vernier.com/products/software/logger-lite/#section5) (free) installed on your computer for these steps.*
+
+1. Connect the spectrophotometer to your computer via USB and open Logger Lite.  
+1. Go to **Experiment > Set up sensors > Spectrometer:1**.  
+1. Select **Fluorescence (405nm)** and click **OK**.  
+1. Select **Experiment > Calibrate > Spectrometer:1** and follow the on-screen instructions.  
+
+    ```{marginfigure}
+    Your blank should be a cuvette filled with solvent and nothing else.
+    ```
+1. Press **Collect (play button)** and load an aliquot of your high standard.  You should see a spectrum of Intensity vs. Wavelength (nm). Use this spectrum to determine $\lambda_{max}$, the wavelength of maximum emission.
+1. Discard the sample and rinse the cuvette with DI water.
+1. Configure the spectrometer to measure at $\lambda_{max}$ (determined in the previous step).
+    1. Click the **Wave** or **Configure Spectrometer** button in the menu bar.  
+    1. Set the spectrometer to collect **Fluorescence vs. Concentration**.
+    1. Choose **Individual Wavelengths**.
+    1. Select the check box next to the wavelength corresponding to $\lambda_{max}$.
+1. Run your blank, standards (low to high), QC, and sample.  Rinse the cuvette with DI between each sample.
+    1. Click **Collect**.
+    1. Click **Keep** and enter the concentration or a unique ID for each sample.
+
+    ```{marginfigure}
+    You should measure each standard once, the QC in triplicate, and the sample in triplicate.
+
+    When running your standards, always work from low concentration to high concentration to avoid carryover.
+    ```
+1. When you are done, go to **File > Export As > CSV...** and save your spectra into a CSV (comma-separated values) file.
+
+<!-- **Absorption**
+
+1. Connect the spectrophotometer via USB and open LoggerLite.  
+1. Go to **Experiment > Set up sensors > Spectrometer:1**.  
+1. Select **Absorption** and click **OK**.  
+1. Select **Experiment > Calibrate > Spectrometer:1** and follow the on-screen instructions.  
+
+    ```{marginfigure}
+    Your blank should be a cuvette filled with solvent and nothing else.
+    ```
+1. Press **Collect (play button)** and load your sample.  When you're happy with the spectrum press **Stop**.  Press **Store** and then double click the stored column header to name your run.
+1. Discard the sample, rinse the cuvette with DI water, and repeat the previous step as necessary for each standard/sample.
+
+    ```{marginfigure}
+    You should measure each standard once, the QC in triplicate, and the sample in triplicate.
+
+    When running your standards, always work from low concentration to high concentration to avoid carryover.
+    ```
+-->
+
+### Waste Disposal and Cleanup
+
+1. All acid waste should be placed in the waste container provided in the fume hood.
+1. Make sure you wash all glassware with Alconox and warm water, followed by a triple DI rinse.
+1. Shake out the glassware and put it back where you found it (with the caps on).  A little residual DI water in the glassware is OK.  
+
+
+## Data Processing {#uv-vis-data}
+
+The following video walks you through the data processing portion of this lab.
+
+<iframe src="https://wcu.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=993fb4bb-535d-409c-96ce-ac3600df98a1&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" frameBorder = "0" style="border: 0px solid #464646; display: block; margin: auto;" allowfullscreen allow="autoplay"></iframe>
+
+1. Create a new R project for this lab and open the UV-vis lab notebook template. 
+1. Load the data in R.
+
+    ```{R eval = FALSE}
+    fluordat <- read.csv('your-data-file.csv', check.names = FALSE)
+    ```
+1. Plot the standard curve.
+
+    ```{R eval = FALSE}
+    chemplot(fluordat[std_rows, ], xlab = "Your Label", ylab = "Your Label")
+    ```
+
+1. Fit a linear model to the calibration data and inspect it.
+
+    ```{R eval = FALSE}
+    calcurve <- lm(x, y, data = fluordat[std_rows, ])
+    summary(calcurve)
+    ```
+    
+1. Add the line of best fit onto the plot of your calibration data.
+
+    ```{R eval = FALSE}
+    chemplot(fluordat[std_rows, ], xlab = "Your Label", ylab = "Your Label")
+    abline(calcurve, col = 'Your Color', lwd = 2) # lwd sets the line width
+    ```
+
+1. Determine the mean concentration of the QC using the coefficients from the calibration curve.  Remember you can do this manually or use the `inverse.predict()` function from the `chemCal` package.
+
+    To get the coefficients manually:
+    
+    ```{R eval=FALSE}
+    coef(calcurve)[1] # this is the y-intercept
+    coef(calcurve)[2] # this is the slope
+    ```
+    
+    To use `inverse.predict()`:
+    
+    ```{R eval = FALSE}
+    library(chemCal)
+    inverse.predict(calcurve, fluordat[qc_rows, abs_column], alpha = 0.05)
+    ```
+
+1. Determine the mean concentration of your sample using the coefficients from the calibration curve.  Include the 95% CI.  You can do this using the same process you used to calculate the QC concentration.
+
+1. Determine the limit of detection from the blank data.
+
+    ```{R eval = FALSE}
+    blank.mean <- mean(fluordat[blank_rows, abs_col])
+    blank.sd   <- sd(fluordat[blank_rows, abs_col])
+    LOD <- # insert your LOD code here
+    ```
+
+1. Calculate the lower limit of quantitation from the blank data.
+
+
+<!-- 1. Calculate the concentration of each standard and the QC in your lab notebook. (Use the [`serialDilution()`](serial-dilution.html) function and example code in the template.)   
+
+    ```{octave eval = FALSE}
+    ## Calculate standard concentrations
+    serialDilution(stock_concentration, [pipette_vols], [flask_vols])
+    ```
+
+1. Import your spectra from your CSV file.
+
+    ```{octave eval = FALSE}
+    csvread('data/your_filename.csv');  ## replace with your actual folder/filename
+    ```
+
+1. Plot the full UV-visible spectrum for your medium standard and for one sample replicate on the same plot.  The spectra should show *Emission Intensity* as $y$ and *Wavelength* as $x$.
+
+    ```{octave eval = FALSE}
+    plot(x, y, 'DisplayName', 'Insert Name for Legend Here');
+    xlabel('Wavelength (nm)');
+    ylabel('Intensity (arbitrary)');
+    xlim([380 700]); ylim([0 0.25]);
+    hold on
+    plot(x, y, 'DisplayName', 'Insert Name for Legend Here');
+    legend();
+    hold off
+    ```
+
+1. Determine the wavelength of maximum emission ($\lambda_{e-max}$) for quinine.  You may try the following code to find this programmatically:
+
+    ```{octave eval = FALSE}
+    [max_values indices] = max(X(:, 3));
+    lambda_max = wavelengths(indices);
+    ```
+
+1. Plot a calibration curve with your data, with the intensity at $\lambda_{e-max}$ as $y$ and *Concentration (ppm)* as $x$.  
+
+    ```{octave eval = FALSE}
+    ##### Plot cal data
+    plot(x, y, '*', 'DisplayName', 'Experimental Data');
+    xlabel('Concentration (ppm)');
+    ylabel('Intensity (arbitrary)');
+    ```
+
+1. Find the calibration coefficient using the function [`fitlm()`](fit-linear-model-calibration.html).  
+
+    ```{octave eval = FALSE}
+    ##### Calculate linear model / cal curve
+    [fit_params, r2, fitline] = fitlm(conc_vector, intensity_vector');
+    ```
+
+1. Add the output of `fitlm()` to the calibration plot (see the example notebook).  
+
+    ```{octave eval = FALSE}
+    ##### Add cal line to previous plot
+    hold on; % this keeps our previous plot of the training data visible
+    plot(fitline(:, 1), fitline(:, 2), 'b--', 'DisplayName', 'Linear regression')
+    legend('location', 'northwest')
+    hold off % Don't put any more plots on this figure
+    ```
+
+1. Use your calibration curve to determine the concentration of quinine in the QC.  
+
+    ```{marginfigure}
+    Your measured and known QC concentrations should be the same at the 95% confidence level.
+    ```
+
+1. Use your calibration curve to determine the concentration of quinine in the samples.  
+1. Report your final answer as the average concentration $\pm$ one standard deviation, both in your lab notebook and on the analysis sheet.  Make sure to round to the correct number of significant digits!
+
+     > Make sure all of the above steps are clearly labeled in your lab notebook and easy to find.  
+     >
+     > Make sure you include the other information requested in the template.
+
+6. Include a conclusion discussion the measured concentration of your sample (and how it compares to other studies), the validity of your results, and your limits of detection/quantitation (i.e. are your results meaningful?).
+7. Before turning in your notebook, go to **Kernel > Restart Kernel** and then **Run > Run All**.  Fix any errors before turning in your notebook.
+8. Compress your notebook, data file(s), and worksheet into a ZIP folder and upload it to Dropbox (Links for [Monday](https://alphonse.github.io/archive/chem370-f2020/assignments/submissions.html) or [Wednesday](https://alphonse.github.io/archive/chem370-f2020/assignments/submissions-wednesday.html)). -->
+
+## Assessment {#uv-vis-assessment}
+
+Answer the following questions by saving the result as the specified R variable in an R code block.  These questions are graded automatically.  If you do not name your variable correctly (including capitals) your questions will be marked incorrect.
+
+Each question is worth 1 point.  You must get the question *exactly* right to get credit.
+
+1. What is the quinine concentration in your sample, in mg/L?  Call the variable `quinine`.
+
+```{r question-uvvis-1, purl = TRUE}
+quinine <- 0     # put your answer between the '<-' and '#'
+```
+
+2. What is the 95% confidence interval (CI) for quinine concentration in your sample, in mg/L?  Call the variable `quinine_ci`.
+
+```{r question-uvvis-2, purl = TRUE}
+quinine_ci <- 0     # put your answer between the '<-' and '#'
+```
+
+3. What is the quinine concentration in your QC, in mg/L?  Call the variable `quinine_qc`.
+
+```{r question-uvvis-3, purl = TRUE}
+quinine_qc <- 0     # put your answer between the '<-' and '#'
+```
+
+4. What is the 95% confidence interval (CI) for quinine concentration in your QC, in mg/L?  Call the variable `quinine_qc_ci`.
+
+```{r question-uvvis-4, purl = TRUE}
+quinine_qc_ci <- 0     # put your answer between the '<-' and '#'
+```
+
+5. What is the *expected* concentration for your qc, in mg/L?  Call it `qc_expected`.
+
+```{r question-uvvis-5, purl = TRUE}
+qc_expected <- 0     # put your answer between the '<-' and '#'
+```
+
+6. TRUE or FALSE: My QC passes.  Answer `TRUE` or `FALSE` in the variable `qc_pass`.
+
+```{r question-uvvis-6, purl = TRUE}
+qc_pass <- FALSE     # put your answer between the '<-' and '#'
+```
+
+7. What is your sensitivity factor?  Call it `m`.
+
+```{r question-uvvis-7, purl = TRUE}
+m <- 0     # put your answer between the '<-' and '#'
+```
+
+8. What is the $R^2$ value for your calibration curve? Call it `r2`.
+
+```{r question-uvvis-8, purl = TRUE}
+r2 <- 0     # put your answer between the '<-' and '#'
+```
+
+9. What is your limit of detection for quinine (LOD), in mg/L.  Call it `lod`.
+
+```{r question-uvvis-9, purl = TRUE}
+lod <- 0     # put your answer between the '<-' and '#'
+```
+
+10. What is your limit of quantitation for quinine (LOQ), in mg/L.  Call it `loq`.
+
+```{r question-uvvis-10, purl = TRUE}
+loq <- 0     # put your answer between the '<-' and '#'
+```
+
+## Notebook Rubric {#uvvis-rubric}
+
+I will use this rubric to judge the *content* (not accuracy) of your notebook.  For all items: '2' = exceptional, '1' = satisfactory, and '0' = inadequate/not present.
+
+| Item                                                                                                           | 2   | 1   | 0   |
+| -------------------------------------------------------------------------------------------------------------- | --- | --- | --- |
+| Descriptive title present?                                                                                     |     |     |     |
+| Introduction present describing experimental goals?                                                            |     |     |     |
+| Materials and Methods: detailed enough to convey *exactly* what was done?                                      |     |     |     |
+| Materials and Methods: Instrument table(s) complete?                                                           |     |     |     |
+| Results and Data: Calibration curve (if needed) plotted with high quality, including R2, slope, and intercept  |     |     |     |
+| Results and Data: all spectra, chromatograms, etc., plotted with high quality                                  |     |     |     |
+| Results and Data: Notebook runs without errors                                                                 |     |     |     |
+| Conclusion present and clearly states outcome of experiment while discussing errors/future direction as needed |     |     |     |
+| References clearly cited and used in the notebooks                                                             |     |     |     |
+
+## Materials (for Instructors) {- #uvvis-materials}
+
+### Materials {-}
+
+This lab requires per student: 
+
+- 5 25-mL volumetric flasks
+- 1 50-mL volumetric flask
+- Volumetric pipettes (you determine the size you need)
+- Pipette bulb
+- 1-cm plastic cuvette
+- Beakers, for temporary storage of stock solutions
+- Waste beaker
+- SpectroVis UV-visible spectrometer
+
+### Solutions {-}
+
+This lab requires per student: 
+
+- 0.05 M sulfuric acid, about 150 ml
+- 100-ppm quinine stock solution, about 20 mL
+- 100-ppm quinine QC stock solution, about 10 mL
+- Tonic water, about 20 mL
+- Wash bottle of DI water

@@ -1,0 +1,185 @@
+<html>
+  <head>
+    <title>Chemistry Review</title>
+    <link rel="stylesheet" type="text/css" href="remark.css">
+    <link rel="stylesheet" type="text/css" href="mermaid.css">
+    <div w3-include-html="slide-types.html"></div>
+    <div w3-include-html="common-text.html"></div>
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+.footer[
+- <div class="tooltip"><a href="/devel/chem370"><i class="fas fa-home"></i></a> <span class="tooltiptext">Go to C370 Main Page</span></div>
+- <div class="tooltip"><a href="/devel/chem370/lectures"><i class="fas fa-chalkboard-teacher"></i></a><span class="tooltiptext">Go to Lecture List</span></div>
+- [<div class="tooltip"><i class="fas fa-list"></i><span class="tooltiptext">Go to Table of Contents</span></div>](#contents)
+- <div class="tooltip"><i class="fas fa-question"></i><span class="tooltiptext">Press <kbd>Shift</Kbd> + <kbd>?</kbd> for Navigation Tips!</span></div>
+]
+
+--
+
+<h1 style = "font-size: 64px;">
+Chemistry Review
+</h1>
+
+[<img src="https://live.staticflickr.com/3884/14797853993_2beddd43bf_o.jpg" class = "img-right-post">](https://www.flickr.com/photos/internetarchivebookimages/14797853993/sizes/o/)
+<!-- ![](https://live.staticflickr.com/3884/14797853993_2beddd43bf_o.jpg) -->
+
+**Dr. Al Fischer**  
+
+Chem 370 | Instrumental Analysis I  
+Western Carolina University
+
+## Reading
+
+1. [Harvey](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29) Ch 2
+2. [Scientific Tools](https://www.eoas.ubc.ca/books/Practical_Meteorology/prmet102/ChA-AppendixA-v102b.pdf) section A.1 (i.e. pg 869-872)
+
+## Table of Contents
+
+1. [What is Analytical Chemistry?](#analtyical-chemistry)
+1. [Analytical Chemistry vs. Analysis](#anal-chem-vs-analysis)
+1. [Analytical Perspective](#analytical-perspective)
+1. [The Work of an Analytical Chemist](#work-of-analytical-chemist)
+
+---
+exclude: true
+
+# Units of Measure
+
+- Units are important! (Mars example)
+- Chemists often work in molarity; it makes dilutions easy.
+- Rest of the world does not work in molarity
+- Units we usually use in IA:
+   - ppm and ppb - specify w/w, w/v, etc,
+      - Be familiar with
+      - But [do not use](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-7-rules-and-style-conventions-expressing-values)! (ISO, NIST, SI)
+   - mg/l (less ambiguous than ppm)
+   - absorbance units (unitless)
+   - wavenumber 
+   - V
+   - "counts" and "abundance"  
+   
+???
+
+- ppm/ppb/ppt are ambiguous at best; they are also language-dependent, and can always be expressed in terms of SI units.
+
+# Chemistry Review
+
+1. Units and numbers (and why they're important!)
+1. Unit and number conventions (and why they're important!)
+1. Units and calculations (dimensional analysis)
+
+---
+class: img-full
+
+#  Units of Measure
+
+![si system](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Unit_relations_in_the_new_SI.svg/572px-Unit_relations_in_the_new_SI.svg.png)
+
+.image-credit[Emilio Pisanty via [Wikimedia](https://upload.wikimedia.org) / [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0)]
+
+---
+
+# Dimensional Analysis
+
+- WHat is dimensional analysis?
+
+---
+
+# Numbers
+
+According to [IUPAC](http://reports.iupac.org/guidelines-for-drafting-reports/11-numbers.html): 
+
+> - If the magnitude of the number is less than one, the decimal sign ***shall be preceded by a zero.***  
+> - For numbers with many digits, the digits may be separated in groups of three, counting from the decimal sign toward the left and the right. The groups ***should be separated by a thin space (half space), and never by a comma or a point***, or by any other means.  (This space is best produced as a non-breaking space of constant width, which also prevents splitting of numbers on line breaks. In MS Word for Windows, type ctrl-shift-space; in Mac OS, use command-space.)  
+> - Numbers shall be printed in roman (upright) and lightface fonts [ref. 46, ISO 31]. Hence, numerical values of physical quantities (and the symbols for their units) shall be printed in roman, lightface fonts, irrespective of the type used in the rest of the text.  
+
+---
+class: scrollable
+
+# Significant Figures
+
+- Recall 0.0**990** has 3 significant digits. (Don't omit trailing zeroes!)
+- How many should you report for each type of glassware? Instrument?
+- **Balances:** Usually, your significant digits will be limited by the balance. The exact number may depend on which balance you use (usually ±1 mg).  Be sure to record all digits on the balance when mass is important, even if they are zeroes; if the last digit fluctuates do the best you can to estimate it.f
+- **Graduated cylinders:** Typiclly have an error of ±1 %.
+- **Volumetric Pipettes:** Should be labeled with the volume *delivered* and associated uncertainty (often on the order of 0.01 ml or 0.1 % -- an order of magnitude better than a grad cylinder!)
+- **(Digital) Micropipettes:** Should be calibrated before use -- go by what the balance says, not what the pipette says.
+- **Volumetric Flasks:** Should be labeled with the volume *contained* and associated uncertainty -- typically about 0.2 %.
+- **Beakers/Erlenmeyer Flasks:** These should not be used to measure volumes in instrumental analysis..
+
+
+- Recall 0.0**990** has 3 significant digits. (Don't omit trailing zeroes!)
+- How many should you report for each type of glassware? Instrument?
+- **Balances:** Usually, your significant digits will be limited by the balance. The exact number may depend on which balance you use (usually ±1 mg).  Be sure to record all digits on the balance when mass is important, even if they are zeroes; if the last digit fluctuates do the best you can to estimate it.f
+- **Graduated cylinders:** Typiclly have an error of ±1 %.
+- **Volumetric Pipettes:** Should be labeled with the volume *delivered* and associated uncertainty (often on the order of 0.01 ml or 0.1 % -- an order of magnitude better than a grad cylinder!)
+- **(Digital) Micropipettes:** Should be calibrated before use -- go by what the balance says, not what the pipette says.
+- **Volumetric Flasks:** Should be labeled with the volume *contained* and associated uncertainty -- typically about 0.2 %.
+- **Beakers/Erlenmeyer Flasks:** These should not be used to measure volumes in instrumental analysis..
+
+???
+
+- Pipettes & flasks must be clean
+- Solids must be dry (dry in oven and then store in dessicator)
+- Everything must be room temp (even solids you are measuring).
+
+---
+
+# Stoichiometry
+
+---
+exclude: true
+
+# Copyright Statement & Credits
+
+This material available for re-use under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/). You may re-use this material under the conditions that you (1) attribute the author, (2) do not use it for commercial or for-profit purposes, and (3) share it under an equally-permissive license.  Please [contact](mailto:difscher@wcu.edu) the author for inquiries about other useage.  Take note that some of the materials referenced in this book might be under different copyright protection — if so, this will be indicated in the text.
+
+I have tried to acknowledge all sources. If I have forgotten to acknowledge your work, have provided insufficient credits, or have misinterpreted your copyright, it has not been done with malicious intent. Please [notify me](mailto:difscher@wcu.edu) of any concerns.
+
+This presentation uses [remark](https://remarkjs.com/) by [Ole Petter Bang](https://github.com/gnab).
+
+<!-- =============================================================================== -->
+
+    </textarea>
+    <script src="/assets/js/include-html.js" type="text/javascript"></script>
+    <script src="remark.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/efbc54fa3b.js"></script>
+    <script type="text/javascript">     
+         var slideshow = remark.create(
+           {
+             navigation: {scroll: false, touch: true},
+             slideNumberFormat: '%current%',
+             highlightLanguage: 'r',
+             highlightStyle: 'atom-one-light',
+           });
+        MathJax.Hub.Config({
+             tex2jax: {
+             skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+             }
+         });
+         MathJax.Hub.Configured();
+         mermaid.initialize({
+            startOnLoad: false,
+            cloneCssStyles: false,
+            theme: null
+          });
+          
+        function initMermaid(s) {
+          var diagrams = document.querySelectorAll('.mermaid');
+          var i;
+          for(i=0;i<diagrams.length;i++){
+            if(diagrams[i].offsetWidth>0){
+              mermaid.init(undefined, diagrams[i]);
+            }
+          }
+        }
+        slideshow.on('afterShowSlide', initMermaid);
+        initMermaid(slideshow.getSlides()[slideshow.getCurrentSlideIndex()])
+    </script>
+    </body>
+</html>

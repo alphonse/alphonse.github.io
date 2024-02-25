@@ -1,0 +1,448 @@
+<html>
+  <head>
+    <title>Reproducible & Open Research</title>
+    <link rel="stylesheet" type="text/css" href="remark.css">
+    <link rel="stylesheet" type="text/css" href="mermaid.css">
+    <div w3-include-html="slide-types.html"></div>
+    <div w3-include-html="common-text.html"></div>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: img-full
+
+<img src = "https://upload.wikimedia.org/wikipedia/commons/9/9c/Open_Science_-_Prinzipien.png" style = "width: 500px; padding-top: 100px;" alt = "tenents of open sceince">
+
+.image-credit[Andreas E. Neuhold via [Wikimedia](https://upload.wikimedia.org) / [CC BY-SA](https://creativecommons.org/licenses/by-sa/3.0)]
+
+# Reproducible Research & Open Science
+
+**Dr. Al Fischer** / Western Carolina University  
+Chem 370 / Instrumental Analysis  
+
+---
+
+layout: true
+.footer[
+- <div class="tooltip"><a href="/devel/chem370"><i class="fas fa-home"></i></a> <span class="tooltiptext">Go to C370 Main Page</span></div>
+- <div class="tooltip"><a href="/devel/chem370/lectures"><i class="fas fa-chalkboard-teacher"></i></a><span class="tooltiptext">Go to Lecture List</span></div>
+- [<div class="tooltip"><i class="fas fa-list"></i><span class="tooltiptext">Go to Table of Contents</span></div>](#contents)
+- <div class="tooltip"><i class="fas fa-question"></i><span class="tooltiptext">Press <kbd>Shift</Kbd> + <kbd>?</kbd> for Navigation Tips!</span></div>
+]
+
+---
+name: contents
+
+# Reproducible Research & Open Science
+
+## Reading
+- [Reproducible Research @ ROpenSci](https://ropensci.github.io/reproducibility-guide/sections/introduction/)
+
+## Additional Info
+
+- [FOSTER Open Science](https://book.fosteropenscience.eu/en/02OpenScienceBasics/)  
+- [Intro to R @ Naval Postgraduate School](http://faculty.nps.edu/rdfricke/OA3101/Lab%201.pdf)
+
+## Outline
+
+- Reproducible research
+- Open science
+- Tools we'll use
+
+---
+class: img-full
+
+# Reproducible Research
+
+<center>
+Reproducibility is central to the scientific method.
+</center>
+
+![the scientific method](https://chem.libretexts.org/@api/deki/files/56137/CNX_Chem_01_01_SciMethod.jpg?revision=1&size=bestfit&width=745&height=439)
+
+.image-credit[*Chemistry* via [OpenStax](https://chem.libretexts.org/Bookshelves/General_Chemistry/Book%3A_Chemistry_%28OpenSTAX%29/01%3A_Essential_Ideas/1.1%3A_Chemistry_in_Context) / [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0)]
+
+
+---
+# Reproducible Research
+
+## Types of Reproducibility ([Victoria Stodden](https://www.edge.org/response-detail/25340)):
+
+- **Computational:** details provided about code, software, hardware, and implementation details.  
+- **Empirical:** details provided about non-computational portions of study (how the data was collected.  
+- **Statistical reproducibility:** when detailed information is provided about the choice of statistical tests, model parameters, threshold values, etc. (prevent *p*-hacking).  
+
+## My definition:
+
+Research methodologies that allow for independent review, replication, and confirmation of results and computations.
+
+???
+
+## Reproducibility vs. Replicability (Goodman et al (2016)): 
+
+- **Reproducibility:** ability to get same results with the same data (i.e. reproduce *computations*).
+
+- **Replicability:** ability to get same outcome with unique data (i.e. reproduce *procedures and computations*)
+
+(in data science -- is this a good definition for chemistry?)
+
+---
+
+# Reproducible Research
+
+## Why do reproducible research?
+
+1. Show evidence of correctness.
+2. Enable others to make use of methods and results.
+
+---
+class: img-full
+
+# Reproducible Research
+
+<center>
+Historic archival methods have relied on paper and distribution via academic journals and conferences.
+
+<img style = "width: 500px" src="https://www.sciencealert.com/images/Notebook1.jpg" alt = "marie curie's lab notebook">
+</center>
+.image-credit[(c) Wellcome Collection via [Science Alert](https://www.sciencealert.com/these-personal-effects-of-marie-curie-will-be-radioactive-for-another-1-500-years) / [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0)]
+
+
+---
+class: img-full
+
+# Reproducible Research
+
+<center>
+Historic archival methods have relied on paper and distribution via academic journals and conferences...**is this still relevant?**
+
+<img style = "width: 500px;" src="https://www.sciencealert.com/images/Notebook1.jpg" alt = "marie curie's lab notebook">
+</center>
+.image-credit[(c) Wellcome Collection via [Science Alert](https://www.sciencealert.com/these-personal-effects-of-marie-curie-will-be-radioactive-for-another-1-500-years) / [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0)]
+
+---
+class: img-full
+
+# Reproducible Research
+
+<center>
+Modern datasets are large and processing relies heavily on computation.
+
+
+<img style = "width: 700px; padding-top: 50px;" src = "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-017-02499-1/MediaObjects/41598_2017_2499_Fig1_HTML.jpg?as=webp" alt = "modern chemometric approach">
+</center>
+
+.image-credit[(c) Fujimura et al. (2017) [*Nature*](https://www.nature.com/articles/s41598-017-02499-1) / [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0)]
+
+---
+
+# Reproducible Research
+
+<center>
+What would an ideal modern data archival solution look like?
+
+<img style = "width: 700px; padding-top: 50px;" src = "img/data_archive_examples.png" alt = "data archive examples">
+
+</center>
+
+.image-credit[Examples from [Atmospheric Measurement Techniques](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjuo5u50v_pAhUxRzABHZRtA2MQFjABegQIEhAC&url=https%3A%2F%2Fwww.atmospheric-measurement-techniques.net%2F&usg=AOvVaw2JB4cXiMk4o6CL6rovvp1h)]
+
+???
+
+What would an ideal modern data archival solution look like?
+
+- Electronic  
+- Archival  
+- Redundant  
+- Conveys information about computational thought process  
+- Easily accessbile (by who?)  
+- Universal format  
+
+---
+exclude: true
+
+# Reproducible Research
+
+What would an ideal modern data archival solution look like?
+
+- Electronic  
+
+- Archival  
+ 
+- Redundant  
+
+--
+exclude: true
+
+- Conveys information about computational thought process
+
+--
+exclude: true
+
+- Easily accessbile (by who?)
+
+--
+exclude: true
+
+- Universal format
+
+---
+class: img-full
+
+# Open Research
+
+Research methodologies that allow for independent review, replication, and confirmation of results and computations ***by anyone***.
+
+> ***Open Science*** [research] is the practice of science in such a way that others can collaborate and contribute, where research data, lab notes and other research processes are freely available, under terms that enable reuse, redistribution and reproduction of the research and its underlying data and methods ([FOSTER Open Science](https://book.fosteropenscience.eu/en/02OpenScienceBasics/01OpenConceptsAndPrinciples.html) Definition). 
+
+<img src = "https://upload.wikimedia.org/wikipedia/commons/9/9c/Open_Science_-_Prinzipien.png" style = "width: 500px;" alt = "tenents of open science">
+
+.image-credit[Andreas E. Neuhold via [Wikimedia](https://upload.wikimedia.org) / [CC BY-SA](https://creativecommons.org/licenses/by-sa/3.0)]
+
+???
+
+> In a nutshell, Open Science is transparent and accessible knowledge that is shared and developed through collaborative networks (Vicente-Sáez & Martínez-Fuentes 2018).
+https://book.fosteropenscience.eu/en/02OpenScienceBasics/01OpenConceptsAndPrinciples.html
+
+---
+
+# Open Research
+
+<center>
+<img src = "https://upload.wikimedia.org/wikipedia/commons/9/9c/Open_Science_-_Prinzipien.png" style = "width: 500px;" alt = "tenents of open sceince">
+</center>
+
+.image-credit[Andreas E. Neuhold via [Wikimedia](https://upload.wikimedia.org) / [CC BY-SA](https://creativecommons.org/licenses/by-sa/3.0)]
+
+---
+
+# Open Research
+
+## 4 fundamental rules of open science:
+
+1. Transparent (ethical considerations, increase trust)
+2. Available and Free (inclusive/fair)
+3. Accessible (embracing modern open-source tools to facilitate collaboration)
+4. Reusable (licensing to maximize re-use while creator retains ownership and gets credit)
+
+<center>
+
+<img src = "https://book.fosteropenscience.eu/en/Images/02%20Open%20Science%20Basics/02_open_concepts_and_principles.png" style = "max-width: 600px;" alt = "4 fundamentals of open research">
+
+.image-credit[[FOSTER Open Science](](https://book.fosteropenscience.eu/en/02OpenScienceBasics/01OpenConceptsAndPrinciples.html) / Public Domain]
+
+
+---
+
+# Open Science
+
+## Why open science?
+
+(from [FOSTER Open Science](https://book.fosteropenscience.eu/en/02OpenScienceBasics/01OpenConceptsAndPrinciples.html))
+
+- **Democratic:** Making scholarly knowledge available freely for all. 
+ 
+- **Infrastructure:** Efficient research and collaboration requires readily available tools.  
+
+- **Public:** Societal impact requires engagement (citizen science).  
+
+- **Measurement:** Traditional metrics of impact may be problematic.
+
+--
+
+> An article about computational results is advertising, not scholarship. The actual scholarship is the full software environment, code and data, that produced the result. ([Claerbout and Karrenbach 1992](http://sepwww.stanford.edu/doku.php?id=sep:research:reproducible:seg92))
+
+---
+
+# Open Science
+
+## Open data formats:
+
+- Text: TXT, ODT, PDF/A, XML
+
+- Tabular data: CSV, TSV
+
+- Image: TIFF, PNG, JPG 2000, SVG, WebP
+
+- Audio: WAV, FLAC, OPUS
+
+- Video: MPEG2, Theora, VP8, VP9, AV1, Motion JPG 2000 (MJ2),
+
+- Binary hierarchical data: HDF5
+
+
+???
+
+Within the context of Open Science, and for optimal long-term archiving, files should not be compressed and should avoid proprietary or patent-encumbered formats and in favor of open formats based on documented standards. This ensures the access and re-usability of the content. Only unencrypted files should be published and archived. Examples for open file formats are given.
+
+Some file formats cannot be converted to open formats, but are nonetheless archived.
+
+---
+
+# Open Science
+
+## Open data formats:
+
+- Text: **TXT**, ODT, **PDF**/A, XML  
+  [we will use MD, which is an open-source plain text format]
+
+- Tabular data: **CSV, TSV**
+
+- Image: TIFF, **PNG**, JPG 2000, **SVG**, WebP
+
+- Audio: WAV, FLAC, OPUS
+
+- Video: MPEG2, Theora, VP8, VP9, AV1, Motion JPG 2000 (MJ2),
+
+- Binary hierarchical data: HDF5
+
+---
+# Open Science
+
+## Licensing:
+
+- Creative Commons
+
+- FreeBSD
+
+- MIT
+
+- CERN Open Hardware License
+
+- Release to Public Domain
+
+---
+
+# Open Science
+
+## How to Achieve these Goals
+
+- Programmatic Data Analysis [We will use [R](https://www.r-project.org/)]
+
+- Literate Programming [We will use (R) Markdown]
+
+- Version control [Version control not enforced]
+
+    - suggested tool: Git + [GitHub](https://www.github.com) + [Gitkraken](https://www.gitkraken.com)
+    - benefits: robust backup of work, ability to undo to previous versions
+    - I will help you get started if you're interested.
+    
+---
+
+# Why R?
+
+## Reasons for choosing R:
+- Free & Open Source (paid alternatives can be ~$10k)
+- Command line interface (programmatic)
+    - Can write analysis scripts/functions once and apply to all your data.
+- Very capable
+- Mature & Established
+    - Widespread support online (and in books)
+    - Many "packages" (add-ons)
+- Widely used (mostly stats, bio, social sciences)
+- Ability to create notebooks and papers
+- Good for instruction
+- Included in *Analytical Chemistry 2.1*
+
+## Cons:
+- Learning curve
+- Other languages are more common in chemistry (e.g. MATLAB)
+- Slow compared to some languages (e.g. Julia, well-written Python)
+
+---
+
+# Why R?
+
+## Alternatives:
+- MATLAB (proprietary) / Octave (open-source)
+- Origin (proprietary)
+- Excel (proprietary) / LibreCalc (open-source)
+- Igor (proprietary)
+- Mathmatica (proprietary)
+- Python (open-source)
+- Julia (open-source)
+- more...
+
+---
+
+# Why R?
+
+- Excel is not made for science.
+- Eventually you uncover its limitations.
+- When done correctly, programming can be more efficient.
+- Produces better graphics.
+
+---
+
+# What is R?
+
+- Open source software originally designed for statistics (alternative to S).
+- Open source, developed by consortium of volunteers (anyone can contribute!).
+- As a result, has be extended to many fields.
+
+# Learning R
+
+- R tutorials on Chem 370 Website
+- [rforcats](http://rforcats.net/)
+
+## Example
+
+Plotting mass spectra in Excel vs. R
+
+---
+
+
+---
+exclude: false
+
+# Copyright Statement & Credits
+
+This material available for re-use under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/). You may re-use this material under the conditions that you (1) attribute the author, (2) do not use it for commercial or for-profit purposes, and (3) share it under an equally-permissive license.  Please [contact](mailto:difscher@wcu.edu) the author for inquiries about other useage.  Take note that some of the materials referenced in this book might be under different copyright protection — if so, this will be indicated in the text.
+
+I have tried to acknowledge all sources. If I have forgotten to acknowledge your work, have provided insufficient credits, or have misinterpreted your copyright, it has not been done with malicious intent. Please [notify me](mailto:difscher@wcu.edu) of any concerns.
+
+This presentation uses [remark](https://remarkjs.com/) by [Ole Petter Bang](https://github.com/gnab).
+
+<!-- =============================================================================== -->
+
+    </textarea>
+    <script src="/assets/js/include-html.js" type="text/javascript"></script>
+    <script src="remark.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/efbc54fa3b.js"></script>
+    <script type="text/javascript">     
+         var slideshow = remark.create(
+           {
+             navigation: {scroll: false, touch: true},
+             slideNumberFormat: '%current%',
+             highlightLanguage: 'r',
+             highlightStyle: 'atom-one-light',
+           });
+        MathJax.Hub.Config({
+             tex2jax: {
+             skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+             inlineMath: [ ['$','$'], ["\\(","\\)"] ]
+             }
+         });
+         MathJax.Hub.Configured();
+         mermaid.initialize({
+            startOnLoad: false,
+            cloneCssStyles: false,
+            theme: null
+          });
+          
+        function initMermaid(s) {
+          var diagrams = document.querySelectorAll('.mermaid');
+          var i;
+          for(i=0;i<diagrams.length;i++){
+            if(diagrams[i].offsetWidth>0){
+              mermaid.init(undefined, diagrams[i]);
+            }
+          }
+        }
+        slideshow.on('afterShowSlide', initMermaid);
+        initMermaid(slideshow.getSlides()[slideshow.getCurrentSlideIndex()])
+    </script>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+.rmdcaution, .rmdimportant, .rmdnote, .rmdtip, .rmdwarning {
+  padding: 1em 1em 1em 1em;
+  border: 4px solid #592C88;
+  margin-bottom: 10px;
+  background: rgba(193, 168, 117, 0.5);
+  border-radius: 15px;
+}
+.rmdcaution {
+  background-image: url("../images/caution.png");
+}
+.rmdnote {
+  background-image: url("../images/note.png");
+}
+.rmdtip {
+  background-image: url("../images/tip.png");
+}
+.rmdwarning {
+  background-image: url("../images/warning.png");
+}
+.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+.flushright {
+  text-align: right;
+}
+blockquote > p:first-child {
+  text-align: inherit;
+}
+.header-section-number {
+  padding-right: .2em;
+  font-weight: 500;
+}
+.level1 .header-section-number {
+  display: inline-block;
+  border-bottom: 3px solid;
+}
+
+blockquote {
+  color: #BE3A34;
+  padding-left: 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  border-left: 4px solid #BE3A34;
+}
+
+.marginfigure {
+  /* font-family: 'Barlow', sans-serif; */
+  font-style: italic;
+  padding-left: 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  border-left: 4px solid #4A7729;
+  color: #4A7729;
+}
+.margin-toggle {
+  visibility: hidden;
+}
+
+h1 {
+  border-bottom: 1px solid;
+  font-family: 'IBM Plex Sans', serif;
+  color: #592C88;
+}
+h2 {
+  font-family: 'IBM Plex Sans', serif;
+  color: #592C88;
+}
+h3 {
+  font-weight: normal;
+  font-family: 'IBM Plex Sans', serif;
+  color: #592C88;
+}
+
+h4, h5, h6 {
+  font-weight: normal;
+}
+
+.title {
+  font-weight: 700;
+  font-family: 'IBM Plex Sans', serif;
+}
+.smallcaps {
+  font-variant: small-caps;
+}
+.book .book-body .page-wrapper .page-inner section.normal strong {
+  font-weight: 600;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a {
+    color: #592C88;
+    text-decoration: none;
+    background: 0 0;
+    font-weight: bold;
+}

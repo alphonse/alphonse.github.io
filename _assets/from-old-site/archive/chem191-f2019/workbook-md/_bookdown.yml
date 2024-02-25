@@ -1,0 +1,19 @@
+book_filename: "chem191.github.io"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Exercise "
+output_dir: "../workbook"
+rmd_files: [
+            "index.Rmd", 
+            "00_preface.Rmd", 
+            "01_getting-started.Rmd",
+            "02_Blink.Rmd",
+            "03_Voltage.Rmd",
+            "04_Functions.Rmd",
+            "05_Soldering.Rmd",
+            "FunctionsLibrary.Rmd",
+            "Troubleshooting.Rmd",
+            "Glossary.Rmd",
+            # "Details.Rmd"
+            ]

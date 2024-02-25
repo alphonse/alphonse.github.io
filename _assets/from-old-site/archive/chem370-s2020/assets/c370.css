@@ -1,0 +1,265 @@
+/* 
+body {
+	font-family: 'Roboto', sans-serif;
+	color: $black
+} */
+
+// titles
+.title {
+	text-align: center;
+	font-weight: bold;
+	p {
+		text-align: center;
+		font-weight: bold;
+	}
+}
+.post-title {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 3rem;
+}
+
+// headings
+h1 {
+	color: #592C88;;
+	font-family: $c370heading;
+	font-weight: bold;
+	text-align: left;
+	font-size: 28px;
+}
+h2 {
+	color: #592C88;;
+	font-family: $c370heading;
+	font-weight: normal;
+	font-size: 20px;
+	// border-bottom: 2px solid;
+}
+
+h3.title a {
+	color: #592C88;;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+h5 {
+	color: $darkgray;
+	font-family: $font1;
+	font-weight: normal;
+	font-style: italic;
+}
+
+// post list
+.post-list {
+    text-align: left;
+	ul {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	li {
+		padding: 10px 18px;
+		margin: 0 10px;
+		text-decoration: none;
+		background: $white;
+		color: #592C88;;
+        box-shadow: 0px 0px 10px $gray;
+        &:hover {
+            box-shadow: 0px 0px 10px lightgray;
+            .mouseover-text {
+                color: #C1A875;;
+		        box-shadow: 0 0 1px 0 #C1A875;;
+            }
+        }
+        .mouseover-text {
+            display: inline-block;
+            border-radius: 5px;
+            color: #C1A875;;
+            padding: 20px;
+        }
+		a {
+			@include font-rem(20);
+			text-decoration: none;
+			color: #592C88;;
+			font-weight: bolder;
+            &:hover {
+                color: #C1A875;;
+            }
+		}
+		p {
+			font-weight: lighter;
+			@include font-rem(16);
+		}
+	}
+}
+// quotes
+blockquote {
+	font-family:$c370quotefont;
+	font-style:italic;
+	border-left:8px solid #592C88;;
+	background-color: $gray;
+	padding-left:20px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 15px;
+}
+@media only screen and (min-width: 48em) {
+	blockquote {
+		margin-left:-10px
+	}
+}
+
+// figcaption
+figcaption {
+    padding-top: 10px;
+    @include font(14);
+    color: darkgray;
+}
+
+// links
+a {
+  font-family: 'Nunito', sans-serif;;
+  color: #592C88;;
+  font-weight: bold;
+  text-decoration: none;
+  &:link {
+  	color: #592C88;;
+  }
+  &:visited {
+  	color: #592C88;;
+  }
+  &:hover {
+  	color: #C1A875;;
+  }
+  &:active {
+  	color: #C1A875;;
+  }
+}
+
+a.quicklink {
+	display: inline-block;
+	font-family: $c370heading;
+  color: #592C88;;
+	font-size: small;
+  font-weight: normal;
+	background-color: $white;
+	border: 1px solid #592C88;;
+	border-radius: 5px;
+	@include rounded(4px);
+	margin: 0 2px;
+	padding: 0 5px;
+  &:link {
+  	color: #592C88;;
+  }
+  &:visited {
+  	color: #592C88;;
+  }
+  &:hover {
+  	color: #C1A875;;
+		border-color: #C1A875;
+  }
+  &:active {
+		color: #C1A875;;
+		border-color: #C1A875;
+  }
+}
+
+// pre and code
+pre, code {
+	font-family: $codeFont;
+	overflow-x: auto;
+}
+p code,
+li code,
+p pre,
+li pre {
+    @include font(12);
+    background-color: rgba(0,0,0,0.04);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    @include rounded(4px);
+    margin: 0 2px;
+    padding: 0 5px;
+}
+li .highlight code,
+li .highlight pre {
+    background-color: transparent;
+    border: 0;
+}
+
+// table
+table {
+	width: 100%;
+}
+
+// notice
+.notice {
+    margin-top: 1.5em;
+    padding: .5em 1em;
+    text-indent: 0;
+    @include font-rem(14);
+    background-color: $gray;
+    border: 1px solid #592C88;;
+    @include rounded(3px);
+}
+
+// description title
+dt {
+    font-weight: bolder;
+}
+
+// footer
+.footer {
+    color: lightgray;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.footer a {
+    color: lightgray;
+    font-weight: normal;
+    &:hover {
+        color: $brown;
+    }
+}
+.footer i {
+    color: lightgray;
+    &:hover {
+        color: $brown;
+    }
+}
+
+table {
+	margin: 8px 0;
+	border-collapse: collapse;
+	width: 100%;
+	font-family: $c370heading;
+	font-size: 14px;
+}
+
+th {
+	background-color: #592C88;
+	color: white;
+	font-weight: bold;
+}
+
+table, th, td {
+	padding: 5px;
+}
+
+tr {
+	border-bottom: 1px solid #F2F2F2;
+}
+
+tr:hover {
+	color: #592C88;;
+}
+
+
+tr:last-child {
+	border-bottom: 2px solid #592C88;
+}
+
+.fa-pen-square {
+	color: salmon;
+}

@@ -1,0 +1,79 @@
+# Soldering and PCB Assembly
+
+**Objective:** Assemble/solder air quality sensor printed circuit board.
+
+## Introduction
+
+Up to this point, we've used solderless breadboards and jumper wires to connect things to the Teensy.  Those provide quick, temporary connections that can be used for prototyping and learning.  However, they can be prone to failure over time as the connections inadvertently come loose.  In situations where a design won't change, metal solder joints provide a more reliable, permanent connection.
+
+Although soldering seems difficult to many people, it's actually a simple process if you have the correct tools and know the right technique.  Hand soldering has been done on an industrial scale by assembly technicians for decades, and modern electronics with very small components are usually soldered by machine.  In short, the soldering process involves heating up two metal parts to be joined with a *soldering iron*, applying a compound called *flux* to the joint, and then melting a soft metal alloy (the *solder*) onto the joint.  Once the solder cools (after a second or two), a permanent connection is made between the two components.
+
+
+> Good soldering technique, contrary to popular belief, is not hard.  In fact, it's incredibly easy!
+>
+> If you've got the right tools and now the very simple, basic techniques, good soldering is a piece of cake!  Anyone can do it, straight up!
+> -*Dave Jones, EEVBlog*
+
+This exercise will walk you through the basics of soldering, and by the end you should have completed assembly of your air sensor printed circuit board (PCB).  The following video tutorials may be helpful in knowing what to expect before you come to class.  Please watch the beginner tutorial, and then watch the longer tutorials by the EEVBlog if you would like to learn more details.
+
+- [Beginner tutorial](https://www.youtube.com/watch?v=Qps9woUGkvI)
+- In depth tutorial @ EEVBlog:
+    1. [Tools](https://www.youtube.com/watch?v=J5Sb21qbpEQ)
+    2. [Through-hole Soldering](https://www.youtube.com/watch?v=fYz5nIHH0iY)
+    3. [Surface-mount Soldering](https://www.youtube.com/watch?v=b9FC9fAlfQE)
+
+- schematic diagrams
+
+## Soldering Basics
+
+### The Supplies
+
+Good tools and supplies can really make or break a soldering project.  The two most important things are the solder and the soldering iron, but there are a host of other supplies that can help out.
+
+-  **Solder** is traditionally made from a lead alloy, although many modern solders are lead free due to the toxic nature of lead.  For most hobby applications, either option will work.  Solder comes in many different sizes, but in general narrower solder (<0.5 mm diameter) is better for electronics work.  Many solders come with rosin (basically pin sap) embedded in the core, which acts as *flux* and eliminates the need for pre-application of flux (described below).
+- **Flux** is a special compound that removes oxidation from the surface of the metals to be joined.  Many metal (including copper, which is what we are soldering) form oxide layers on the surface of the metal.  Although these are often difficult to see, they are always there.  They will prohibit the solder from *wetting* (flowing onto and adhereing to) the items to be joined.  It is usually very difficult or impossible to solder a joing without flux, and joints made with it will eventually crack and fail.  Many solders come with flux (rosin) embedded in the middle of the solder to act as a flux; with these solders no additional flux is necessary.  Any residue left from flux can be cleaned up with isopropyl (rubbing) alcohol or special flux cleaner.
+- A **Soldering iron** is a pen-shaped device with a fine metal tip that is heated, usually with an electric heating element.  It's always best to invest in a temperature-controlled soldering iron and skip the cheaper ones -- the proper temperature is important for good soldering.  A good soldering iron should also have a removable/interchangeable tip and a safety stand to prevent fires.
+- A **sponge** is just a regular kitchen sponge that is dampened with water and used to clean the tip of the soldering iron during use.  Keeping the tip clean helps the solder melt easily.  As an alternative, a **brass sponge** (think of a metal kitchen scrubbie) can be used.
+- A **third hand** is just a metal stand with clips on it to hold your workpiece while you solder to it.  Tape, sticky tack, and other items can be used as well.
+- **Flush side cutters, wire cutters, and/or wire strippers** are useful for trimming leads after they've been soldered and stripping wires prior to soldering.
+- **Isopropyl alcohol** or **flux remover** and a small brush are useful in removing stick residue left by the flux.
+- **Solder wick** and a **solder sucker** are tools used to remove solder when necessary. (Even though it said solder is "permanent" above, it can be removed, albeit not always in an easy manner!)
+- A **Fume extractor** collects the smoke released during soldering and prevents it from being breathed in by the solderer.
+
+### The Technique
+
+The main thing to remember when soldering is to use heat and wettability to determine where the solder will end up.  If you want solder on one part of a circuit board and not another, make sure you apply the heat and flux to that part to be soldered and no where else; the solder will folow dutifully.
+
+**Setup**
+
+1. Check for the recommended iron temperature for the solder you're using.  If you're unsure, 350$^\circ$C is a good starting point.  If your part to be soldered is very large or you're soldering to a ground plane with a large thermal mass you made need to increase the temperature.
+1. Turn on the soldering iron to the correct temperature.
+1. Wet the sponge on the soldering iron stand.
+1. Layout all the tools necessary.
+1. Turn on the fume extractor.
+
+**Soldering**
+
+1. **Create a mechanical connection if possible.** If joining two wires, twist them together.  If connecting a component to a circuit board, bend the leads down to hold in the place.  The mechanical connection is not strictly necessary, but it will add stregnth to the solder joint.
+1. **Stabilize the parts to be soldered.**  It takes two hands to solder -- one to hold the soldering iron and one to apply the solder.  Make sure your workpiece is secure before you being soldering.
+1. [**Apply flux (if not using rosin-core solder).**  Apply a small amount only to the parts to be soldered.  Remember, the solder will folow the flux.]
+1. **Clean the tip of the iron.** The soldering iron tip will develop an oxide layer as it sits at high temperature.  Give a one or two wipes across the wet sponge each time you pick it up.
+1. **Tin the tip of the iron.** Just barely touch the tip of the iron 
+1. **Apply heat to the joint.**  Try to maxmize contact between the tip of the iron and the joint to be soldered.  Apply heat to the solder joint, not the solder.  This ensures the joint is hot enough to flow the solder and helps create a strong joint.
+1. **Apply solder to the joint.** Touch the end of the solder to the joint to be soldered.  If the joint is hot enough the solder should flow immediately throughout the joint.
+1. **Let it cool.** Remove the solder, then the iron, and let the joint cool for a second or two before moving it.  Wait longer before touching the joint as it will be hot enough to burn you.
+1. **Inspect the joint.**  A properly soldered joint should have a shiny, domed appearance.  An improperly soldered joint will appear dull and blobby.  Remove solder if necessary and repeat until a good joint is achieved.
+
+### Safety
+
+- Obviously, the soldering iron and anything it touches are hot.  Don't touch the tip of the iron or any of the parts that have recently been soldered.
+- Always be mindful of where you set the iron down.  It's hot enough to start fires and/or melt work surfaces and power cords.
+- Don't breath in the fumes.  They mostly result from the flux.  Use a fume extractor or a fume hood to keep the fumes out of your lungs!
+
+## Assembling the Board
+
+You will add components to a printed circuit board (PCB) to build the air sensor.  The PCB has internal connections that ensure all components will be connected correctly.  The purple areas of the board are called *solder mask*.  Solder strongly prefers to stick to metal and will (almost) not stick to the solder mask.  Use this to your advantage!
+
+1. Solder each component on one at a time.  Remember to consider which ones you need to solder first and which ones last, as some components may make it hard to get the iron into areas of the PCB.
+1. Each component is labelled on the board.  Refer to the model at the front of the room if you're unsure where something goes.
+1. Make sure your have the component in the right place and the right orientation before making the solder connection! You may not be able to remove it if you do it incorrectly!!

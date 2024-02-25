@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>An Analytical Perspective</title>
+    <link rel="stylesheet" type="text/css" href="remark.css">
+    <link rel="stylesheet" type="text/css" href="mermaid.css">
+    <div w3-include-html="slide-types.html"></div>
+    <div w3-include-html="common-text.html"></div>
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+.footer[
+- <div class="tooltip"><a href="/devel/chem370"><i class="fas fa-home"></i></a> <span class="tooltiptext">Go to C370 Main Page</span></div>
+- <div class="tooltip"><a href="/devel/chem370/lectures"><i class="fas fa-chalkboard-teacher"></i></a><span class="tooltiptext">Go to Lecture List</span></div>
+- [<div class="tooltip"><i class="fas fa-list"></i><span class="tooltiptext">Go to Table of Contents</span></div>](#contents)
+- <div class="tooltip"><i class="fas fa-question"></i><span class="tooltiptext">Press <kbd>Shift</Kbd> + <kbd>?</kbd> for Navigation Tips!</span></div>
+]
+
+---
+
+<h1 style = "font-size: 64px;">
+An Analytical Perspective
+</h1>
+
+[<img src="https://live.staticflickr.com/3884/14797853993_2beddd43bf_o.jpg" class = "img-right-post">](https://www.flickr.com/photos/internetarchivebookimages/14797853993/sizes/o/)
+<!-- ![](https://live.staticflickr.com/3884/14797853993_2beddd43bf_o.jpg) -->
+
+**Dr. Al Fischer**  
+
+Chem 370 | Instrumental Analysis I  
+Western Carolina University
+
+## Reading
+
+1. [Harvey](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29) Chs 1 + 2
+
+## Table of Contents
+
+1. [What is Analytical Chemistry?](#analtyical-chemistry)
+1. [Analytical Chemistry vs. Analysis](#anal-chem-vs-analysis)
+1. [Analytical Perspective](#analytical-perspective)
+1. [The Work of an Analytical Chemist](#work-of-analytical-chemist)
+
+---
+
+<a id="analytical-chemistry"></a>
+
+# What is Analytical Chemistry?  
+
+> Analytical chemistry is what analytical chemists do.
+
+???
+
+The chemist C.N. Reilly once said, *Analytical chemistry is what analytical chemists do.*  Although this definition seems terse and ambiguous, it's in fact quite fitting.  Analytical chemistry often becomes a "catch-all" discipline for the more interdisciplinary areas of chemistry, biochemistry, and nanomaterials research, thus often escaping simple definition (though perhaps this should not be so!).  As we go through the semester, you'll find the portions of analytical chemistry concerned with *instrumental analysis* often draw on numerous fields, including chemistry, physics, engineering, computer science, and statistics.  Likewise, it plays an integral role in all branches of chemistry.  In this lesson, we'll look at more specific definitions of analytical chemistry and explore the differences between *analytical chemistry* and *chemical analysis*.
+
+
+
+---
+
+
+# What is Analytical Chemistry?
+
+
+<div class="mermaid">
+graph TD
+   A[Chemistry] --> B[Analytical]
+   A[Chemistry] --> C[Physical]
+   A[Chemistry] --> D[Bio]
+   A[Chemistry] --> E[Organic]
+   A[Chemistry] --> F[Inorganic]
+</div>
+.image-caption[The traditional branches of chemistry.]
+
+???
+
+For much of the past century or so, chemists have been grouped in one of 5 categories: inorganic chemistry, organic chemistry, physical chemistry, analytical chemistry, and biochemistry.  Although the interdisciplinary nature of modern chemistry has blurred these lines a bit, searching most any university website will reveal this trend even today. But where might someone researching nanoparticle optical properties for cancer applications fit?  They create inorganic materials, but in the form of nanomaterials; they study physical chemistry, but in a biological context; and they do biology, yet this is not the focus of their work; and surely, they conduct plenty of chemical analysis!
+
+
+
+
+---
+
+
+# What is Analytical Chemistry?
+
+> To an analytical chemist, the process of making a useful measurement is critical; if the measurement is not of central importance to the work, then it is not analytical chemistry.
+
+???
+
+You may have previously learned that analytical chemistry is *the field concerned with **qualitatively** and **quantitatively** characterizing matter.*  While this definition will often suffice, it fails to capture the true motives of an analytical chemist.  The analytical chemist is not concerned simply with characterizing a sample; that is the job of an analyst.  Rather, the analytical chemist is concerned with the *measurement*: how it's made, how well it's made, and -- importantly -- how it can be improved or streamlined.  As David Harvey writes in *Analytical Chemistry 2.1*, *To an analytical chemist, the process of making a useful measurement is critical; if the measurement is not of central importance to the work, then it is not analytical chemistry.*  So we see this definition ignores the unique perspective an analytical chemist brings to a study.
+
+---
+
+
+
+<a id="anal-chem-vs-analysis"></a>
+
+# Analytical Chemistry vs. Analysis
+
+<a href="https://chem.libretexts.org/@api/deki/files/159815/Figure1_1.png?revision=1&size=bestfit&width=748&height=910"><img src="https://chem.libretexts.org/@api/deki/files/159815/Figure1_1.png" class="img-center-v"></a>
+
+.image-caption[Fresenius’ analytical scheme for the gravimetric analysis of Ni in ores, CC-BY-SA from [Analytical Chemistry 2.1](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29/01%3A_Introduction_to_Analytical_Chemistry/1.01%3A_What_is_Analytical_Chemistry)]
+
+???
+
+The terms *analytical chemistry* and *chemical analysis* may seem synonymous at first glance.  To understand the difference, consider a mining company concerned with extracting nickel from ore.  Their focus is on understanding how much Ni is in the ore to determine whether it's profitable to extract.  As such, they use a well-known, reliable method to determine the nickel concentration in their ore, and use the same method daily despite it's time-consuming nature.  The gravimetric method they use is shown below, developed Fresenius in the late nineteenth century.
+
+Notice how this method takes a total of 58 hours!  It also requires many hazardous chemicals.  Nevertheless, it is a reliable and robust method for determining nickel content in ore.
+
+---
+
+# Analytical Chemistry vs. Analysis
+
+<a href="https://chem.libretexts.org/@api/deki/files/159828/Figure-1_2.jpg"><img src="https://chem.libretexts.org/@api/deki/files/159828/Figure-1_2.jpg" class="img-center-h"></a>
+
+.image-caption[Gravimetric analysis for Ni in ores by precipitation, CC-BY-SA from [Analytical Chemistry 2.1](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29/01%3A_Introduction_to_Analytical_Chemistry/1.01%3A_What_is_Analytical_Chemistry)]
+
+???
+
+While this may work for an analyst (i.e. someone concerned only with determining how much nickel is present) it raises the eyebrows of an analytical chemist.  In fact, analytical chemists developed a much simpler method in the early 1900s, which is shown below.  The total time to completion was reduced by 70% and number of steps was minimized.  The new method is not only quicker, but uses fewer chemicals, is less prone to error, and ultimately less costly.  Such a method could then be adopted by analysts at the mining company to maximize profitability in the lab.
+
+So we see that an analytical chemist is concerned with developing and improving methods, while an analyst is concerned with utilizing methods. We can say that ***analtyical chemistry is the field concerned with creating and improving analytical processes***. However, this is not to say analytical chemistry and analysis never overlap.  An analtyical chemist will often find themself conducting routine analysis.  This class (and especially the laboratory) aims to prepare you for work in chemical analysis, and provides a stepping stone into analytical chemistry.  (At WCU, Instrumental Analysis II tends to focus more heavily on method development.)
+
+---
+
+
+<a id="analytical-perspective"></a>
+
+---
+class: img-full
+
+# The Analytical Perspective
+
+<img src="https://chem.libretexts.org/@api/deki/files/159831/Figure_1_3.png?revision=1", sytle="width: auto; height: 70%; border-radius: 200px;">
+.image-credit[Flow diagram showing one view of the analytical approach to solving problems, CC-BY-SA [Analytical Chemistry 2.1](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Book%3A_Analytical_Chemistry_2.1_%28Harvey%29/01%3A_Introduction_to_Analytical_Chemistry/1.02%3A_The_Analytical_Perspective)]
+
+???
+
+- Analytical chemistry begins with a problem
+
+# Analytical Perspective
+
+The life cycle of an analytical method may be broken up into 7 stages [[1](https://link.springer.com/article/10.1007/BF00470406), [2](https://pubs.acs.org/doi/10.1021/ed077p577)]:
+
+1. Conception
+2. Demonstration (Validation)
+3. Establishment of capabilities
+4. Widespread acceptance
+5. Continued development (e.g. commercialization)
+6. Cycling through steps 3-5
+7. Replacement/Death
+
+???
+
+As hinted previously, an analytical chemist (especially one concerned with instrumental analysis) will draw on many fields while navigating this process.  Lets again look at the example of determining Ni concentration in ore.  Modern methods of nickel determination no longer rely on gravimetry (the process of determining by weight).  Instead, they rely on instrumental methods of analysis.
+
+---
+
+
+# Conception of a Method
+
+
+
+
+<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Flametest--Na.swn.jpg/720px-Flametest--Na.swn.jpg" class = "img-portrait">
+
+.image-caption-center[Emission of orange light by sodium atoms in a flame.  The intenisity of the orange light increases as the amount of sodium increases, a feature exploited by atomic emission spectroscopy.  (c) Søren Wedel Nielsen via [Wikimedia](https://commons.wikimedia.org/wiki/File:Flametest--Na.swn.jpg) / [CC-BY-SA](https://creativecommons.org/licenses/by-sa/3.0/deed.en)]
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/CSIRO_ScienceImage_1107_Sir_Alan_Walsh_19161998_the_father_of_atomic_absorption_spectroscopy.jpg/894px-CSIRO_ScienceImage_1107_Sir_Alan_Walsh_19161998_the_father_of_atomic_absorption_spectroscopy.jpg" class = "img-portrait">
+
+.image-caption-center[Sir Alan Walsh, inventor of flame atomic absorption spectroscopy.  (c) CSIRO via [Wikimedia](https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_1107_Sir_Alan_Walsh_19161998_the_father_of_atomic_absorption_spectroscopy.jpg) / [CC-BY](https://creativecommons.org/licenses/by/3.0/deed.en)]
+
+
+???
+
+The gravimetric methods for determining metal content had already been supplanted by atomic emissions spectroscopy when Sir Alan Walsh began his tenure at CSIRO (Commonwealth Science and Industrial Research Organisation) in Austrailia.  In these methods, metal samples are heated in a flame and a detector is used to observe which wavelengths of light are emitted.  The more light emitted, the more metal there is in the sample. Each metal emits a specific wavelength, and thus each metal is easily discernable. Although these methods were more sensitive than prior methods, they did not meet the needs of Walsh and CSIRO, who wished to measure minute traces of metals.  
+
+Sir Alan Walsh is largely credited with developing another method of analyzing metals, called flame atomoic absorption spectroscopy, or "flame AA".  Walsh was had recognized that current methods of emission spectroscopy were not sensitive enough.  As the story goes, he was working in his garden one Saturday when he conceived of the idea to measure absorption of light instead of emission.  He immediately phoned his colleague John Shelton, and they devised a plan to test the method on Monday.  
+
+> Look, John!, he exulted. We’ve been measuring the wrong bloody thing! We should be measuring absorption, not emission! [1]
+
+Thus, Walsh recognized a need for a new method (a gap in or lack of analysis capabilities) and drew on his chemical knowledge to conceive of a solution.  In this case, he built upon the work of Robert Wilhelm Bunsen and Gustav Robert Kirchoff who had described the underlying principals in the late 1800s; Pierre Bouguer, Johann Heinrich Lambert, and August Beer, who had previously characterized the attenuation of light by absorbing species; and the scientists who developed the atomic emission instruments shortly before Walsh and his collegues devised flame AA.
+
+
+---
+
+
+# Establishment of Capabilities
+
+<img src="img/early-aa.png" class = "img-center-h">
+
+.image-caption-center[An early flame atomic absorption spectrometer at an exhibition of scientific instruments in Melbourne in March 1954.  Reprinted from [[2](http://dx.doi.org/10.1007/s10809-005-0103-0)] as fair use for education under 17 USC §107]
+
+???
+
+That Monday, Walsh and Shelton set up the simplest possible experiment using the element sodium and had obtained proof of concept before lunch.  Early on, the technique proved useful.  Walsh and his team used it to save the life of children in the hospital, prevent mercury poisoning in thousands of people, and discover vast mineral deposits in Austrailia. [1] As time progressed, the scientists were able to demonstrate the numerous capabilities of their technique, and fully characterized it's applications and limitations.  At the same they continued to cycle through previous steps to further develop and refine the method.
+
+---
+
+
+# Analytical Perspective
+
+## Widespread Acceptance & Continued Development
+
+<img src="https://www.wcu.edu/WebGraphics/CHPH_AA-PenAAcle900F2.JPG" class = "img-center-h">
+
+.image-caption-center[A modern Perkin Elmer PinAAcle 900F flame atomic absorption spectrometer at [WCU](https://www.wcu.edu/learn/departments-schools-colleges/cas/science-and-math/chemphys/instrumentation/index.aspx).]
+
+???
+
+Initially, the scientific world was slow to accept flame AA.  However, flame AA is now used in a mulitude of fields including chemistry, geology, medicine, agriculture, and metallurgy.  The current market value for flame AA is estimated to be in the hundreds of millions of dollars per year worldwide, and the indirect economic gains made possible by the ability to accurately, precisely, and routinely measure metals are innumerable.  The patents for flame AA expired in 1969, and many companies now manufacture flame AA instruments and have thoroughly engineered the spectrometers such that they're robust and user-friendly.  Whereas the original instruments were complex arrangements on an optical table that required careful tweaking of this knob and that knob, modern instruments are nearly "plug-and-play".
+
+---
+
+
+# Death of Method
+
+Although flame AA is still a widely used technique, the same cannot be said of all analytical methods.  For example, anyone wishing to conduct a nickel analysis today would default to an atomic absorption or atomic emmission method for their sensitivity, reproducibility, and throughput compared to the gravimetric methods of yesteryear.  These methods have essentially died off, persisting in memory but rarely used.  As technology progresses and new methods are developed we find many (if not all) techniques eventually succumb to this fate.
+
+---
+
+
+# A Long Shot that Paid Off (by [CSIRO](https://csiropedia.csiro.au/a-long-shot-that-paid-off-csiros-atomic-absorption-project-1970/))
+
+To learn more, I recommend you view the CSIRO's video on flame AA.
+
+<iframe src="https://player.vimeo.com/video/137107317/" class="video" width="640px" height="360px" allowfullscreen="true"></iframe>
+
+<!-- For example, you may notice that the gravimetric method to measure Ni in ore takes 18 hours, has very poor detection limits, and is not automated.  You (1) conceive of an alternative way to measure Ni, drawing on you chemical expertise in the process.  For instance, you may note that Ni absorbs a very specific wavelength of light and hypothesize that you could exploit this fact to measure it's concentration.  Even better, you could program an analysis routine into an instrument for automated analysis.  You (2) would then develop a proof of concept test and refine your proof-of-concept into a prototype instrument.  In doing so, you'd be required to design and engineer the hardware, build electrical circuits, and write software to control the instrument and process the data.  Once your instrument is working, you (3) would need to establish it's capabilities.  You would do this by repetitive testing to determine it's detection limits, noise characteristics, calibration methods, etc., and in the process employ the tools of statistical analysis to robustly characterize the instrument.  Often, this step is a cycle of measuring the capabilities, making small improvement, and repeating.  Finally, you publish your work as a journal article or patent and it (4) becomes widely accepted and begins to see use in your field.  Eventually (5), other researchers and even companies will refine the technique into a truly robust, commercialized instrument available to scientists in any field, not just analytical chemistry.  This step usually involves small improvements over many years or decades (6) before the technique is considered "mature".  And most techniques at some point fail to stay useful; they are replaced by newer, more sensitive methods developed by future analytical chemists, and your technique is supplanted. -->
+
+---
+
+
+<a id="work-of-analytical-chemist"></a>
+
+# The Work of an Analytical Chemist
+
+
+<div class="mermaid">
+graph TD
+   A[Chemistry] --> F{Analytical Chemistry}
+   B[Physics] --> F{Analytical Chemistry}
+   C[Engineering] --> F{Analytical Chemistry}
+   D[Computer Science] --> F{Analytical Chemistry}
+   E[Statistics] --> F{Analytical Chemistry}
+</div>
+
+.image-caption[Analytical chemistry draws on many fields.]
+
+???
+
+To summarize, the process of developing a new analytical method involves several defined steps, each of which draws on various other fields.  In the example above, the investigators (1) conceived of a new method, drawing on their chemical expertise in the process.  They then (2) developed a proof of concept tests and refined their proof-of-concepts into a prototype instrument.  In doing so, they designed and engineered the hardware, built electrical circuits, assembled optical systems.  Modern analytical chemists ususally write software to control the instrument and process the data as well.  After developing the instrument, the inventors set out to (3) establish its capabilities through repetitive testing to determine its detection limits, noise characteristics, calibration methods, etc., in the process employing the tools of statistical analysis and testing the instrument in many different scenarios.  Often, this step is a cycle of measuring the capabilities, making small improvement, and repeating.  Finally, they published their work as a journal article and patent and it eventually (4) became widely accepted and currently sees widespread use.  Now, (5) other researchers and even companies have refined the technique into a truly robust, commercialized instrument available to scientists in all fields, not just analytical chemistry.  This step usually involved small improvements over many years or decades (6) to yield the "mature" technique we have today.  And most techniques at some point fail to stay useful and are replaced by newer, more sensitive methods developed by future analytical chemists.
+
+---
+
+# The Work of an Analytical Chemist
+
+> Analytical chemists work a the extremes of analysis.
+
+???
+
+Throughout the process of refinement, the analytical chemist routinely considers their *design requirements*.  Often, there is a tradeoff between characteristics in an instrument.  For example, you may design your instrument to be very sensitive, but sacrifice size and portability in the process.  A company commercializing the instrument will likely modify the technique into a very robust and user-friendly instrument, but may have to sacrifice some sensitivity in the process.  One way or another though, analytical chemists work at the *extremes of analysis*, pushing the bounds of detection limits, instrument size, or other instrument capabilities.
+
+---
+
+
+# The Work of an Analytical Chemist
+
+<div class="mermaid">
+graph TD
+   A[Chemistry] --> F{Analytical Chemistry}
+   B[Physics] --> F{Analytical Chemistry}
+   C[Engineering] --> F{Analytical Chemistry}
+   D[Computer Science] --> F{Analytical Chemistry}
+   E[Statistics] --> F{Analytical Chemistry}
+   F{Analytical Chemistry} --> G[Physical Chemistry]
+   F{Analytical Chemistry} --> H[Biochemistry]
+   F{Analytical Chemistry} --> I[Organic Chemistry]
+   F{Analytical Chemistry} --> J[Inorganic Chemistry]
+</div>
+
+.image-caption[Analytical chemistry not only draws on many fields, but also gives to many fields.]
+
+???
+
+But if analytical chemistry relies on so many other fields, why is it a catch-all field within chemistry departments?  Well, because almost every chemist has to employ analytical tools in their work, and those that don't fit well within the 5 main categories (such as the biophysical nanoscientist above) get labeled as analytical chemists even if measurement is not the key focus of their work.  In actuality, an additional concern of the analytical chemist is collaboration.  Just as important as creating a technique is helping other chemists use it.  Thus, analytical chemistry both draws on a many fields and gives to many fields.   
+
+---
+
+
+# The Work of an Analytical Chemist
+
+To once again quote David Harvey in *Analytical Chemistry 2.1*:
+
+> To an analytical chemist, the process of making a useful measurement is critical; if the measurement is not of central importance to the work, then it is not analytical chemistry.
+>
+> [We] will come across numerous examples of analytical methods...most of which are routine examples of chemical analysis. It is important to remember, however, that nonroutine problems prompted analytical chemists to develop these methods.
+
+So overall, an analytical chemist's work is to take nonroutine problems and make them routine.  
+
+---
+
+
+# References
+
+[1] [Atomic absorption spectroscopy at CSIRO](https://csiropedia.csiro.au/atomic-absorption-spectroscopy/)  
+[2] L'vov, Boris. (2005). Fifty years of atomic absorption spectrometry. J. Anal. Chem.. 60. 382-392. [10.1007/s10809-005-0103-0](https://dx.doi.org/10.1007/s10809-005-0103-0). 
+
+<!-- =============================================================================== -->
+
+
+    </textarea>
+    <script src="/assets/js/include-html.js" type="text/javascript"></script>
+    <script src="remark.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/efbc54fa3b.js"></script>
+    <script type="text/javascript">     
+         var slideshow = remark.create(
+           {
+             navigation: {scroll: false, touch: true},
+             slideNumberFormat: '%current%',
+             highlightLanguage: 'r',
+             highlightStyle: 'atom-one-light',
+           });
+        MathJax.Hub.Config({
+             tex2jax: {
+             skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+             }
+         });
+         MathJax.Hub.Configured();
+         mermaid.initialize({
+            startOnLoad: false,
+            cloneCssStyles: false,
+            theme: null
+          });
+          
+        function initMermaid(s) {
+          var diagrams = document.querySelectorAll('.mermaid');
+          var i;
+          for(i=0;i<diagrams.length;i++){
+            if(diagrams[i].offsetWidth>0){
+              mermaid.init(undefined, diagrams[i]);
+            }
+          }
+        }
+        slideshow.on('afterShowSlide', initMermaid);
+        initMermaid(slideshow.getSlides()[slideshow.getCurrentSlideIndex()])
+    </script>
+    </body>
+</html>

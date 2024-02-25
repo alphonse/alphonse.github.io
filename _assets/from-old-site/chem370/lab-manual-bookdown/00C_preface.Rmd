@@ -1,0 +1,71 @@
+# Overview {-}
+
+This course is an introduction to instrumental analysis in the chemistry lab. Students will be introduced to components of the “analyst’s toolbox” through real-world scenarios, including spectroscopy, mass spectrometry, and chromatography. Students will conduct sample preparation, instrument calibration, and qualitative and quantitative analysis using UV-visible spectroscopy (UV-vis), gas-chromatography/mass spectrometry (GC-MS), high-performance liquid chromatography (HP-LC), flame atomic absorption spectroscopy (FAAS), and Fourier-transform infrared spectroscopy (FT-IR). Throughout the semester, students will also work to develop skills related to reproducible data analysis, scientific communication, and collaboration in the laboratory. Prerequisites include CHEM-232 (Quantitative Analysis) and CHEM-242 (Organic Chemistry II).
+
+## Lab Activities {-}
+
+Students will work in pairs at the beginning of the semester to complete introductory labs involving spectroscopy and gas chromatography.  After that, they will be assigned groups of 2-3 with which they will complete one rotation lab that lasts the remainder of the semester.  Students may choose to analyze [e-cigarette liquid](/chem370/lab-manual/rotation-a-e-cigarette-liquid.html) or [acetaminophen tablets](/chem370/lab-manual/rotation-b-acetaminophen.html) for their rotation lab.  The rotation lab are scenario-based, so students should refer to the memorandum at the beginning of each rotation for details.  The lab activities for the rotation lab are:
+
+| Vape Juice                             | Acetaminophen                               | 
+| -------------------------------------- | ------------------------------------------- |
+| GC-MS (ID flavor)                      | HPLC (Quantify acetaminophen, check purity) |
+| AA (Quantify Metal)                    | FTIR (Check for Adulterants)                |
+| FTIR (Check for Adulterants)           | GC-MS (ID flavor)                           |
+| HPLC (Quantify Nicotine, check purity) | AA (Quantify Metal)                         |
+
+## Lab Notebooks {-}
+
+Students will use [R](https://cran.r-project.org/) and [RStudio](https://rstudio.com/) to create an electronic lab notebook for data processing.  R is an open-source programming language and is one of the most commonly used data processing languages.  The figure below shows that 36% of surveyed data scientist used R on a regular basis in 2018, making it the third most popular language in the survey.
+
+<!-- ![Graph of the most commonly used languages in data science in 2018 from [Business Over Broadway](https://businessoverbroadway.com/2019/01/13/programming-languages-most-used-and-recommended-by-data-scientists/)](http://businessoverbroadway.com/wp-content/uploads/2019/01/programming_languages_used.png) -->
+
+## Features of the Book {-}
+
+### **Typographical Conventions** {-}
+
+This lab manual will use some common typographical (formatting) conventions to distinguish between its different features.   For example, the data processing activities will make extensive use of [R](https://cran.r-project.org/) code, which will always be represented with `monospace font with a grey background` (in the online version).  It may be `inline` or
+
+```
+offset.
+```
+
+You should take time to thoroughly digest code chunks.  Sometimes the code may work as-is; other times you may have to add to the code or change placeholders to make it work.  And other times the code may be *pseudocode*, which is example code that looks like it would work but will throw an error.  The code will often be color-coded to highlight various features of the programming language (a feature called syntax highlighting).
+
+The lab procedures will often contain warnings that your should watch out for.  
+
+> A warning will look like this!
+
+It also contains checkpoints and tips to help keep you on track.  
+
+```{marginfigure}
+A tip or checkpoint will look like this.
+```
+
+
+<!-- Both in code and in the lab manual text, capital letters will be used to represent matrices and lowercase letters will be used to represent vectors and scalars.  Matrices and vectors will always be bold within the text.  For example:
+
+- `A` or **A** represents a matrix
+- `a` or **a** represents a vector
+- `a` or $a$ represents a scalar. -->
+
+### **e-Book vs. PDF** {-}
+
+This lab manual is available in both HTML (webpage) format and as a PDF.  These two formats generally have identical content, although some features of the book (such as videos) may only work in the online version and do not appear in the PDF.
+
+<!-- ### Additional Resources {-} -->
+
+<!-- ##### **Octave/MATLAB** {-} -->
+
+<!-- - [MATLAB Cheat Sheet](http://assets.steventhornton.ca/A_Matlab_Cheat_Sheet/MatlabCheatsheet.pdf) (PDF) -->
+<!-- - [MATLAB Support - Examples](https://www.mathworks.com/help/examples.html)   -->
+<!-- - [Octave Wikibook](https://en.wikibooks.org/wiki/Octave_Programming_Tutorial) -->
+<!-- - [Jupyter Docs](https://jupyterlab.readthedocs.io/en/stable/) -->
+
+<!-- ##### **Analytical Chemistry** {-} -->
+
+<!-- - **Recommended Supplementary Book:** Harvey, D.T. (2008) *[Analytical Chemistry 2.0](http://dpuadweb.depauw.edu/harvey_web/eTextProject/version_2.0.html)* (free online) -->
+
+<!-- ##### **Markdown** {-} -->
+
+<!-- - [Markdown Tutorial](https://www.markdowntutorial.com/) -->
+<!-- - [Markdown Resources](https://www.markdowntutorial.com/conclusion/) -->

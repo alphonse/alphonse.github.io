@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Analyst's Toolbox</title>
+    <link rel="stylesheet" type="text/css" href="remark.css">
+  </head>
+
+
+
+  <body>
+    <textarea id="source">
+
+<!-- background-image: ![img](https://lh3.googleusercontent.com/3R7iMxCxsHeXBGQLUWh9rtddVtK5OUxLJp3XrvCESeoqT7BtEiim6IpnzVR4QrWR2qoPp2uW3DZ3WDuTo_sSKed2bTSssF44u69UHpT-f51yuJldeJVY57L8ONx3uPWhNk7HGRBu6tB_okmnIayJpUl3TsC8VQpHqrVBQRQv-by3ynDLfIUfzp_KeCiJxvXHYGqCXbN2ciNX9D6IpxmddoYVu8V3h9J-YPjPH1-maLKVrxHiKwvNgfTf9Pou7ZGMT9jqTtWa6HiYXdppTv_nVQyUaHw5cCFX2pE6pX2G39snX-pZ1f08C-9IMbAN_JEZuKtu9xufsPcjMmzgxzNomIcWSIOIQKMGgBsJldOw6vw14bHGY_xtO8PrNZFCxm-1xGJocJXHiCgoUIMNBGY4sC0GjthIrj7TXKxJhtANj9OiWwVH-uHH4yLlhbMSS4I5fwvapoLClMW3i1bchelyfTk40CCbTYbdCYj4aMjZG9wVTe4PGHiWLqf53KKiQFOI49aBNjZlVPAdCzddldu3vmdVgoyzK1jpN6-_3rNdfkcpeCuwu1JGEe9_uNvgYDaG2cBjw2_MK9eh-mIJxMI8STbJR4_qDJ7OYoYRhCES9NCwQ8KyePOcbZxmkqtHo-XcAigjcXo6rL7KeOKXIfDCx036crdTIHtgnY4zS9vuGmyyswdGir_SvuflhgxF=w2560-h1440-no?authuser=1 w-33pct) -->
+
+class: img-right-full
+![img](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Mass_Spectrometer_Schematic.svg/1920px-Mass_Spectrometer_Schematic.svg.png)
+
+
+<h1 style = "font-size: 80px;">
+Welcome!
+</h1>
+
+## Chem 370  
+## Instrumental Analysis
+
+**Dr. Al Fischer**  
+Western Carolina University
+
+
+---
+layout: true
+.footer[
+- <div class="tooltip"><a href="https://alphonse.github.io/devel/chem370"><i class="fas fa-home"></i></a> <span class="tooltiptext">Go to C370 Main Page</span></div>
+- <div class="tooltip"><a href="https://alphonse.github.io/devel/chem370/lectures"><i class="fas fa-chalkboard-teacher"></i></a><span class="tooltiptext">Go to Lecture List</span></div>
+- [<div class="tooltip"><i class="fas fa-list"></i><span class="tooltiptext">Go to Table of Contents</span></div>](#contents)
+- <div class="tooltip"><i class="fas fa-question"></i><span class="tooltiptext">Press <kbd>Shift</Kbd> + <kbd>?</kbd> for Navigation Tips!</span></div>
+]
+---
+
+exclude: true
+
+# Table of Contents
+
+1. [A problem](#problem)
+2. [The Analyst's Toolbox](#4)
+1. Course Intro / Front Matter
+
+
+---
+exclude: true
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f0/1_MV_accelerator_mass_spectrometer.jpg)
+
+.image-credit[USDOE image of mass spectrometer, public domain, via [wikimedia](https://commons.wikimedia.org/wiki/File:1_MV_accelerator_mass_spectrometer.jpg)]
+
+---
+
+name: problem
+
+# A problem
+
+> A man is found dead in his home with white powder on his upper lip.  A small ziploc bag containing a white substance and a bag of powdered-sugar donuts were found at the scene.  Your job as the chief analytical chemist for the state crime lab is to determine how he died.  What should you do?
+
+<!-- (is this the best example?  is there one that could be solved with tools of genchem/ochem? one that could show "traditional" way of analyzing?) -->
+
+
+<!-- - *Datura stramonium* in the backyard garden (which contains the highly-toxic psychoactive drug scopalamine) -->
+
+???
+
+**Responding officers found the following on scene:**
+- A small bag with a white powder in it (his roomate was previously arrested for cocaine)
+- A bag of powdered-sugar donuts
+
+**Other Notes:**
+
+- The penalty for possessing cocaine hydrochloride is different from the penalty for possessing the freebase form.
+- It is legal to grow *Datura*, despite it's toxic and psychotic natures.
+
+--
+
+## What could the powder be?
+
+---
+exclude: true
+class: img-right
+
+## Add some pictures and explanation
+
+![mass spec](https://upload.wikimedia.org/wikipedia/commons/f/f0/1_MV_accelerator_mass_spectrometer.jpg)
+
+.image-credit[USDOE image of mass spectrometer, public domain, via [wikimedia](https://commons.wikimedia.org/wiki/File:1_MV_accelerator_mass_spectrometer.jpg)]
+
+- note 1
+- note 2
+
+---
+
+# The Analyst's Toolbox
+
+> As we introduce new techniques, it is important that you incorporate them in the context of the techniques with which you are already familair.
+> *Granger, p3*
+
+**Tools of an Analyst:**
+
+- Spectroscopy
+ - UV-visible (electronic)
+ - Infrared (vibrational)
+ - Nuclear Magnetic Resonance (nuclear)
+- Spectrometry (mass of molecules/fragments of molecules)
+- Chromatography (separations)
+
+---
+
+# Code and Math
+
+```
+A = read.csv("filename.csv")
+A$column_name
+# comment
+```
+
+$$ y = mx + b $$
+
+---
+exclude: true
+# Teaching Philosopy (What I expect from you)
+
+---
+
+Why should we do instrumental analysis?
+
+- Compliance/law/forensics
+- Curiosity (why does coffee make us feel energized? why do flowers smell good (or bad?))
+- Safety
+
+- Case studies?
+
+---
+
+# Goals of this Class
+
+
+???
+
+From Scott:
+- Given as set of instruments and a sample
+- Choose the best one to extraction chemical information about the sample (analyte in a matrix)
+- Explain why how you made your choice
+- Example: Drug testing for Truck drivers
+- How would you determine the concentration of cocaine in a urine sample
+
+---
+exclude: true
+class: middle center
+
+# A Block Diagram
+
+<div class="mermaid">
+graph LR
+   id1(Source) --> id2(Sample)
+   id2(Sample) --> id3(Detector);
+</div>
+
+---
+exclude: true
+# Copyright Statement & Credits
+
+This material available for re-use under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/). You may re-use this material under the conditions that you (1) attribute the author, (2) do not use it for commercial or for-profit purposes, and (3) share it under an equally-permissive license.  Please [contact](mailto:difscher@wcu.edu) the author for inquiries about other useage.  Take note that some of the materials referenced in this book might be under different copyright protection — if so, this will be indicated in the text.
+
+I have tried to acknowledge all sources. If I have forgotten to acknowledge your work, have provided insufficient credits, or have misinterpreted your copyright, it has not been done with malicious intent. Please [notify me](mailto:difscher@wcu.edu) of any concerns.
+
+This presentation uses [remark](https://remarkjs.com/) by [Ole Petter Bang](https://github.com/gnab).
+
+
+
+
+    </textarea>
+    <script src="remark.js" type="text/javascript">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/efbc54fa3b.js"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create(
+        {
+          navigation: {scroll: false,},
+          slideNumberFormat: '%current%',
+          highlightLanguage: 'r',
+          highlightStyle: 'atom-one-light',
+        });
+        MathJax.Hub.Config({
+             tex2jax: {
+             skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+             }
+         });
+         MathJax.Hub.Configured();
+        mermaid.initialize({
+        startOnLoad: false,
+        cloneCssStyles: false
+      });
+        function initMermaid(s) {
+          var diagrams = document.querySelectorAll('.mermaid');
+          var i;
+          for(i=0;i<diagrams.length;i++){
+            if(diagrams[i].offsetWidth>0){
+              mermaid.init(undefined, diagrams[i]);
+            }
+          }
+        }
+        slideshow.on('afterShowSlide', initMermaid);
+        initMermaid(slideshow.getSlides()[slideshow.getCurrentSlideIndex()])
+    </script>
+    </body>
+</html>

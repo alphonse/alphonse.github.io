@@ -1,0 +1,33 @@
+# Appendix C: Glossary and Abbreviations {-}
+
+### Current (*i*) {-}
+
+The flow of electical energy, measured in **amperes (A)** or **amps** for short. By convention, current flows from the positive side of a circuit to the negative side.  [Note that the actual charge carriers, electrons, flow from the negative side the positive side!]
+
+### Electricity {-}
+
+A form of energy resulting from the accumulation or movement of charged particles, typically electrons.  Practically speaking, electricity is a form of energy that we use to generate heat, light, and movement.
+
+### LED {-}
+
+Light emitting diode; a semi-conductor designed to emit light when a current is applied.
+
+### Power (*P*) {-}
+
+The rate of work, measured in **Watts (W)**.  Practically speaking, power is the rate at which a circuit converts electrical energy to another form of energy (such as light).
+
+$$
+P = V i
+$$
+
+### Resistance (*R*) {-}
+
+The resistance to current flow, measured in **ohms ($\Omega$)**.
+
+$$
+R = \frac{V}{i}
+$$
+
+### Voltage (*V*) {-}
+
+The potential energy difference between two points in a circuit measured in **volts (V)**.  A larger voltage indicates a stronger "push" to drive electric current.
