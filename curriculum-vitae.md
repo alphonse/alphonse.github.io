@@ -67,11 +67,13 @@ Mattingly, K, B.D. Johnson, and **D.A. Fischer**. (2015) Characterization of Atm
 
 **Fischer, D.A.** and G.D. Smith (2017) [UV-Visible Photoacoustic Spectroscopy for Aerosol Absorption](/assets/pdf/poster_pas_aaar_2017_al-fischer.pdf). *American Association for Aerosol Research Annual Conference*, Raleigh, NC.
 
-Renbaum-Wolff, L., **D.A. Fischer**, T. Helgestad, A. Lambe, G. Smith, C. Cappa, A.J. Sedlacek, P. Davidovits, ***T. ONASCH***, A. Freedman. (2016) Broadband Measurements of the Mass Absorption Coefficient of Soot.  *American Association for Aerosol Research Annual Conference*, Portland, OR. 7CA.1.
-
-Renbaum-Wolff, L., **D.A. Fischer**, T. Helgestad, A. Lambe, G. Smith, C. Cappa, A. Sedlacek, P. Davidovits, T. Onasch, and ***A. FREEDMAN***. (2016) Measurements of Soot Mass Absorption Coefficients from 300 to 660 nm.  *European Geophysical Union General Assembly 2016*, Vienna, Austria.  EGU2016-9236.
-<!--
-***L. RENBAUM-WOLFF***, A. Lambe, T. Onasch, A. Freedman, L. Williams, T. Helgestad, C. Cappa, **D.A. Fischer**, G. Smith, S. China, C. Mazzoleni, A.J. Sedlacek, E. Browne, G. Isaacman-VanWertz, J. Kroll, J. Brogan, Y. Parmar, A. Lee, N. Sharma, J. Bhandari, J. Jayne, D. Worsnop, P. Davidovits. (2015) New Optical Experiments "Shed Light" on Role of Particle Morphology and Chemical Composition in the Absorption Enhancement of Coated Soot Particles.  *American Association for Aerosol Research Annual Conference*,  Minneapolis, MN. 12CC.3. -->
+<!-- 
+Renbaum-Wolff, L., **D.A. Fischer**, T. Helgestad, A. Lambe, G. Smith, C. Cappa, A.J. Sedlacek, P. Davidovits, T. ONASCH, A. Freedman. (2016) Broadband Measurements of the Mass Absorption Coefficient of Soot.  *American Association for Aerosol Research Annual Conference*, Portland, OR. 7CA.1. -->
+<!-- 
+Renbaum-Wolff, L., **D.A. Fischer**, T. Helgestad, A. Lambe, G. Smith, C. Cappa, A. Sedlacek, P. Davidovits, T. Onasch, and A. FREEDMAN. (2016) Measurements of Soot Mass Absorption Coefficients from 300 to 660 nm.  *European Geophysical Union General Assembly 2016*, Vienna, Austria.  EGU2016-9236. -->
+<!-- 
+***L. RENBAUM-WOLFF***, A. Lambe, T. Onasch, A. Freedman, L. Williams, T. Helgestad, C. Cappa, **D.A. Fischer**, G. Smith, S. China, C. Mazzoleni, A.J. Sedlacek, E. Browne, G. Isaacman-VanWertz, J. Kroll, J. Brogan, Y. Parmar, A. Lee, N. Sharma, J. Bhandari, J. Jayne, D. Worsnop, P. Davidovits. (2015) New Optical Experiments "Shed Light" on Role of Particle Morphology and Chemical Composition in the Absorption Enhancement of Coated Soot Particles.  *American Association for Aerosol Research Annual Conference*,  Minneapolis, MN. 12CC.3. 
+-->
 
 **Fischer, D.A.** and G.D. Smith. (2015) [A UV-Vis Broadband Cavity Enhanced Spectrometer for Ambient Aerosols](/assets/pdf/poster_bbces_ces_2015_al-fischer.pdf). *Eleventh International User Meeting and Summer School on Cavity Enhanced Spectroscopy*, Boulder, CO.
 
@@ -82,7 +84,7 @@ Renbaum-Wolff, L., **D.A. Fischer**, T. Helgestad, A. Lambe, G. Smith, C. Cappa,
 # Teaching
 
 - **WCU CHEM 689:** *Cooperative Internship in Natural Products Chemistry*
-- **WCU CHEM 493:** *Atmospheric Measurment Techniques (Special Topics in Chemistry)
+- **WCU CHEM 493:** *Atmospheric Measurment Techniques* (Special Topics in Chemistry)
 - **WCU CHEM 454/554, PHYS 454:**  *Computer Interfacing*
 - **WCU CHEM 380:**  *Undergraduate Research in Chemistry*
 - **[WCU CHEM 370](https://chem370.github.io):**  *Instrumental Analysis I (Lecutre + Lab)*
@@ -103,9 +105,9 @@ Renbaum-Wolff, L., **D.A. Fischer**, T. Helgestad, A. Lambe, G. Smith, C. Cappa,
 
 * [Continuous Flow Liquid Stage for Scanning Electron Microscopy](http://hummingbirdscientific.com/products/sem-liquid/)
 * [Vapor Delivery System for SEM and TEM](http://hummingbirdscientific.com/products/liquid/liquid-system-vapor-delivery-system/)
-* [A UV-visible Broadband Cavity Enhanced Spectrometer](https://drive.google.com/open?id=0BzNwM1Y1QBSbWG5MMlZGaURVam8)
+* [A UV-visible Broadband Cavity Enhanced Spectrometer](/assets/pdf/poster_bbces_ces_2015_al-fischer.pdf)
 * [An Incoherent-Coherent "Hybrid" UV-visible Photoacoustic Spectrometer](http://smithlab.uga.edu/Research/PAS/)
-* [A Single-Cell, 4-Wavelength Photoacoustic Instrument for Atmospheric Aerosols](https://drive.google.com/open?id=0BzNwM1Y1QBSbc1I2SFRsNzdkRWM)
+* [A Single-Cell, 4-Wavelength Photoacoustic Instrument for Atmospheric Aerosols](/assets/pdf/poster_pas_aaar_2017_al-fischer.pdf)
 
 <!-- ## On the Web
 

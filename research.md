@@ -41,4 +41,6 @@ The primary focus of my research is the development of new instrumentation.  Som
   
    ![PCA of conifer IR spectra](/assets/nsc-project.png)
    
-- **Determination of microplastic type in river waters using FT-IR** 
+- **Determination of microplastic type in river waters using FT-IR:** We are using FT-IR to identify microplastics and chemometrics collected from the Tuckasegee River in Jackson County, NC.  The image below shows example spectra of microplastic standards and PCA of microplastic standards.
+
+   ![PCA of microplastic IR spectra](/assets/microplastics.png)
